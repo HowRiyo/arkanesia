@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "@hapi/hapi": "^21.3.12",
+    "@hapi/inert": "^7.1.0",
+    "@hapi/vision": "^7.0.3",
+    "gsap": "^3.12.7",
+    "nodemon": "^3.1.9",
+    "pug": "^3.0.3",
+    "save-dev": "^0.0.1-security"
+  },
+  "name": "arkanesia",
+  "version": "1.0.0",
+  "description": "Capstone project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HowRiyo/arkanesia.git"
+  },
+  "keywords": [
+    "ArkaNesia"
+  ],
+  "author": "Satriyo Seno Akbar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HowRiyo/arkanesia/issues"
+  },
+  "homepage": "https://github.com/HowRiyo/arkanesia#readme",
+  "type": "module"
+}

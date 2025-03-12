@@ -1,0 +1,50 @@
+nav {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    gap: 4em;
+
+    background-color: var(--light-col);
+
+    width: max-content;
+
+    padding-block: 15px;
+    margin-inline: auto;
+}
+
+
+nav * {
+    color: var(--dark-col);
+    text-decoration: none;
+
+    font-family: var(--fredoka);
+}
+
+
+nav div.left-decoration,
+nav div.right-decoration {
+    position: absolute;
+    top: 0;
+    
+    background-color: var(--light-col);
+    z-index: 9;
+    
+    width: 50px;
+    height: 100%;
+}
+
+
+nav div.left-decoration {
+    left: -50px;
+
+    clip-path: polygon(100% 0, 100% 100%, 83% 96%, 71% 90%, 62% 81%, 50% 63%, 28% 31%, 21% 20%, 12% 9%, 0 0);
+}
+
+nav div.right-decoration {
+    right: -50px;
+
+    clip-path: polygon(100% 0, 100% 100%, 83% 96%, 71% 90%, 62% 81%, 50% 63%, 28% 31%, 21% 20%, 12% 9%, 0 0);
+
+    transform: scaleX(-1);
+}

@@ -1,0 +1,18 @@
+doctype html
+html
+    head
+        title= title
+        link(rel="stylesheet", href="/public/css/global.css")
+        link(rel="stylesheet", href="/public/css/theme.css")
+        link(rel="stylesheet", href="/public/css/header.css")
+        link(rel="stylesheet", href="/public/css/nav.css")
+        block head
+
+    body
+        include ../partials/header.pug
+
+        include ../partials/nav.pug
+
+        block content
+
+        script(src="https://kit.fontawesome.com/ae2a5b0f5d.js")

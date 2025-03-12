@@ -1,0 +1,12 @@
+.logo-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+
+    color: var(--main-col-1);
+    font-family: var(--fredoka);
+
+    padding-block: 1em;
+}

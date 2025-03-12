@@ -1,0 +1,20 @@
+extends layouts/default
+
+block head
+    link(rel="stylesheet", href="/public/css/index.css")
+
+    script(src="/public/js/index.js", defer)
+
+block content
+    div.landing-page-img
+
+    div.side-slider-wrapper
+        div.side-slider-content
+            p.side-slider-text Integrated Machine Learning
+        div.side-slider-content
+            p.side-slider-text ChatBot Helping Here
+        div.side-slider-content
+            p.side-slider-text Explore Your Destination
+        
+        i(class="fa-solid fa-2xl fa-angle-right", style="color: var(--light-col)")
+        
