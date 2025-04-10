@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event - Arkanesia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-800">
+  
+  <!-- Navbar -->
+  <nav class="bg-white shadow-lg px-10 py-4 flex items-center justify-between sticky top-0 z-50">
+    <h1 class="text-3xl font-bold tracking-tight">
+      <span class="text-blue-600 hover:tracking-wider transition-all duration-300">Arka</span><span class="text-gray-800">nesia.</span>
+    </h1>
+  
+    <div class="flex items-center space-x-8">
+      <ul class="flex space-x-8 text-gray-600 font-medium">
+        <li>
+          <a href="index.html" class="relative group hover:text-blue-600 transition">
+            Home
+            <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-full"></span>
+          </a>
+        </li>
+        <li>
+          <a href="ensiklopedia.html" class="relative group hover:text-blue-600 transition">
+            Ensiklopedia
+            <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-full"></span>
+          </a>
+        </li>
+        <li>
+          <a href="event.html" class="relative group text-blue-600">
+            Event
+            <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-full"></span>
+          </a>
+        </li>
+        <li>
+          <a href="about-us.html" class="relative group hover:text-blue-600 transition">
+            About
+            <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-full"></span>
+          </a>
+        </li>
+      </ul>
+  
+      <a href="search-page.html" class="px-6 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg hover:from-blue-700 hover:to-blue-800 transform hover:scale-105 transition-all duration-300">
+        Cari Budaya
+      </a>
+    </div>
+  </nav>
+
+  <div id="mobile-menu" class="md:hidden hidden px-10 py-4 bg-white shadow space-y-3">
+    <ul class="flex flex-col space-y-2 text-gray-600">
+      <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
+      <li><a href="ensiklopedia.html" class="hover:text-blue-600">Ensiklopedia</a></li>
+      <li><a href="event.html" class="text-blue-600 font-medium">Event</a></li>
+      <li><a href="about-us.html" class="hover:text-blue-600">About</a></li>
+      <li><a href="search-page.html" class="hover:text-blue-600">Cari Budaya</a></li>
+    </ul>
+    <a href="login.html" class="block bg-blue-600 text-white text-center py-2 rounded-lg shadow-md hover:bg-blue-700 transition">Login</a>
+  </div>
+
+
+
+  <!-- Event Section -->
+  <section class="max-w-7xl mx-auto px-6 py-20">
+    <div class="text-center mb-14">
+      <h2 class="text-3xl font-bold text-blue-900">Event Budaya</h2>
+      <p class="text-gray-500 mt-2">Jelajahi beragam event budaya menarik dari seluruh Indonesia.</p>
+    </div>
+
+    <h3 class="text-2xl font-bold text-gray-800">Event Terbaru</h3>
+<br>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div class="event-card bg-white border rounded-xl overflow-hidden shadow-md">
+        <img src="./assets/images/bg-after.png" alt="Festival Budaya" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="text-lg font-bold text-blue-800">Festival Tari Tradisional</h3>
+          <p class="text-sm text-gray-500 mt-1">Yogyakarta - 20 Mei 2025</p>
+          <a href="#" class="inline-block mt-4 bg-blue-600 text-white px-4 py-2 text-sm rounded-lg hover:bg-blue-700 transition">Lihat Detail</a>
+        </div>
+      </div>
+      <div class="event-card bg-white border rounded-xl overflow-hidden shadow-md">
+        <img src="./assets/images/bg-after.png" alt="Festival Budaya" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="text-lg font-bold text-blue-800">Festival Tari Tradisional</h3>
+          <p class="text-sm text-gray-500 mt-1">Yogyakarta - 20 Mei 2025</p>
+          <a href="#" class="inline-block mt-4 bg-blue-600 text-white px-4 py-2 text-sm rounded-lg hover:bg-blue-700 transition">Lihat Detail</a>
+        </div>
+      </div>
+      <div class="event-card bg-white border rounded-xl overflow-hidden shadow-md">
+        <img src="./assets/images/bg-after.png" alt="Festival Budaya" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="text-lg font-bold text-blue-800">Festival Tari Tradisional</h3>
+          <p class="text-sm text-gray-500 mt-1">Yogyakarta - 20 Mei 2025</p>
+          <a href="#" class="inline-block mt-4 bg-blue-600 text-white px-4 py-2 text-sm rounded-lg hover:bg-blue-700 transition">Lihat Detail</a>
+        </div>
+      </div>
+      <div class="event-card bg-white border rounded-xl overflow-hidden shadow-md">
+        <img src="./assets/images/bg-after.png" alt="Festival Budaya" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="text-lg font-bold text-blue-800">Festival Tari Tradisional</h3>
+          <p class="text-sm text-gray-500 mt-1">Yogyakarta - 20 Mei 2025</p>
+          <a href="#" class="inline-block mt-4 bg-blue-600 text-white px-4 py-2 text-sm rounded-lg hover:bg-blue-700 transition">Lihat Detail</a>
+        </div>
+      </div>
+      <div class="event-card bg-white border rounded-xl overflow-hidden shadow-md">
+        <img src="./assets/images/bg-after.png" alt="Festival Budaya" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="text-lg font-bold text-blue-800">Festival Tari Tradisional</h3>
+          <p class="text-sm text-gray-500 mt-1">Yogyakarta - 20 Mei 2025</p>
+          <a href="#" class="inline-block mt-4 bg-blue-600 text-white px-4 py-2 text-sm rounded-lg hover:bg-blue-700 transition">Lihat Detail</a>
+        </div>
+      </div>
+      <div class="event-card bg-white border rounded-xl overflow-hidden shadow-md">
+        <img src="./assets/images/bg-after.png" alt="Festival Budaya" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="text-lg font-bold text-blue-800">Festival Tari Tradisional</h3>
+          <p class="text-sm text-gray-500 mt-1">Yogyakarta - 20 Mei 2025</p>
+          <a href="#" class="inline-block mt-4 bg-blue-600 text-white px-4 py-2 text-sm rounded-lg hover:bg-blue-700 transition">Lihat Detail</a>
+        </div>
+      </div>
+    </div>
+    <br>
+    <h3 class="text-2xl font-bold text-gray-800">Rekomendasi Wisata</h3>
+    <br>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div class="event-card bg-white border rounded-xl overflow-hidden shadow-md">
+        <img src="./assets/images/bg-after.png" alt="Festival Budaya" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="text-lg font-bold text-blue-800">Festival Tari Tradisional</h3>
+          <p class="text-sm text-gray-500 mt-1">Yogyakarta - 20 Mei 2025</p>
+          <a href="#" class="inline-block mt-4 bg-blue-600 text-white px-4 py-2 text-sm rounded-lg hover:bg-blue-700 transition">Lihat Detail</a>
+        </div>
+      </div>
+      <div class="event-card bg-white border rounded-xl overflow-hidden shadow-md">
+        <img src="./assets/images/bg-after.png" alt="Festival Budaya" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="text-lg font-bold text-blue-800">Festival Tari Tradisional</h3>
+          <p class="text-sm text-gray-500 mt-1">Yogyakarta - 20 Mei 2025</p>
+          <a href="#" class="inline-block mt-4 bg-blue-600 text-white px-4 py-2 text-sm rounded-lg hover:bg-blue-700 transition">Lihat Detail</a>
+        </div>
+      </div>
+      <div class="event-card bg-white border rounded-xl overflow-hidden shadow-md">
+        <img src="./assets/images/bg-after.png" alt="Festival Budaya" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="text-lg font-bold text-blue-800">Festival Tari Tradisional</h3>
+          <p class="text-sm text-gray-500 mt-1">Yogyakarta - 20 Mei 2025</p>
+          <a href="#" class="inline-block mt-4 bg-blue-600 text-white px-4 py-2 text-sm rounded-lg hover:bg-blue-700 transition">Lihat Detail</a>
+        </div>
+      </div>
+      <div class="event-card bg-white border rounded-xl overflow-hidden shadow-md">
+        <img src="./assets/images/bg-after.png" alt="Festival Budaya" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="text-lg font-bold text-blue-800">Festival Tari Tradisional</h3>
+          <p class="text-sm text-gray-500 mt-1">Yogyakarta - 20 Mei 2025</p>
+          <a href="#" class="inline-block mt-4 bg-blue-600 text-white px-4 py-2 text-sm rounded-lg hover:bg-blue-700 transition">Lihat Detail</a>
+        </div>
+      </div>
+      <div class="event-card bg-white border rounded-xl overflow-hidden shadow-md">
+        <img src="./assets/images/bg-after.png" alt="Festival Budaya" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="text-lg font-bold text-blue-800">Festival Tari Tradisional</h3>
+          <p class="text-sm text-gray-500 mt-1">Yogyakarta - 20 Mei 2025</p>
+          <a href="#" class="inline-block mt-4 bg-blue-600 text-white px-4 py-2 text-sm rounded-lg hover:bg-blue-700 transition">Lihat Detail</a>
+        </div>
+      </div>
+      <div class="event-card bg-white border rounded-xl overflow-hidden shadow-md">
+        <img src="./assets/images/bg-after.png" alt="Festival Budaya" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="text-lg font-bold text-blue-800">Festival Tari Tradisional</h3>
+          <p class="text-sm text-gray-500 mt-1">Yogyakarta - 20 Mei 2025</p>
+          <a href="#" class="inline-block mt-4 bg-blue-600 text-white px-4 py-2 text-sm rounded-lg hover:bg-blue-700 transition">Lihat Detail</a>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+  
+
+  <footer class="mt-10 border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row items-start md:items-center justify-between">
+      <div class="mb-6 md:mb-0">
+        <h1 class="text-2xl font-extrabold text-blue-700">Arka<span class="text-gray-800 font-medium">nesia.</span></h1>
+        <p class="text-sm text-gray-400 mt-2 max-w-md leading-relaxed">
+          Bukan cuma destinasi, ArkaNesia bawa kamu menyelami warisan budaya dan tradisi yang penuh arti.
+        </p>
+      </div>
+    </div>
+    <div class="text-center bg-blue-700 text-white text-sm py-3">
+      © 2025 · All rights reserved · Arkanesia
+    </div>
+  </footer>
+  
+  <script>
+    document.getElementById("menu-toggle").addEventListener("click", function () {
+      const menu = document.getElementById("mobile-menu");
+      menu.classList.toggle("hidden");
+    });
+  </script>
+</body>
+</html>
