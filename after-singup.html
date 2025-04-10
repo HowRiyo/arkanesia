@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Account Created</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body
+  class="bg-cover bg-center min-h-screen flex items-center justify-center px-4"
+  style="background-image: url('./assets/images/bg-after.png');"
+>
+  <!-- Card -->
+  <div
+    class="w-full max-w-5xl px-16 py-16 rounded-3xl bg-white/85 border border-white/50 shadow-lg text-center"
+  >
+    <!-- Brand -->
+    <h1 class="text-4xl font-extrabold text-blue-700 mb-10">
+      Arka<span class="text-gray-900 font-medium">nesia.</span>
+    </h1>
+
+    <!-- Icon Centang Bulat -->
+    <div class="flex items-center justify-center mb-10">
+      <div class="w-24 h-24 flex items-center justify-center rounded-full border-[6px] border-green-500">
+        <svg class="w-12 h-12 text-green-500" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Judul -->
+    <h2 class="text-4xl font-extrabold text-blue-700 mb-4">
+      Account Created Successfully
+    </h2>
+
+    <!-- Subjudul -->
+    <p class="text-xl text-gray-800 font-medium mb-10">
+      Please Check Your Email
+    </p>
+
+    <!-- Tombol -->
+    <a
+      href="index.html"
+      class="inline-block bg-blue-600 text-white text-lg font-semibold px-10 py-4 rounded-xl shadow-md hover:bg-blue-700 transition duration-300"
+    >
+      Back to Home page
+    </a>
+  </div>
+
+  <!-- GSAP Animasi Masuk -->
+  <script>
+    gsap.from("div", {
+      opacity: 0,
+      y: 40,
+      duration: 0.8,
+      ease: "power3.out",
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arkanesia AI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    body {
+      background: radial-gradient(circle at top, #e0f2ff, #ffffff);
+      overflow-x: hidden;
+    }
+    .glow-input:focus {
+      box-shadow: 0 0 12px rgba(59, 130, 246, 0.8);
+    }
+    .message-bubble {
+      max-width: 70%;
+      padding: 10px 16px;
+      border-radius: 16px;
+      margin: 8px 0;
+      word-wrap: break-word;
+    }
+    .from-user {
+      background-color: #e0f2ff;
+      align-self: flex-end;
+    }
+    .from-ai {
+      background-color: #f0f0f0;
+      align-self: flex-start;
+    }
+  </style>
+</head>
+<body class="text-gray-800 font-sans">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-md px-4 sm:px-10 py-4 relative z-50">
+    <div class="flex items-center justify-between">
+      <h1 class="text-2xl font-bold"><span class="text-blue-600">Arka</span>nesia AI</h1>
+      <div class="hidden sm:flex items-center space-x-6">
+        <ul class="flex space-x-6 text-gray-600">
+          <li><a href="#" class="hover:text-blue-600">Home</a></li>
+          <li><a href="#" class="hover:text-blue-600">Ensiklopedia</a></li>
+          <li><a href="#" class="hover:text-blue-600">Event</a></li>
+          <li><a href="#" class="hover:text-blue-600">About</a></li>
+        </ul>
+        <a href="#" class="bg-blue-600 text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-700 transition">Login</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero / Intro Section -->
+  <section class="text-center py-20 fade-in relative">
+    <h2 class="text-4xl font-bold text-blue-700 leading-tight mb-4">Mulai Percakapan Budaya dengan AI</h2>
+    <div id="typed-text" class="text-lg text-gray-600 mb-6 h-8"></div>
+    <div class="mx-auto flex items-center w-full max-w-xl bg-white rounded-full px-6 py-3 shadow-xl">
+      <i class="fa-solid fa-comment-dots text-blue-400"></i>
+      <input
+        type="text"
+        placeholder="Tanyakan tentang budaya..."
+        class="ml-3 w-full bg-transparent outline-none text-sm glow-input"
+        id="userInput"
+      />
+    </div>
+  </section>
+
+  <!-- Chat Area -->
+  <section class="max-w-3xl mx-auto px-4 mb-24">
+    <div id="chatBox" class="flex flex-col space-y-2 mt-10"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="px-10 py-16 text-center">
+      <h1 class="text-3xl font-bold mb-2">
+        <span class="text-blue-600">Arka</span>nesia.
+      </h1>
+      <p class="text-gray-500 max-w-md mx-auto">
+        Jelajahi budaya Nusantara melalui percakapan interaktif dengan AI kami.
+      </p>
+    </div>
+    <div class="bg-blue-600 text-white text-center py-3">
+      Copyright 2025 • All rights reserved • Arkanesia
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Animasi nav dan section
+    gsap.from("nav", { y: -100, opacity: 0, duration: 1 });
+    gsap.from("section", { opacity: 0, y: 50, duration: 1.2, delay: 0.5 });
+    gsap.from("footer", { y: 100, opacity: 0, duration: 1, delay: 1 });
+
+    // Typed.js intro
+    const typed = new Typed("#typed-text", {
+      strings: [
+        "Apa itu Reog Ponorogo?",
+        "Siapa tokoh legenda Dayak?",
+        "Apa makna motif batik Mega Mendung?"
+      ],
+      typeSpeed: 40,
+      backSpeed: 20,
+      loop: true
+    });
+
+    // Chat dummy
+    const input = document.getElementById('userInput');
+    const chatBox = document.getElementById('chatBox');
+    input.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' && input.value.trim()) {
+        const userMsg = document.createElement('div');
+        userMsg.className = 'message-bubble from-user self-end';
+        userMsg.textContent = input.value;
+        chatBox.appendChild(userMsg);
+
+        setTimeout(() => {
+          const aiMsg = document.createElement('div');
+          aiMsg.className = 'message-bubble from-ai';
+          aiMsg.textContent = `Sedang mencari jawaban untuk \"${input.value}\"...`; // placeholder
+          chatBox.appendChild(aiMsg);
+          chatBox.scrollTop = chatBox.scrollHeight;
+        }, 800);
+
+        input.value = '';
+      }
+    });
+  </script>
+</body>
+</html>
