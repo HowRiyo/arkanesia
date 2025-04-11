@@ -23,6 +23,11 @@ export type Culture = $Result.DefaultSelection<Prisma.$CulturePayload>
  * 
  */
 export type Event = $Result.DefaultSelection<Prisma.$EventPayload>
+/**
+ * Model Tour
+ * 
+ */
+export type Tour = $Result.DefaultSelection<Prisma.$TourPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -168,6 +173,16 @@ export class PrismaClient<
     * ```
     */
   get event(): Prisma.EventDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.tour`: Exposes CRUD operations for the **Tour** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more Tours
+    * const tours = await prisma.tour.findMany()
+    * ```
+    */
+  get tour(): Prisma.TourDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -609,7 +624,8 @@ export namespace Prisma {
 
   export const ModelName: {
     Culture: 'Culture',
-    Event: 'Event'
+    Event: 'Event',
+    Tour: 'Tour'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -628,7 +644,7 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "culture" | "event"
+      modelProps: "culture" | "event" | "tour"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
@@ -764,6 +780,72 @@ export namespace Prisma {
           }
         }
       }
+      Tour: {
+        payload: Prisma.$TourPayload<ExtArgs>
+        fields: Prisma.TourFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.TourFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TourPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.TourFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TourPayload>
+          }
+          findFirst: {
+            args: Prisma.TourFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TourPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.TourFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TourPayload>
+          }
+          findMany: {
+            args: Prisma.TourFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TourPayload>[]
+          }
+          create: {
+            args: Prisma.TourCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TourPayload>
+          }
+          createMany: {
+            args: Prisma.TourCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          delete: {
+            args: Prisma.TourDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TourPayload>
+          }
+          update: {
+            args: Prisma.TourUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TourPayload>
+          }
+          deleteMany: {
+            args: Prisma.TourDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.TourUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          upsert: {
+            args: Prisma.TourUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TourPayload>
+          }
+          aggregate: {
+            args: Prisma.TourAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateTour>
+          }
+          groupBy: {
+            args: Prisma.TourGroupByArgs<ExtArgs>
+            result: $Utils.Optional<TourGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.TourCountArgs<ExtArgs>
+            result: $Utils.Optional<TourCountAggregateOutputType> | number
+          }
+        }
+      }
     }
   } & {
     other: {
@@ -850,6 +932,7 @@ export namespace Prisma {
   export type GlobalOmitConfig = {
     culture?: CultureOmit
     event?: EventOmit
+    tour?: TourOmit
   }
 
   /* Types for Logging */
@@ -2888,6 +2971,981 @@ export namespace Prisma {
 
 
   /**
+   * Model Tour
+   */
+
+  export type AggregateTour = {
+    _count: TourCountAggregateOutputType | null
+    _avg: TourAvgAggregateOutputType | null
+    _sum: TourSumAggregateOutputType | null
+    _min: TourMinAggregateOutputType | null
+    _max: TourMaxAggregateOutputType | null
+  }
+
+  export type TourAvgAggregateOutputType = {
+    id: number | null
+    prices: number | null
+  }
+
+  export type TourSumAggregateOutputType = {
+    id: number | null
+    prices: number | null
+  }
+
+  export type TourMinAggregateOutputType = {
+    id: number | null
+    name: string | null
+    date: Date | null
+    location: string | null
+    image: string | null
+    description: string | null
+    link: string | null
+    prices: number | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type TourMaxAggregateOutputType = {
+    id: number | null
+    name: string | null
+    date: Date | null
+    location: string | null
+    image: string | null
+    description: string | null
+    link: string | null
+    prices: number | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type TourCountAggregateOutputType = {
+    id: number
+    name: number
+    date: number
+    location: number
+    image: number
+    description: number
+    link: number
+    prices: number
+    createdAt: number
+    updatedAt: number
+    _all: number
+  }
+
+
+  export type TourAvgAggregateInputType = {
+    id?: true
+    prices?: true
+  }
+
+  export type TourSumAggregateInputType = {
+    id?: true
+    prices?: true
+  }
+
+  export type TourMinAggregateInputType = {
+    id?: true
+    name?: true
+    date?: true
+    location?: true
+    image?: true
+    description?: true
+    link?: true
+    prices?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type TourMaxAggregateInputType = {
+    id?: true
+    name?: true
+    date?: true
+    location?: true
+    image?: true
+    description?: true
+    link?: true
+    prices?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type TourCountAggregateInputType = {
+    id?: true
+    name?: true
+    date?: true
+    location?: true
+    image?: true
+    description?: true
+    link?: true
+    prices?: true
+    createdAt?: true
+    updatedAt?: true
+    _all?: true
+  }
+
+  export type TourAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which Tour to aggregate.
+     */
+    where?: TourWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of Tours to fetch.
+     */
+    orderBy?: TourOrderByWithRelationInput | TourOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: TourWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` Tours from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` Tours.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned Tours
+    **/
+    _count?: true | TourCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: TourAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: TourSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: TourMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: TourMaxAggregateInputType
+  }
+
+  export type GetTourAggregateType<T extends TourAggregateArgs> = {
+        [P in keyof T & keyof AggregateTour]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateTour[P]>
+      : GetScalarType<T[P], AggregateTour[P]>
+  }
+
+
+
+
+  export type TourGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: TourWhereInput
+    orderBy?: TourOrderByWithAggregationInput | TourOrderByWithAggregationInput[]
+    by: TourScalarFieldEnum[] | TourScalarFieldEnum
+    having?: TourScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: TourCountAggregateInputType | true
+    _avg?: TourAvgAggregateInputType
+    _sum?: TourSumAggregateInputType
+    _min?: TourMinAggregateInputType
+    _max?: TourMaxAggregateInputType
+  }
+
+  export type TourGroupByOutputType = {
+    id: number
+    name: string
+    date: Date
+    location: string
+    image: string | null
+    description: string
+    link: string | null
+    prices: number
+    createdAt: Date
+    updatedAt: Date
+    _count: TourCountAggregateOutputType | null
+    _avg: TourAvgAggregateOutputType | null
+    _sum: TourSumAggregateOutputType | null
+    _min: TourMinAggregateOutputType | null
+    _max: TourMaxAggregateOutputType | null
+  }
+
+  type GetTourGroupByPayload<T extends TourGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<TourGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof TourGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], TourGroupByOutputType[P]>
+            : GetScalarType<T[P], TourGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type TourSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    date?: boolean
+    location?: boolean
+    image?: boolean
+    description?: boolean
+    link?: boolean
+    prices?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }, ExtArgs["result"]["tour"]>
+
+
+
+  export type TourSelectScalar = {
+    id?: boolean
+    name?: boolean
+    date?: boolean
+    location?: boolean
+    image?: boolean
+    description?: boolean
+    link?: boolean
+    prices?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }
+
+  export type TourOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "date" | "location" | "image" | "description" | "link" | "prices" | "createdAt" | "updatedAt", ExtArgs["result"]["tour"]>
+
+  export type $TourPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "Tour"
+    objects: {}
+    scalars: $Extensions.GetPayloadResult<{
+      id: number
+      name: string
+      date: Date
+      location: string
+      image: string | null
+      description: string
+      link: string | null
+      prices: number
+      createdAt: Date
+      updatedAt: Date
+    }, ExtArgs["result"]["tour"]>
+    composites: {}
+  }
+
+  type TourGetPayload<S extends boolean | null | undefined | TourDefaultArgs> = $Result.GetResult<Prisma.$TourPayload, S>
+
+  type TourCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<TourFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: TourCountAggregateInputType | true
+    }
+
+  export interface TourDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Tour'], meta: { name: 'Tour' } }
+    /**
+     * Find zero or one Tour that matches the filter.
+     * @param {TourFindUniqueArgs} args - Arguments to find a Tour
+     * @example
+     * // Get one Tour
+     * const tour = await prisma.tour.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends TourFindUniqueArgs>(args: SelectSubset<T, TourFindUniqueArgs<ExtArgs>>): Prisma__TourClient<$Result.GetResult<Prisma.$TourPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one Tour that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {TourFindUniqueOrThrowArgs} args - Arguments to find a Tour
+     * @example
+     * // Get one Tour
+     * const tour = await prisma.tour.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends TourFindUniqueOrThrowArgs>(args: SelectSubset<T, TourFindUniqueOrThrowArgs<ExtArgs>>): Prisma__TourClient<$Result.GetResult<Prisma.$TourPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first Tour that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {TourFindFirstArgs} args - Arguments to find a Tour
+     * @example
+     * // Get one Tour
+     * const tour = await prisma.tour.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends TourFindFirstArgs>(args?: SelectSubset<T, TourFindFirstArgs<ExtArgs>>): Prisma__TourClient<$Result.GetResult<Prisma.$TourPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first Tour that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {TourFindFirstOrThrowArgs} args - Arguments to find a Tour
+     * @example
+     * // Get one Tour
+     * const tour = await prisma.tour.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends TourFindFirstOrThrowArgs>(args?: SelectSubset<T, TourFindFirstOrThrowArgs<ExtArgs>>): Prisma__TourClient<$Result.GetResult<Prisma.$TourPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more Tours that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {TourFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all Tours
+     * const tours = await prisma.tour.findMany()
+     * 
+     * // Get first 10 Tours
+     * const tours = await prisma.tour.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const tourWithIdOnly = await prisma.tour.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends TourFindManyArgs>(args?: SelectSubset<T, TourFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TourPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a Tour.
+     * @param {TourCreateArgs} args - Arguments to create a Tour.
+     * @example
+     * // Create one Tour
+     * const Tour = await prisma.tour.create({
+     *   data: {
+     *     // ... data to create a Tour
+     *   }
+     * })
+     * 
+     */
+    create<T extends TourCreateArgs>(args: SelectSubset<T, TourCreateArgs<ExtArgs>>): Prisma__TourClient<$Result.GetResult<Prisma.$TourPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many Tours.
+     * @param {TourCreateManyArgs} args - Arguments to create many Tours.
+     * @example
+     * // Create many Tours
+     * const tour = await prisma.tour.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends TourCreateManyArgs>(args?: SelectSubset<T, TourCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Delete a Tour.
+     * @param {TourDeleteArgs} args - Arguments to delete one Tour.
+     * @example
+     * // Delete one Tour
+     * const Tour = await prisma.tour.delete({
+     *   where: {
+     *     // ... filter to delete one Tour
+     *   }
+     * })
+     * 
+     */
+    delete<T extends TourDeleteArgs>(args: SelectSubset<T, TourDeleteArgs<ExtArgs>>): Prisma__TourClient<$Result.GetResult<Prisma.$TourPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one Tour.
+     * @param {TourUpdateArgs} args - Arguments to update one Tour.
+     * @example
+     * // Update one Tour
+     * const tour = await prisma.tour.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends TourUpdateArgs>(args: SelectSubset<T, TourUpdateArgs<ExtArgs>>): Prisma__TourClient<$Result.GetResult<Prisma.$TourPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more Tours.
+     * @param {TourDeleteManyArgs} args - Arguments to filter Tours to delete.
+     * @example
+     * // Delete a few Tours
+     * const { count } = await prisma.tour.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends TourDeleteManyArgs>(args?: SelectSubset<T, TourDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Tours.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {TourUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many Tours
+     * const tour = await prisma.tour.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends TourUpdateManyArgs>(args: SelectSubset<T, TourUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create or update one Tour.
+     * @param {TourUpsertArgs} args - Arguments to update or create a Tour.
+     * @example
+     * // Update or create a Tour
+     * const tour = await prisma.tour.upsert({
+     *   create: {
+     *     // ... data to create a Tour
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the Tour we want to update
+     *   }
+     * })
+     */
+    upsert<T extends TourUpsertArgs>(args: SelectSubset<T, TourUpsertArgs<ExtArgs>>): Prisma__TourClient<$Result.GetResult<Prisma.$TourPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of Tours.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {TourCountArgs} args - Arguments to filter Tours to count.
+     * @example
+     * // Count the number of Tours
+     * const count = await prisma.tour.count({
+     *   where: {
+     *     // ... the filter for the Tours we want to count
+     *   }
+     * })
+    **/
+    count<T extends TourCountArgs>(
+      args?: Subset<T, TourCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], TourCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a Tour.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {TourAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends TourAggregateArgs>(args: Subset<T, TourAggregateArgs>): Prisma.PrismaPromise<GetTourAggregateType<T>>
+
+    /**
+     * Group by Tour.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {TourGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends TourGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: TourGroupByArgs['orderBy'] }
+        : { orderBy?: TourGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, TourGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetTourGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the Tour model
+   */
+  readonly fields: TourFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for Tour.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__TourClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the Tour model
+   */
+  interface TourFieldRefs {
+    readonly id: FieldRef<"Tour", 'Int'>
+    readonly name: FieldRef<"Tour", 'String'>
+    readonly date: FieldRef<"Tour", 'DateTime'>
+    readonly location: FieldRef<"Tour", 'String'>
+    readonly image: FieldRef<"Tour", 'String'>
+    readonly description: FieldRef<"Tour", 'String'>
+    readonly link: FieldRef<"Tour", 'String'>
+    readonly prices: FieldRef<"Tour", 'Float'>
+    readonly createdAt: FieldRef<"Tour", 'DateTime'>
+    readonly updatedAt: FieldRef<"Tour", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * Tour findUnique
+   */
+  export type TourFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Tour
+     */
+    select?: TourSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Tour
+     */
+    omit?: TourOmit<ExtArgs> | null
+    /**
+     * Filter, which Tour to fetch.
+     */
+    where: TourWhereUniqueInput
+  }
+
+  /**
+   * Tour findUniqueOrThrow
+   */
+  export type TourFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Tour
+     */
+    select?: TourSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Tour
+     */
+    omit?: TourOmit<ExtArgs> | null
+    /**
+     * Filter, which Tour to fetch.
+     */
+    where: TourWhereUniqueInput
+  }
+
+  /**
+   * Tour findFirst
+   */
+  export type TourFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Tour
+     */
+    select?: TourSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Tour
+     */
+    omit?: TourOmit<ExtArgs> | null
+    /**
+     * Filter, which Tour to fetch.
+     */
+    where?: TourWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of Tours to fetch.
+     */
+    orderBy?: TourOrderByWithRelationInput | TourOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for Tours.
+     */
+    cursor?: TourWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` Tours from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` Tours.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of Tours.
+     */
+    distinct?: TourScalarFieldEnum | TourScalarFieldEnum[]
+  }
+
+  /**
+   * Tour findFirstOrThrow
+   */
+  export type TourFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Tour
+     */
+    select?: TourSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Tour
+     */
+    omit?: TourOmit<ExtArgs> | null
+    /**
+     * Filter, which Tour to fetch.
+     */
+    where?: TourWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of Tours to fetch.
+     */
+    orderBy?: TourOrderByWithRelationInput | TourOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for Tours.
+     */
+    cursor?: TourWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` Tours from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` Tours.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of Tours.
+     */
+    distinct?: TourScalarFieldEnum | TourScalarFieldEnum[]
+  }
+
+  /**
+   * Tour findMany
+   */
+  export type TourFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Tour
+     */
+    select?: TourSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Tour
+     */
+    omit?: TourOmit<ExtArgs> | null
+    /**
+     * Filter, which Tours to fetch.
+     */
+    where?: TourWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of Tours to fetch.
+     */
+    orderBy?: TourOrderByWithRelationInput | TourOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing Tours.
+     */
+    cursor?: TourWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` Tours from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` Tours.
+     */
+    skip?: number
+    distinct?: TourScalarFieldEnum | TourScalarFieldEnum[]
+  }
+
+  /**
+   * Tour create
+   */
+  export type TourCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Tour
+     */
+    select?: TourSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Tour
+     */
+    omit?: TourOmit<ExtArgs> | null
+    /**
+     * The data needed to create a Tour.
+     */
+    data: XOR<TourCreateInput, TourUncheckedCreateInput>
+  }
+
+  /**
+   * Tour createMany
+   */
+  export type TourCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many Tours.
+     */
+    data: TourCreateManyInput | TourCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * Tour update
+   */
+  export type TourUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Tour
+     */
+    select?: TourSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Tour
+     */
+    omit?: TourOmit<ExtArgs> | null
+    /**
+     * The data needed to update a Tour.
+     */
+    data: XOR<TourUpdateInput, TourUncheckedUpdateInput>
+    /**
+     * Choose, which Tour to update.
+     */
+    where: TourWhereUniqueInput
+  }
+
+  /**
+   * Tour updateMany
+   */
+  export type TourUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update Tours.
+     */
+    data: XOR<TourUpdateManyMutationInput, TourUncheckedUpdateManyInput>
+    /**
+     * Filter which Tours to update
+     */
+    where?: TourWhereInput
+    /**
+     * Limit how many Tours to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * Tour upsert
+   */
+  export type TourUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Tour
+     */
+    select?: TourSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Tour
+     */
+    omit?: TourOmit<ExtArgs> | null
+    /**
+     * The filter to search for the Tour to update in case it exists.
+     */
+    where: TourWhereUniqueInput
+    /**
+     * In case the Tour found by the `where` argument doesn't exist, create a new Tour with this data.
+     */
+    create: XOR<TourCreateInput, TourUncheckedCreateInput>
+    /**
+     * In case the Tour was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<TourUpdateInput, TourUncheckedUpdateInput>
+  }
+
+  /**
+   * Tour delete
+   */
+  export type TourDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Tour
+     */
+    select?: TourSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Tour
+     */
+    omit?: TourOmit<ExtArgs> | null
+    /**
+     * Filter which Tour to delete.
+     */
+    where: TourWhereUniqueInput
+  }
+
+  /**
+   * Tour deleteMany
+   */
+  export type TourDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which Tours to delete
+     */
+    where?: TourWhereInput
+    /**
+     * Limit how many Tours to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * Tour without action
+   */
+  export type TourDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Tour
+     */
+    select?: TourSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Tour
+     */
+    omit?: TourOmit<ExtArgs> | null
+  }
+
+
+  /**
    * Enums
    */
 
@@ -2932,6 +3990,22 @@ export namespace Prisma {
   export type EventScalarFieldEnum = (typeof EventScalarFieldEnum)[keyof typeof EventScalarFieldEnum]
 
 
+  export const TourScalarFieldEnum: {
+    id: 'id',
+    name: 'name',
+    date: 'date',
+    location: 'location',
+    image: 'image',
+    description: 'description',
+    link: 'link',
+    prices: 'prices',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+  };
+
+  export type TourScalarFieldEnum = (typeof TourScalarFieldEnum)[keyof typeof TourScalarFieldEnum]
+
+
   export const SortOrder: {
     asc: 'asc',
     desc: 'desc'
@@ -2967,6 +4041,17 @@ export namespace Prisma {
   };
 
   export type EventOrderByRelevanceFieldEnum = (typeof EventOrderByRelevanceFieldEnum)[keyof typeof EventOrderByRelevanceFieldEnum]
+
+
+  export const TourOrderByRelevanceFieldEnum: {
+    name: 'name',
+    location: 'location',
+    image: 'image',
+    description: 'description',
+    link: 'link'
+  };
+
+  export type TourOrderByRelevanceFieldEnum = (typeof TourOrderByRelevanceFieldEnum)[keyof typeof TourOrderByRelevanceFieldEnum]
 
 
   /**
@@ -3160,6 +4245,86 @@ export namespace Prisma {
     updatedAt?: DateTimeWithAggregatesFilter<"Event"> | Date | string
   }
 
+  export type TourWhereInput = {
+    AND?: TourWhereInput | TourWhereInput[]
+    OR?: TourWhereInput[]
+    NOT?: TourWhereInput | TourWhereInput[]
+    id?: IntFilter<"Tour"> | number
+    name?: StringFilter<"Tour"> | string
+    date?: DateTimeFilter<"Tour"> | Date | string
+    location?: StringFilter<"Tour"> | string
+    image?: StringNullableFilter<"Tour"> | string | null
+    description?: StringFilter<"Tour"> | string
+    link?: StringNullableFilter<"Tour"> | string | null
+    prices?: FloatFilter<"Tour"> | number
+    createdAt?: DateTimeFilter<"Tour"> | Date | string
+    updatedAt?: DateTimeFilter<"Tour"> | Date | string
+  }
+
+  export type TourOrderByWithRelationInput = {
+    id?: SortOrder
+    name?: SortOrder
+    date?: SortOrder
+    location?: SortOrder
+    image?: SortOrderInput | SortOrder
+    description?: SortOrder
+    link?: SortOrderInput | SortOrder
+    prices?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    _relevance?: TourOrderByRelevanceInput
+  }
+
+  export type TourWhereUniqueInput = Prisma.AtLeast<{
+    id?: number
+    AND?: TourWhereInput | TourWhereInput[]
+    OR?: TourWhereInput[]
+    NOT?: TourWhereInput | TourWhereInput[]
+    name?: StringFilter<"Tour"> | string
+    date?: DateTimeFilter<"Tour"> | Date | string
+    location?: StringFilter<"Tour"> | string
+    image?: StringNullableFilter<"Tour"> | string | null
+    description?: StringFilter<"Tour"> | string
+    link?: StringNullableFilter<"Tour"> | string | null
+    prices?: FloatFilter<"Tour"> | number
+    createdAt?: DateTimeFilter<"Tour"> | Date | string
+    updatedAt?: DateTimeFilter<"Tour"> | Date | string
+  }, "id">
+
+  export type TourOrderByWithAggregationInput = {
+    id?: SortOrder
+    name?: SortOrder
+    date?: SortOrder
+    location?: SortOrder
+    image?: SortOrderInput | SortOrder
+    description?: SortOrder
+    link?: SortOrderInput | SortOrder
+    prices?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    _count?: TourCountOrderByAggregateInput
+    _avg?: TourAvgOrderByAggregateInput
+    _max?: TourMaxOrderByAggregateInput
+    _min?: TourMinOrderByAggregateInput
+    _sum?: TourSumOrderByAggregateInput
+  }
+
+  export type TourScalarWhereWithAggregatesInput = {
+    AND?: TourScalarWhereWithAggregatesInput | TourScalarWhereWithAggregatesInput[]
+    OR?: TourScalarWhereWithAggregatesInput[]
+    NOT?: TourScalarWhereWithAggregatesInput | TourScalarWhereWithAggregatesInput[]
+    id?: IntWithAggregatesFilter<"Tour"> | number
+    name?: StringWithAggregatesFilter<"Tour"> | string
+    date?: DateTimeWithAggregatesFilter<"Tour"> | Date | string
+    location?: StringWithAggregatesFilter<"Tour"> | string
+    image?: StringNullableWithAggregatesFilter<"Tour"> | string | null
+    description?: StringWithAggregatesFilter<"Tour"> | string
+    link?: StringNullableWithAggregatesFilter<"Tour"> | string | null
+    prices?: FloatWithAggregatesFilter<"Tour"> | number
+    createdAt?: DateTimeWithAggregatesFilter<"Tour"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"Tour"> | Date | string
+  }
+
   export type CultureCreateInput = {
     title: string
     year: number
@@ -3325,6 +4490,94 @@ export namespace Prisma {
     image?: NullableStringFieldUpdateOperationsInput | string | null
     description?: StringFieldUpdateOperationsInput | string
     link?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type TourCreateInput = {
+    name: string
+    date: Date | string
+    location: string
+    image?: string | null
+    description: string
+    link?: string | null
+    prices: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type TourUncheckedCreateInput = {
+    id?: number
+    name: string
+    date: Date | string
+    location: string
+    image?: string | null
+    description: string
+    link?: string | null
+    prices: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type TourUpdateInput = {
+    name?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    location?: StringFieldUpdateOperationsInput | string
+    image?: NullableStringFieldUpdateOperationsInput | string | null
+    description?: StringFieldUpdateOperationsInput | string
+    link?: NullableStringFieldUpdateOperationsInput | string | null
+    prices?: FloatFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type TourUncheckedUpdateInput = {
+    id?: IntFieldUpdateOperationsInput | number
+    name?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    location?: StringFieldUpdateOperationsInput | string
+    image?: NullableStringFieldUpdateOperationsInput | string | null
+    description?: StringFieldUpdateOperationsInput | string
+    link?: NullableStringFieldUpdateOperationsInput | string | null
+    prices?: FloatFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type TourCreateManyInput = {
+    id?: number
+    name: string
+    date: Date | string
+    location: string
+    image?: string | null
+    description: string
+    link?: string | null
+    prices: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type TourUpdateManyMutationInput = {
+    name?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    location?: StringFieldUpdateOperationsInput | string
+    image?: NullableStringFieldUpdateOperationsInput | string | null
+    description?: StringFieldUpdateOperationsInput | string
+    link?: NullableStringFieldUpdateOperationsInput | string | null
+    prices?: FloatFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type TourUncheckedUpdateManyInput = {
+    id?: IntFieldUpdateOperationsInput | number
+    name?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    location?: StringFieldUpdateOperationsInput | string
+    image?: NullableStringFieldUpdateOperationsInput | string | null
+    description?: StringFieldUpdateOperationsInput | string
+    link?: NullableStringFieldUpdateOperationsInput | string | null
+    prices?: FloatFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -3588,6 +4841,88 @@ export namespace Prisma {
     id?: SortOrder
   }
 
+  export type FloatFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel>
+    in?: number[]
+    notIn?: number[]
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatFilter<$PrismaModel> | number
+  }
+
+  export type TourOrderByRelevanceInput = {
+    fields: TourOrderByRelevanceFieldEnum | TourOrderByRelevanceFieldEnum[]
+    sort: SortOrder
+    search: string
+  }
+
+  export type TourCountOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    date?: SortOrder
+    location?: SortOrder
+    image?: SortOrder
+    description?: SortOrder
+    link?: SortOrder
+    prices?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type TourAvgOrderByAggregateInput = {
+    id?: SortOrder
+    prices?: SortOrder
+  }
+
+  export type TourMaxOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    date?: SortOrder
+    location?: SortOrder
+    image?: SortOrder
+    description?: SortOrder
+    link?: SortOrder
+    prices?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type TourMinOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    date?: SortOrder
+    location?: SortOrder
+    image?: SortOrder
+    description?: SortOrder
+    link?: SortOrder
+    prices?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type TourSumOrderByAggregateInput = {
+    id?: SortOrder
+    prices?: SortOrder
+  }
+
+  export type FloatWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel>
+    in?: number[]
+    notIn?: number[]
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatWithAggregatesFilter<$PrismaModel> | number
+    _count?: NestedIntFilter<$PrismaModel>
+    _avg?: NestedFloatFilter<$PrismaModel>
+    _sum?: NestedFloatFilter<$PrismaModel>
+    _min?: NestedFloatFilter<$PrismaModel>
+    _max?: NestedFloatFilter<$PrismaModel>
+  }
+
   export type StringFieldUpdateOperationsInput = {
     set?: string
   }
@@ -3614,6 +4949,14 @@ export namespace Prisma {
 
   export type DateTimeFieldUpdateOperationsInput = {
     set?: Date | string
+  }
+
+  export type FloatFieldUpdateOperationsInput = {
+    set?: number
+    increment?: number
+    decrement?: number
+    multiply?: number
+    divide?: number
   }
 
   export type NestedIntFilter<$PrismaModel = never> = {
@@ -3781,6 +5124,22 @@ export namespace Prisma {
     _count?: NestedIntFilter<$PrismaModel>
     _min?: NestedDateTimeFilter<$PrismaModel>
     _max?: NestedDateTimeFilter<$PrismaModel>
+  }
+
+  export type NestedFloatWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel>
+    in?: number[]
+    notIn?: number[]
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatWithAggregatesFilter<$PrismaModel> | number
+    _count?: NestedIntFilter<$PrismaModel>
+    _avg?: NestedFloatFilter<$PrismaModel>
+    _sum?: NestedFloatFilter<$PrismaModel>
+    _min?: NestedFloatFilter<$PrismaModel>
+    _max?: NestedFloatFilter<$PrismaModel>
   }
 
 

@@ -142,6 +142,19 @@ exports.Prisma.EventScalarFieldEnum = {
   updatedAt: 'updatedAt'
 };
 
+exports.Prisma.TourScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  date: 'date',
+  location: 'location',
+  image: 'image',
+  description: 'description',
+  link: 'link',
+  prices: 'prices',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -167,10 +180,19 @@ exports.Prisma.EventOrderByRelevanceFieldEnum = {
   link: 'link'
 };
 
+exports.Prisma.TourOrderByRelevanceFieldEnum = {
+  name: 'name',
+  location: 'location',
+  image: 'image',
+  description: 'description',
+  link: 'link'
+};
+
 
 exports.Prisma.ModelName = {
   Culture: 'Culture',
-  Event: 'Event'
+  Event: 'Event',
+  Tour: 'Tour'
 };
 
 /**
