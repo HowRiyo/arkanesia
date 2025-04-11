@@ -70,9 +70,9 @@ export default function Home() {
             </section>
 
             {/* BUTTON HOVER SECTION */}
-            <section className="flex justify-center mt-10">
-                <div className="w-full max-w-3xl bg-blue-100 rounded-3xl px-8 py-6 shadow-inner">
-                    <div className="flex justify-center space-x-12">
+            <section className="flex justify-around mt-10">
+                <div className="w-6xl bg-blue-100 rounded-3xl px-8 py-6 shadow-inner">
+                    <div className="flex justify-around space-x-12">
                         <button
                             className="px-6 py-3 bg-white border rounded-lg shadow-md text-base hover-glow"
                             style={{ "--glow-color": "rgba(59,130,246,0.35)" }}
@@ -119,7 +119,7 @@ export default function Home() {
                                         <Image src="/image/bg.jpg" fill objectFit="cover" alt="Big Most Picked"/>
                                     </div>
                                     <span className="absolute top-2 left-2 bg-blue-600 text-white px-3 py-1 rounded">Rp 200.000</span>
-                                    <div className="absolute bottom-2 left-2 text-white">
+                                    <div className="absolute w-full bottom-0 pb-2 pl-4 text-white mostPicked-card">
                                         <h4 className="font-bold">Nama Wisata</h4>
                                         <p className="text-sm">Lokasi tempat wisata</p>
                                     </div>
