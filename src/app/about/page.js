@@ -13,11 +13,7 @@ export default function AboutPage() {
         <div className="flex justify-between flex-col md:flex-row gap-20">
           <div className="relative w-full md:w-1/2 h-100">
             <Image
-<<<<<<< HEAD
-              src="/assets/images/bg.jpg"
-=======
               src="/assets/images/arkanesia-bg2.png"
->>>>>>> aa69860494dead883b714157e91ba40bd5d183cd
               alt="ArkaNesia"
               fill
               objectFit="cover"

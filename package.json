@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@prisma/extension-accelerate": "^1.3.0",
+    "axios": "^1.8.4",
     "gsap": "^3.12.7",
     "next": "15.2.4",
     "react": "^19.0.0",
