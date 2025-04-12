@@ -27,7 +27,7 @@ export default function EventPage() {
       ScrollTrigger.refresh();
     }, containerRef);
 
-    return () => ctx.revert(); // Clean up saat unmount
+    return () => ctx.revert();
   }, []);
 
   const dummyEvents = Array.from({ length: 6 }).map((_, i) => ({
@@ -39,79 +39,84 @@ export default function EventPage() {
   }));
 
   return (
-    <main ref={containerRef} className="bg-white text-gray-800 min-h-screen">
-      <section className="max-w-7xl mx-auto px-6 py-20">
-        <div className="text-center mb-14">
-          <h2 className="text-3xl font-bold text-blue-900">Event Budaya</h2>
-          <p className="text-gray-500 mt-2">
+    <main ref={containerRef} className="text-[var(--dark-col)] py-15 px-30">
+      
+      <section className="text-center mb-15">
+          <h2 className="text-3xl font-bold text-[var(--main-col)]">Event Budaya</h2>
+          <p className="text-[var(--gray-col)] mt-2">
             Jelajahi beragam event budaya menarik dari seluruh Indonesia.
           </p>
-        </div>
+      </section>
+      
+      <section className="mx-auto mb-30">
+        <h3 className="text-3xl font-bold text-[var(--dark-col)] mb-10">Event Terbaru</h3>
 
-        <h3 className="text-2xl font-bold text-gray-800 mb-6">Event Terbaru</h3>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-10">
-          {dummyEvents.map((event) => (
-            <div
-              key={event.id}
-              className="event-card bg-white border rounded-xl overflow-hidden shadow-md"
-            >
-              <Image
-                src={event.image}
-                alt={event.title}
-                width={500}
-                height={300}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-5">
-                <h3 className="text-lg font-bold text-blue-800">
-                  {event.title}
-                </h3>
-                <p className="text-sm text-gray-500 mt-1">
-                  {event.location} - {event.date}
-                </p>
-                <Link
-                  href="#"
-                  className="inline-block mt-4 bg-blue-600 text-white px-4 py-2 text-sm rounded-lg hover:bg-blue-700 transition"
-                >
-                  Lihat Detail
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <h3 className="text-2xl font-bold text-gray-800 mb-6">
-          Rekomendasi Wisata
-        </h3>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-15">
           {dummyEvents.map((event) => (
             <div
               key={`wisata-${event.id}`}
-              className="event-card bg-white border rounded-xl overflow-hidden shadow-md"
+              className="event-card relative border-[var(--border-col)] border rounded-2xl overflow-hidden shadow-md h-90"
             >
-              <Image
-                src={event.image}
-                alt={event.title}
-                width={500}
-                height={300}
-                className="w-full h-48 object-cover"
-              />
+              <div className="relative h-[55%] w-[101%]">
+                <Image
+                  src={event.image}
+                  alt={event.title}
+                  fill
+                  objectFit="cover"
+                />
+              </div>
               <div className="p-5">
-                <h3 className="text-lg font-bold text-blue-800">
+                <h3 className="font-bold text-xl text-[var(--main-col)]">
                   {event.title}
                 </h3>
-                <p className="text-sm text-gray-500 mt-1">
+                <p className="text-sm text-[var(--gray-col)] mt-1">
                   {event.location} - {event.date}
                 </p>
-                <Link
-                  href="#"
-                  className="inline-block mt-4 bg-blue-600 text-white px-4 py-2 text-sm rounded-lg hover:bg-blue-700 transition"
-                >
-                  Lihat Detail
-                </Link>
               </div>
+              <Link
+                href="#"
+                className="inline-block absolute bottom-6 right-6 bg-[var(--main-col)] text-[var(--light-col)] px-4 py-2 text-sm font-semibold rounded-2xl hover:bg-[var(--main-col)] transition"
+              >
+                Lihat Detail
+              </Link>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section>
+        <h3 className="text-3xl font-bold text-[var(--dark-col)] mb-10">
+          Rekomendasi Wisata
+        </h3>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-15">
+          {dummyEvents.map((event) => (
+            <div
+              key={`wisata-${event.id}`}
+              className="event-card relative border-[var(--border-col)] border rounded-2xl overflow-hidden shadow-md h-90"
+            >
+              <div className="relative h-[55%] w-[101%]">
+                <Image
+                  src={event.image}
+                  alt={event.title}
+                  fill
+                  objectFit="cover"
+                />
+              </div>
+              <div className="p-5">
+                <h3 className="font-bold text-xl text-[var(--main-col)]">
+                  {event.title}
+                </h3>
+                <p className="text-sm text-[var(--gray-col)] mt-1">
+                  {event.location} - {event.date}
+                </p>
+              </div>
+              <Link
+                href="#"
+                className="inline-block absolute bottom-6 right-6 bg-[var(--main-col)] text-[var(--light-col)] px-4 py-2 text-sm font-semibold rounded-2xl hover:bg-[var(--main-col)] transition"
+              >
+                Lihat Detail
+              </Link>
             </div>
           ))}
         </div>

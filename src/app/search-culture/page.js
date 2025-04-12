@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useEffect, useRef } from "react";
 
 export default function SearchPage() {
@@ -27,20 +28,20 @@ export default function SearchPage() {
   };
 
   return (
-    <main className="text-gray-800 font-sans fade-in">
-      <section className="text-center py-20 relative">
-        <h2 className="text-4xl font-bold text-blue-700 leading-tight mb-4">
+    <main className="px-30 text-[var(--dark-col)] font-sans fade-in grid place-items-center h-dvh">
+      <section className="text-center relative">
+        <h2 className="text-4xl font-bold text-[var(--main-col)] leading-tight mb-4">
           Mulai Percakapan Budaya dengan AI
         </h2>
-        <p className="text-lg text-gray-600 mb-6">
+        <p className="text-lg text-[var(--gray-col)] mb-6">
           Tanyakan budaya, tradisi, atau legenda Indonesia
         </p>
-        <div className="mx-auto flex items-center w-full max-w-xl bg-white rounded-full px-6 py-3 shadow-xl">
-          <i className="fa-solid fa-comment-dots text-blue-400"></i>
+        <div className="mx-auto flex items-center w-full max-w-xl bg-[var(--light-col)] rounded-full px-6 py-3 shadow-xl">
+          <i className="fa-solid fa-comment-dots text-[var(--accent-col)]"></i>
           <input
             type="text"
             placeholder="Tanyakan tentang budaya..."
-            className="ml-3 w-full bg-transparent outline-none text-sm"
+            className="ml-3 w-full bg-transparent outline-none text-lg px-2 py-1"
             id="userInput"
             ref={inputRef}
             onKeyDown={handleKeyDown}
@@ -48,12 +49,22 @@ export default function SearchPage() {
         </div>
       </section>
 
-      <section className="max-w-3xl mx-auto px-4 mb-24">
+      <section>
         <div
           id="chatBox"
           ref={chatBoxRef}
           className="flex flex-col space-y-2 mt-10"
         ></div>
+      </section>
+
+      <section>
+        <div className="font-extrabold text-2xl text-[var(--main-col)] text-center">Telusuri Kategori Melalui</div>
+        <div className="flex gap-10 mt-5">
+          <Link className="bg-[var(--shadow-col)] px-8 py-2 rounded-4xl text-[var(--light-col)] font-semibold" href="#">Kategori 1</Link>
+          <Link className="bg-[var(--shadow-col)] px-8 py-2 rounded-4xl text-[var(--light-col)] font-semibold" href="#">Kategori 2</Link>
+          <Link className="bg-[var(--shadow-col)] px-8 py-2 rounded-4xl text-[var(--light-col)] font-semibold" href="#">Kategori 3</Link>
+          <Link className="bg-[var(--shadow-col)] px-8 py-2 rounded-4xl text-[var(--light-col)] font-semibold" href="#">Kategori 4</Link>
+        </div>
       </section>
 
       <style jsx>{`

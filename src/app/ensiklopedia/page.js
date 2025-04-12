@@ -1,8 +1,10 @@
 "use client";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import Link from "next/link";
+import Image from "next/image";
 
-export default function EnsiklopediaPage() {
+export default function EncyclopediaPage() {
   const wrapperRef = useRef(null);
 
   useEffect(() => {
@@ -16,38 +18,45 @@ export default function EnsiklopediaPage() {
       });
     }, wrapperRef);
 
-    return () => ctx.revert(); // clean up animasi saat unmount
+    return () => ctx.revert();
   }, []);
 
   return (
     <main
       ref={wrapperRef}
-      className="max-w-4xl mx-auto py-10 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      className="px-30 py-15 mx-auto"
     >
-      <h2 className="text-3xl font-bold text-center text-blue-900 fade-in">
-        Event Budaya
+      <h2 className="text-3xl font-extrabold text-center text-[var(--main-col)] fade-in mb-5">
+        Ensiklopedia
       </h2>
       <br />
       <div className="space-y-6">
         {[...Array(8)].map((_, i) => (
-          <a href="/ensiklopedia" key={i} className="fade-in">
-            <div className="bg-white p-4 shadow-md rounded-lg flex flex-col sm:flex-row items-start gap-4">
+          <Link href="/ensiklopedia" key={i} className="fade-in">
+            <div className="my-5 p-4 shadow-md rounded-lg flex justify-center flex-col sm:flex-row items-start gap-6">
               <div
-                className="w-16 h-16 min-w-[64px] bg-gray-200 rounded-md bg-cover bg-center"
-                style={{
-                  backgroundImage: "url('/assets/images/bg-after.png')",
-                }}
-              ></div>
-              <div>
-                <h3 className="font-bold text-gray-800">
+                className="relative w-25 h-25 min-w-[64px] bg-[var(--light-col)] bg-cover bg-center">
+                  <Image
+                    src={"/assets/images/bg.jpg"}
+                    alt="title"
+                    fill
+                    objectFit="cover"
+                    className="rounded-md"
+                  />
+                </div>
+              <div className="w-[90%]">
+                <h3 className="font-bold text-xl text-[var(--dark-col)]">
                   Judul ensiklopedia (tahun)
                 </h3>
-                <p className="text-gray-600 text-sm">
+                <p className="text-[var(--gray-col)] text-sm">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit...
                 </p>
               </div>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
     </main>
