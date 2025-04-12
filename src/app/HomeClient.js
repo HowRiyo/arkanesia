@@ -2,8 +2,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import MostPickedSection from "@/components/MostPickedEvent";
+import { useEffect, useState } from "react";
 
 export default function HomeClient({ events, tours }) {
+  const [shuffledTours, setShuffledTours] = useState([]);
+
+  useEffect(() => {
+    const shuffled = [...tours].sort(() => 0.5 - Math.random()).slice(0, 10);
+    setShuffledTours(shuffled);
+  }, [tours]);
   const handleMove = (e) => {
     const btn = e.currentTarget;
     const rect = btn.getBoundingClientRect();
@@ -148,7 +155,7 @@ export default function HomeClient({ events, tours }) {
         </h3>
 
         <div className="grid grid-cols-4 gap-y-12 gap-x-6 mt-4">
-          {tours.map((tour, i) => (
+          {shuffledTours.map((tour, i) => (
             <Link key={i} href="#">
               <div className="relative">
                 <div className="hover-popular">
