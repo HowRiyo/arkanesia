@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import Image from "next/image";
 import Link from "next/link";
@@ -216,3 +217,13 @@ export default function HomePage() {
         </main>
     );
 }
+=======
+import prisma from "@/lib/prisma";
+import HomeClient from "./HomeClient";
+
+export default async function Home() {
+    const events = await prisma.event.findMany();
+    const tours = await prisma.tour.findMany();
+    return <HomeClient events={events} tours={tours} />;
+}
+>>>>>>> 7c31fd6f55e2288c5d592952865c81b12bcf0224
