@@ -82,7 +82,7 @@ export default function EventClient({ events, tours }) {
               key={`wisata-${tour.id}`}
               className="event-card bg-white border rounded-xl overflow-hidden shadow-md"
             >
-              <img src={tour.image} alt={tour.title} />
+              <img src={tour.image} alt={tour.title} className="w-full h-56"/>
               <div className="p-5">
                 <h3 className="text-lg font-bold text-blue-800">
                   {tour.name}

@@ -47,9 +47,9 @@ model Tour {
   name      String  
   date      DateTime
   location  String
-  image     String?
+  image     String? @db.Text
   description String @db.Text
-  link      String?
+  link      String? @db.Text
   prices    Float
   district  String?
   province  String?

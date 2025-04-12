@@ -1,6 +1,6 @@
-'use client'
+"use client";
 
-import Image from "next/image"
+import Image from "next/image";
 
 export default function MostPickedSection({ tours }) {
   return (
@@ -17,7 +17,9 @@ export default function MostPickedSection({ tours }) {
                 className="w-full h-full object-cover"
               />
               <div className="absolute top-3 left-3 bg-blue-600 text-white px-3 py-1 rounded text-sm">
-                Rp {tours[0].prices}
+                {tours[0].prices && tours[0].prices > 0
+                  ? `Rp ${tours[0].prices}`
+                  : "Free Entry"}
               </div>
             </div>
           )}
@@ -26,7 +28,10 @@ export default function MostPickedSection({ tours }) {
         {/* Kartu kecil di kanan */}
         <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {tours.slice(1, 6).map((tour) => (
-            <div key={tour.id} className="relative rounded-xl overflow-hidden shadow-md">
+            <div
+              key={tour.id}
+              className="relative rounded-xl overflow-hidden shadow-md"
+            >
               <img
                 src={tour.image}
                 alt={tour.name}
@@ -44,5 +49,5 @@ export default function MostPickedSection({ tours }) {
         </div>
       </div>
     </section>
-  )
+  );
 }
