@@ -20,9 +20,9 @@ model Culture {
   year      Int
   location  String
   image     String?
+  langtitude Float?
+  longitude Float?
   description String
-  district  String
-  province  String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
@@ -49,10 +49,6 @@ model Tour {
   description String
   link      String?
   prices    Float
-  district  String
-  province  String
-  latitude  Float
-  longitude Float
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
