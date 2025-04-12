@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
@@ -61,4 +62,12 @@ export default function EncyclopediaPage() {
       </div>
     </main>
   );
+=======
+import prisma from "@/lib/prisma";
+import EnsiklopediaClient from "./EnsiklopediaClient";
+
+export default async function EnsiklopediaPage() {
+  const cultures = await prisma.culture.findMany();
+  return <EnsiklopediaClient cultures={cultures} />;
+>>>>>>> 7c31fd6f55e2288c5d592952865c81b12bcf0224
 }
