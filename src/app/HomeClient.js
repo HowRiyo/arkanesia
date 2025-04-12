@@ -99,7 +99,7 @@ export default function HomeClient({ events, tours }) {
 
         <div className="relative w-[40%] h-80">
           <Image
-            src="/image/bg.jpg"
+            src="/assets/images/bg.jpg"
             alt="Hero Image"
             fill
             className="object-cover rounded-3xl rounded-tl-[80px] shadow-md"
