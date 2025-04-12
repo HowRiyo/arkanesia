@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 export default function AboutPage() {
   return (
@@ -14,7 +13,7 @@ export default function AboutPage() {
         <div className="flex flex-col md:flex-row items-start md:items-center gap-10">
           <div className="w-full md:w-1/2">
             <Image
-              src="/assets/images/about-img.png"
+              src="/assets/images/arkanesia-bg2.png"
               alt="ArkaNesia"
               width={600}
               height={400}
