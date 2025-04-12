@@ -147,7 +147,7 @@ export default function HomeClient({ events, tours }) {
                 <div className="hover-popular">
                   <img
                     src={tour.image}
-                    objectFit="cover"
+                    objectfit="cover"
                     width={200}
                     height={100}
                     alt="Popular Choice"
