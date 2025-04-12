@@ -26,7 +26,7 @@ export default function EnsiklopediaClient({ cultures }) {
       className="max-w-4xl mx-auto py-10 px-4 sm:px-6 lg:px-8 overflow-hidden"
     >
       <h2 className="text-3xl font-bold text-center text-blue-900 fade-in">
-        Event Budaya
+        Ensiklopedia
       </h2>
       <br />
       <div className="space-y-6 flex flex-col">
