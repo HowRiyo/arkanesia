@@ -199,3 +199,6 @@ export async function tour() {
     }
 }
 
+culture()
+event()
+tour()
