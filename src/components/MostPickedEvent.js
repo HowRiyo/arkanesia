@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export default function MostPickedSection({ tours }) {
   return (
-    <section className="my-10">
+    <>
       <h2 className="text-2xl font-semibold mb-6">Most Picked</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Kartu besar di kiri */}
@@ -16,7 +16,7 @@ export default function MostPickedSection({ tours }) {
                 alt={tours[0].name}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute top-3 left-3 bg-blue-600 text-white px-3 py-1 rounded text-sm">
+              <div className="absolute top-0 right-0 bg-[var(--main-col)] text-[var(--light-col)] px-8 py-2 rounded-bl-2xl font-semibold">
                 Rp {tours[0].prices}
               </div>
             </div>
@@ -32,10 +32,10 @@ export default function MostPickedSection({ tours }) {
                 alt={tour.name}
                 className="w-full h-40 object-cover"
               />
-              <div className="absolute top-2 left-2 bg-blue-600 text-white px-3 py-1 rounded text-sm">
+              <div className="absolute top-0 right-0 bg-[var(--main-col)] text-[var(--light-col)] text-sm px-4 py-1 rounded-bl-2xl font-semibold">
                 Rp {tour.prices}
               </div>
-              <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent p-3 text-white">
+              <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-[var(--dark-col)] to-transparent p-3 text-[var(--light-col)]">
                 <p className="font-bold">{tour.name}</p>
                 <p className="text-sm">{tour.location}</p>
               </div>
@@ -43,6 +43,8 @@ export default function MostPickedSection({ tours }) {
           ))}
         </div>
       </div>
-    </section>
+    </>
+
+    
   )
 }

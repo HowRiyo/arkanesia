@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function EnsiklopediaClient({ cultures }) {
   const wrapperRef = useRef(null);
@@ -21,36 +22,39 @@ export default function EnsiklopediaClient({ cultures }) {
   }, []);
 
   return (
-    <main
-      ref={wrapperRef}
-      className="max-w-4xl mx-auto py-10 px-4 sm:px-6 lg:px-8 overflow-hidden"
-    >
-      <h2 className="text-3xl font-bold text-center text-blue-900 fade-in">
-        Event Budaya
-      </h2>
-      <br />
-      <div className="space-y-6 flex flex-col">
+      <main
+        ref={wrapperRef}
+        className="px-30 py-15 mx-auto"
+      >
+        <h2 className="text-3xl font-extrabold text-center text-[var(--main-col)] fade-in mb-5">
+          Ensiklopedia
+        </h2>
+        <br />
+        <div className="space-y-6">
         {cultures.map((culture, i) => (
           <Link
             href={`/ensiklopedia/${culture.id}`}
             key={i}
             className="fade-in"
           >
-            <div className="bg-white p-4 shadow-md rounded-lg flex flex-col sm:flex-row items-start gap-4">
-              <div
-                className="w-16 h-16 min-w-[64px] bg-gray-200 rounded-md bg-cover bg-center"
-                style={{ backgroundImage: `url(${culture.image})` }}
-              ></div>
+            <div className="p-4 my-10 shadow-[0_5px_10px_var(--shadow-col)] rounded-lg flex flex-col sm:flex-row items-start gap-10">
+              <img
+                src={culture.image}
+                alt={culture.title}
+                width={200}
+                height={200}
+                className="rounded-md"
+              />
               <div>
-                <h3 className="font-bold text-gray-800">
+                <h3 className="font-bold text-[var(--dark-col)] text-xl">
                   {culture.title} ({culture.year})
                 </h3>
-                <p className="text-gray-600 text-sm">{culture.description}</p>
+                <p className="text-[var(--gray-col)] text-sm">{culture.description}</p>
               </div>
             </div>
           </Link>
         ))}
-      </div>
-    </main>
+        </div>
+      </main>
   );
 }
