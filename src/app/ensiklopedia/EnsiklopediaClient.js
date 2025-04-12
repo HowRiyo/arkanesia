@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import Link from "next/link";
 
 export default function EnsiklopediaClient({ cultures }) {
   const wrapperRef = useRef(null);
@@ -30,24 +31,24 @@ export default function EnsiklopediaClient({ cultures }) {
       <br />
       <div className="space-y-6 flex flex-col">
         {cultures.map((culture, i) => (
-          <a href="/ensiklopedia" key={i} className="fade-in">
+          <Link
+            href={`/ensiklopedia/${culture.id}`}
+            key={i}
+            className="fade-in"
+          >
             <div className="bg-white p-4 shadow-md rounded-lg flex flex-col sm:flex-row items-start gap-4">
               <div
                 className="w-16 h-16 min-w-[64px] bg-gray-200 rounded-md bg-cover bg-center"
-                style={{
-                  backgroundImage: `url(${culture.image})`,
-                }}
+                style={{ backgroundImage: `url(${culture.image})` }}
               ></div>
               <div>
                 <h3 className="font-bold text-gray-800">
-                  {culture.title}({culture.year})
+                  {culture.title} ({culture.year})
                 </h3>
-                <p className="text-gray-600 text-sm">
-                  {culture.description}
-                </p>
+                <p className="text-gray-600 text-sm">{culture.description}</p>
               </div>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
     </main>
