@@ -156,7 +156,7 @@ export default function HomeClient({ events, tours }) {
 
         <div className="grid grid-cols-4 gap-y-12 gap-x-6 mt-4">
           {shuffledTours.map((tour, i) => (
-            <Link key={i} href="#">
+            <Link key={i} href={`/tour/${tour.id}`}>
               <div className="relative">
                 <div className="hover-popular">
                   <img
