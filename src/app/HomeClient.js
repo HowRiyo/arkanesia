@@ -148,30 +148,24 @@ export default function HomeClient({ events, tours }) {
         </h3>
 
         <div className="grid grid-cols-4 gap-y-12 gap-x-6 mt-4">
-          {[...Array(8)].map((_, i) => (
+          {tours.map((tour, i) => (
             <Link key={i} href="#">
               <div className="relative">
                 <div className="hover-popular">
-                  <Image
-                    src="/image/bg.jpg"
-                    objectFit="cover"
+                  <img
+                    src={tour.image}
+                    objectfit="cover"
                     width={200}
                     height={100}
                     alt="Popular Choice"
-                    className="rounded-lg w-full h-32 object-cover shadow-md"
+                    className="rounded-xl w-full h-32 object-cover shadow-md"
                   />
-
-                  {(i === 0 || i === 7) && (
-                    <span className="absolute top-0 right-0 bg-[var(--main-col)] text-[var(--light-col)] px-4 py-1 rounded-bl-xl font-semibold">
-                      Popular Choice
-                    </span>
-                  )}
+                  <span className="absolute top-0 left-0 bg-blue-600 text-white px-4 py-1 rounded-br-lg">
+                    Popular Choice
+                  </span>
                 </div>
-
-                <p className="mt-2 font-semibold">Nama Wisata</p>
-                <p className="text-[var(--gray-col)] text-sm">
-                  Lokasi tempat wisata
-                </p>
+                <p className="mt-2 font-semibold">{tour.name}</p>
+                <p className="text-gray-500">{tour.location}</p>
               </div>
             </Link>
           ))}
