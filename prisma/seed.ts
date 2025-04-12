@@ -175,13 +175,36 @@ const tours: Prisma.TourCreateInput[] = [
     }
 ]
 
+export async function main() {
+    console.log("🌱 Seeding started...");
+  
+    await culture();
+    await event();
+    await tour();
+  
+    console.log("✅ Seeding selesai.");
+  }
+  
+main()
+.catch((e) => {
+    console.error("❌ Error saat seeding:", e);
+    process.exit(1);
+})
+.finally(async () => {
+    await prisma.$disconnect();
+});
+  
+
 export async function culture() {
     for (const culture of cultures) {
-        await prisma.culture.create({
-            data: culture,
+        await prisma.culture.upsert({
+            where: { title: culture.title },
+            update: {},
+            create: culture,
         });
     }
 }
+
 
 export async function event() {
     for (const event of events) {

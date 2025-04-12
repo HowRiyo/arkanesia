@@ -1,7 +1,7 @@
 import prisma from "@/lib/prisma";
 import EventClient from "./EventClient";
 
-<<<<<<< HEAD
+
 // Register plugin GSAP
 gsap.registerPlugin(ScrollTrigger);
 
@@ -121,10 +121,10 @@ export default function EventPage() {
     </main>
   );
 }
-=======
+
 export default async function EventPage() {
   const events = await prisma.event.findMany();
   const tours = await prisma.tour.findMany();
   return <EventClient events={events} tours={tours} />;
 }
->>>>>>> 7c31fd6f55e2288c5d592952865c81b12bcf0224
+
