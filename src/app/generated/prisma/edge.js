@@ -177,7 +177,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "D:\\A Private\\Bootcamp Dicoding\\Capstone\\arkanesia\\src\\app\\generated\\prisma",
+      "value": "/home/riyo/Desktop/Web/arkanesia/src/app/generated/prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -186,12 +186,12 @@ const config = {
     "binaryTargets": [
       {
         "fromEnvVar": null,
-        "value": "windows",
+        "value": "debian-openssl-3.0.x",
         "native": true
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "D:\\A Private\\Bootcamp Dicoding\\Capstone\\arkanesia\\prisma\\schema.prisma",
+    "sourceFilePath": "/home/riyo/Desktop/Web/arkanesia/prisma/schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
@@ -205,12 +205,11 @@ const config = {
     "db"
   ],
   "activeProvider": "mysql",
-  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
         "fromEnvVar": "DATABASE_URL",
-        "value": null
+        "value": "mysql://root:root@localhost:3306/arkanesia"
       }
     }
   },

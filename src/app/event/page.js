@@ -6,3 +6,4 @@ export default async function EventPage() {
   const tours = await prisma.tour.findMany();
   return <EventClient events={events} tours={tours} />;
 }
+
