@@ -79,7 +79,7 @@ export default function EventClient({ events, tours }) {
         <div id="rekomendasi-wisata" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {tours.map((tour) => (
             <div
-              key={`wisata-${tour.id}`}
+              key={tour.id}
               className="event-card bg-white border rounded-xl overflow-hidden shadow-md"
             >
               <img src={tour.image} alt={tour.title} className="w-full h-56"/>
@@ -96,7 +96,7 @@ export default function EventClient({ events, tours }) {
                   })}
                 </p>
                 <Link
-                  href="#"
+                  href={`/tour/${tour.id}?from=/event`}
                   className="inline-block mt-4 bg-blue-600 text-white px-4 py-2 text-sm rounded-lg hover:bg-blue-700 transition"
                 >
                   Lihat Detail

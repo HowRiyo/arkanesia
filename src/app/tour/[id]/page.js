@@ -1,7 +1,8 @@
 import prisma from "@/lib/prisma";
 import Link from "next/link";
 
-export default async function TourDetailPage({ params }) {
+export default async function TourDetailPage({ params, searchParams }) {
+  const backHref = searchParams?.from || "/";
   const { id } = params;
 
   const tour = await prisma.tour.findUnique({
@@ -18,7 +19,7 @@ export default async function TourDetailPage({ params }) {
     <main className="max-w-4xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
       <div className="flex items-center justify-between mb-4">
         <Link
-          href="/ensiklopedia"
+          href={backHref}
           className="bg-blue-600 text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-700 transition"
         >
           Back
@@ -40,9 +41,10 @@ export default async function TourDetailPage({ params }) {
       />
       <div className="flex flex-col items-center">
         <p className="text-gray-700 leading-relaxed text-center">
-          Gambar ini menunjukkan ilustrasi terkait ensiklopedia yang sedang
-          dibahas. Visualisasi ini membantu memahami konteks lebih dalam dan
-          memperkaya informasi yang tersedia.
+          Gambar ini menunjukkan ilustrasi terkait tempat wisata{" "}
+          <i className="font-bold">{tour.name}</i> yang sedang dibahas.
+          Visualisasi ini membantu memahami konteks lebih dalam dan memperkaya
+          informasi yang tersedia.
         </p>
       </div>
 
