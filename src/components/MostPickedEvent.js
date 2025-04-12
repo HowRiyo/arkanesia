@@ -28,6 +28,10 @@ export default function MostPickedSection({ tours }) {
                 ? `Rp ${randomTours[0].prices}`
                 : "Free Entry"}
             </div>
+            <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent p-3 text-white">
+                <p className="font-bold">{randomTours[0].name}</p>
+                <p className="text-sm">{randomTours[0].location}</p>
+              </div>
           </div>
         </Link>
 
