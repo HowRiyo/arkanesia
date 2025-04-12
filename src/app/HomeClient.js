@@ -4,7 +4,7 @@ import Link from "next/link";
 import MostPickedSection from "@/components/MostPickedEvent";
 import { useEffect, useState } from "react";
 
-export default function HomeClient({ events, tours }) {
+export default function HomeClient({ cultures ,events, tours }) {
   const [shuffledTours, setShuffledTours] = useState([]);
 
   useEffect(() => {
@@ -39,7 +39,7 @@ export default function HomeClient({ events, tours }) {
           </div>
 
           <div className="mt-6 flex space-x-10 text-[var(--gray-col)]">
-            {/* EVENT */}
+            {/* Budaya */}
             <div className="flex items-center space-x-3">
               <svg
                 className="w-6 h-6 text-[var(--main-col)]"
@@ -55,12 +55,12 @@ export default function HomeClient({ events, tours }) {
                 />
               </svg>
               <span className="text-[var(--dark-col)] font-semibold text-base">
-                250
+                {cultures.length}
               </span>
-              <span className="text-sm">Event</span>
+              <span className="text-sm">Budaya</span>
             </div>
 
-            {/* GAMBAR */}
+            {/* Event */}
             <div className="flex items-center space-x-3">
               <svg
                 className="w-6 h-6 text-[var(--main-col)]"
@@ -76,9 +76,9 @@ export default function HomeClient({ events, tours }) {
                 />
               </svg>
               <span className="text-[var(--dark-col)] font-semibold text-base">
-                200
+                {events.length}
               </span>
-              <span className="text-sm">Gambar</span>
+              <span className="text-sm">Event</span>
             </div>
 
             {/* TEMPAT WISATA */}
@@ -97,7 +97,7 @@ export default function HomeClient({ events, tours }) {
                 />
               </svg>
               <span className="text-[var(--dark-col)] font-semibold text-base">
-                100
+                {tours.length}
               </span>
               <span className="text-sm">Tempat Wisata</span>
             </div>
