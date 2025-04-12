@@ -1,0 +1,46 @@
+.hover-glow {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-glow::before {
+    content: "";
+    position: absolute;
+    top: var(--y, 50%);
+    left: var(--x, 50%);
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, var(--glow-color, rgba(59,130,246,0.35)), transparent 40%);
+    opacity: 0;
+    transition: width 0.5s ease, height 0.5s ease, opacity 0.5s ease;
+    border-radius: 50%;
+    z-index: -1;    
+}
+
+.hover-glow:hover::before {
+    width: 400px;
+    height: 400px;
+    opacity: 1;
+}
+
+.hover-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.hover-popular {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-popular:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+.mostPicked-card {
+    box-shadow: inset 0 -25px 25px rgba(41, 41, 41, 0.75);
+}
