@@ -27,11 +27,7 @@ Kita menggunakan Prisma dan MySql sebagai database.
 # Instal Prisma
 
 ```bash
-npm install prisma --save-dev
-# and
-npm install tsx --save-dev
-# then
-npx prisma init --output ../src/app/generated/prisma
+npm install
 ```
 
 # Create Database

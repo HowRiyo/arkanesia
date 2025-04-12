@@ -29,14 +29,6 @@ export default function EventClient({ events, tours }) {
     return () => ctx.revert(); // Clean up saat unmount
   }, []);
 
-  const dummyEvents = Array.from({ length: 6 }).map((_, i) => ({
-    id: i,
-    title: "Festival Tari Tradisional",
-    location: "Yogyakarta",
-    date: "20 Mei 2025",
-    image: "/assets/images/bg-after.png",
-  }));
-
   return (
     <main ref={containerRef} className="bg-white text-gray-800 min-h-screen">
       <section className="max-w-7xl mx-auto px-6 py-20">
@@ -70,7 +62,7 @@ export default function EventClient({ events, tours }) {
                 </p>
 
                 <Link
-                  href="#"
+                  href={`/event/${event.id}`}
                   className="inline-block mt-4 bg-blue-600 text-white px-4 py-2 text-sm rounded-lg hover:bg-blue-700 transition"
                 >
                   Lihat Detail
