@@ -38,4 +38,5 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-next-env.d.ts
+next-env.d.tsaccess_token.txt
+access_token.txt

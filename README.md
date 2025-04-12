@@ -1,8 +1,11 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+#### Arkanesia
 
-## Getting Started
+Arkanesia merupakan sebuah projek untuk membantu anda mengenal banyak destinasi budaya! Informasi yang disajikan sangat lengkap dan rapi. Projek ini telah dientegrasikan dengan AI yang dapat membantu anda disini. 
 
-First, run the development server:
+
+### Getting Start
+
+First, activating the development server:
 
 ```bash
 npm run dev
@@ -14,23 +17,43 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Cara Seting Database
 
-## Learn More
+Kita menggunakan Prisma dan MySql sebagai database.
 
-To learn more about Next.js, take a look at the following resources:
+# Instal Prisma
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm install prisma --save-dev
+# and
+npm install tsx --save-dev
+# then
+npx prisma init --output ../src/app/generated/prisma
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Create Database
+Buat database di phpmyadmin dengan nama arkanesia
 
-## Deploy on Vercel
+Lalu atur file .env dengan format :
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+DATABASE_URL="mysql://username:password@localhost:3306/db_name"
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Migrate model Tabel 
+```bash
+npx prisma migrate dev --name init
+```
+
+# Seeding data Tabel
+```bash
+npx prisma db seed
+```
+
+# Cek database(Opsional)
+```bash
+npx prisma studio
+```
