@@ -5,7 +5,7 @@ export default function MostPickedSection({ tours }) {
   const [randomTours, setRandomTours] = useState([]);
 
   useEffect(() => {
-    const shuffled = [...tours].sort(() => 0.5 - Math.random()).slice(0, 6);
+    const shuffled = [...tours].sort(() => 0.5 - Math.random()).slice(0, 7);
     setRandomTours(shuffled);
   }, [tours]);
 
