@@ -2,7 +2,6 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import Link from "next/link";
-import Image from "next/image";
 
 export default function EnsiklopediaClient({ cultures }) {
   const wrapperRef = useRef(null);
@@ -28,40 +27,47 @@ export default function EnsiklopediaClient({ cultures }) {
   );
 
   return (
+    <main
+      ref={wrapperRef}
+      className="py-10 px-30 overflow-hidden"
+    >
+      <h2 className="text-4xl font-extrabold text-center text-[var(--main-col)] fade-in">
+        Ensiklopedia
+      </h2>
 
-      <main
-        ref={wrapperRef}
-        className="px-30 py-15 mx-auto"
-      >
-        <h2 className="text-3xl font-extrabold text-center text-[var(--main-col)] fade-in mb-5">
-          Ensiklopedia
-        </h2>
-        <br />
-        <div className="space-y-6">
-        {cultures.map((culture, i) => (
+      <div className="my-15 fade-in mx-auto w-1/2">
+        <input
+          type="text"
+          placeholder="Cari Budaya di Provinsi..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          className="w-full border-[var(--border-col)] border rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--accent-col)] transition"
+        />
+      </div>
+
+      <div className="space-y-6 flex flex-col gap-5">
+        {filteredCultures.map((culture, i) => (
           <Link
             href={`/ensiklopedia/${culture.id}`}
             key={i}
             className="fade-in"
           >
-            <div className="p-4 my-10 shadow-[0_5px_10px_var(--shadow-col)] rounded-lg flex flex-col sm:flex-row items-start gap-10">
-              <img
-                src={culture.image}
-                alt={culture.title}
-                width={200}
-                height={200}
-                className="rounded-md"
-              />
-              <div>
-                <h3 className="font-bold text-[var(--dark-col)] text-xl">
+            <div className="p-4 shadow-md rounded-lg flex flex-col sm:flex-row items-start gap-4">
+              <div
+                className="w-52 h-32 min-w-[64px] bg-[var(--light-col)] rounded-md bg-cover bg-center"
+                style={{ backgroundImage: `url(${culture.image})` }}
+              ></div>
+              <div className="flex-1">
+                <h3 className="font-bold text-[var(--dark-col)]">
                   {culture.title} ({culture.year})
                 </h3>
-                <p className="text-[var(--gray-col)] text-sm">{culture.description}</p>
+                <p className="text-[var(--gray-col)] text-sm line-clamp-4">
+                  {culture.description}
+                </p>
               </div>
             </div>
           </Link>
         ))}
-
 
         {filteredCultures.length === 0 && (
           <p className="text-center text-[var(--gray-col)]">
