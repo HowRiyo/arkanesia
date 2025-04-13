@@ -1,9 +1,13 @@
+export const runtime = "nodejs";
+
 import prisma from "@/lib/prisma";
 import Link from "next/link";
 
 export default async function TourDetailPage({ params, searchParams }) {
-  const backHref = searchParams?.from || "/";
-  const { id } = params;
+  const { id } = await params;
+
+  const { from } = await searchParams || {}; 
+  const backHref = from || "/";
 
   const tour = await prisma.tour.findUnique({
     where: {
