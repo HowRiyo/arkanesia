@@ -22,7 +22,9 @@ model Culture {
   image       String?
   langtitude  Float?
   longitude   Float?
-  description String
+  description String   @db.Text
+  district    String?
+  province    String?
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }
@@ -44,10 +46,14 @@ model Tour {
   name        String
   date        DateTime
   location    String
-  image       String?
-  description String
-  link        String?
+  image       String?  @db.Text
+  description String   @db.Text
+  link        String?  @db.Text
   prices      Float
+  district    String?
+  province    String?
+  latitude    Float?
+  longitude   Float?
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }

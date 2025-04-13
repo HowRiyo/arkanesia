@@ -126,6 +126,8 @@ exports.Prisma.CultureScalarFieldEnum = {
   langtitude: 'langtitude',
   longitude: 'longitude',
   description: 'description',
+  district: 'district',
+  province: 'province',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 };
@@ -151,6 +153,10 @@ exports.Prisma.TourScalarFieldEnum = {
   description: 'description',
   link: 'link',
   prices: 'prices',
+  district: 'district',
+  province: 'province',
+  latitude: 'latitude',
+  longitude: 'longitude',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 };
@@ -169,7 +175,9 @@ exports.Prisma.CultureOrderByRelevanceFieldEnum = {
   title: 'title',
   location: 'location',
   image: 'image',
-  description: 'description'
+  description: 'description',
+  district: 'district',
+  province: 'province'
 };
 
 exports.Prisma.EventOrderByRelevanceFieldEnum = {
@@ -185,7 +193,9 @@ exports.Prisma.TourOrderByRelevanceFieldEnum = {
   location: 'location',
   image: 'image',
   description: 'description',
-  link: 'link'
+  link: 'link',
+  district: 'district',
+  province: 'province'
 };
 
 

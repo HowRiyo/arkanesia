@@ -1062,6 +1062,8 @@ export namespace Prisma {
     langtitude: number | null
     longitude: number | null
     description: string | null
+    district: string | null
+    province: string | null
     createdAt: Date | null
     updatedAt: Date | null
   }
@@ -1075,6 +1077,8 @@ export namespace Prisma {
     langtitude: number | null
     longitude: number | null
     description: string | null
+    district: string | null
+    province: string | null
     createdAt: Date | null
     updatedAt: Date | null
   }
@@ -1088,6 +1092,8 @@ export namespace Prisma {
     langtitude: number
     longitude: number
     description: number
+    district: number
+    province: number
     createdAt: number
     updatedAt: number
     _all: number
@@ -1117,6 +1123,8 @@ export namespace Prisma {
     langtitude?: true
     longitude?: true
     description?: true
+    district?: true
+    province?: true
     createdAt?: true
     updatedAt?: true
   }
@@ -1130,6 +1138,8 @@ export namespace Prisma {
     langtitude?: true
     longitude?: true
     description?: true
+    district?: true
+    province?: true
     createdAt?: true
     updatedAt?: true
   }
@@ -1143,6 +1153,8 @@ export namespace Prisma {
     langtitude?: true
     longitude?: true
     description?: true
+    district?: true
+    province?: true
     createdAt?: true
     updatedAt?: true
     _all?: true
@@ -1243,6 +1255,8 @@ export namespace Prisma {
     langtitude: number | null
     longitude: number | null
     description: string
+    district: string | null
+    province: string | null
     createdAt: Date
     updatedAt: Date
     _count: CultureCountAggregateOutputType | null
@@ -1275,6 +1289,8 @@ export namespace Prisma {
     langtitude?: boolean
     longitude?: boolean
     description?: boolean
+    district?: boolean
+    province?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }, ExtArgs["result"]["culture"]>
@@ -1290,11 +1306,13 @@ export namespace Prisma {
     langtitude?: boolean
     longitude?: boolean
     description?: boolean
+    district?: boolean
+    province?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }
 
-  export type CultureOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "year" | "location" | "image" | "langtitude" | "longitude" | "description" | "createdAt" | "updatedAt", ExtArgs["result"]["culture"]>
+  export type CultureOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "year" | "location" | "image" | "langtitude" | "longitude" | "description" | "district" | "province" | "createdAt" | "updatedAt", ExtArgs["result"]["culture"]>
 
   export type $CulturePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Culture"
@@ -1308,6 +1326,8 @@ export namespace Prisma {
       langtitude: number | null
       longitude: number | null
       description: string
+      district: string | null
+      province: string | null
       createdAt: Date
       updatedAt: Date
     }, ExtArgs["result"]["culture"]>
@@ -1687,6 +1707,8 @@ export namespace Prisma {
     readonly langtitude: FieldRef<"Culture", 'Float'>
     readonly longitude: FieldRef<"Culture", 'Float'>
     readonly description: FieldRef<"Culture", 'String'>
+    readonly district: FieldRef<"Culture", 'String'>
+    readonly province: FieldRef<"Culture", 'String'>
     readonly createdAt: FieldRef<"Culture", 'DateTime'>
     readonly updatedAt: FieldRef<"Culture", 'DateTime'>
   }
@@ -2985,11 +3007,15 @@ export namespace Prisma {
   export type TourAvgAggregateOutputType = {
     id: number | null
     prices: number | null
+    latitude: number | null
+    longitude: number | null
   }
 
   export type TourSumAggregateOutputType = {
     id: number | null
     prices: number | null
+    latitude: number | null
+    longitude: number | null
   }
 
   export type TourMinAggregateOutputType = {
@@ -3001,6 +3027,10 @@ export namespace Prisma {
     description: string | null
     link: string | null
     prices: number | null
+    district: string | null
+    province: string | null
+    latitude: number | null
+    longitude: number | null
     createdAt: Date | null
     updatedAt: Date | null
   }
@@ -3014,6 +3044,10 @@ export namespace Prisma {
     description: string | null
     link: string | null
     prices: number | null
+    district: string | null
+    province: string | null
+    latitude: number | null
+    longitude: number | null
     createdAt: Date | null
     updatedAt: Date | null
   }
@@ -3027,6 +3061,10 @@ export namespace Prisma {
     description: number
     link: number
     prices: number
+    district: number
+    province: number
+    latitude: number
+    longitude: number
     createdAt: number
     updatedAt: number
     _all: number
@@ -3036,11 +3074,15 @@ export namespace Prisma {
   export type TourAvgAggregateInputType = {
     id?: true
     prices?: true
+    latitude?: true
+    longitude?: true
   }
 
   export type TourSumAggregateInputType = {
     id?: true
     prices?: true
+    latitude?: true
+    longitude?: true
   }
 
   export type TourMinAggregateInputType = {
@@ -3052,6 +3094,10 @@ export namespace Prisma {
     description?: true
     link?: true
     prices?: true
+    district?: true
+    province?: true
+    latitude?: true
+    longitude?: true
     createdAt?: true
     updatedAt?: true
   }
@@ -3065,6 +3111,10 @@ export namespace Prisma {
     description?: true
     link?: true
     prices?: true
+    district?: true
+    province?: true
+    latitude?: true
+    longitude?: true
     createdAt?: true
     updatedAt?: true
   }
@@ -3078,6 +3128,10 @@ export namespace Prisma {
     description?: true
     link?: true
     prices?: true
+    district?: true
+    province?: true
+    latitude?: true
+    longitude?: true
     createdAt?: true
     updatedAt?: true
     _all?: true
@@ -3178,6 +3232,10 @@ export namespace Prisma {
     description: string
     link: string | null
     prices: number
+    district: string | null
+    province: string | null
+    latitude: number | null
+    longitude: number | null
     createdAt: Date
     updatedAt: Date
     _count: TourCountAggregateOutputType | null
@@ -3210,6 +3268,10 @@ export namespace Prisma {
     description?: boolean
     link?: boolean
     prices?: boolean
+    district?: boolean
+    province?: boolean
+    latitude?: boolean
+    longitude?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }, ExtArgs["result"]["tour"]>
@@ -3225,11 +3287,15 @@ export namespace Prisma {
     description?: boolean
     link?: boolean
     prices?: boolean
+    district?: boolean
+    province?: boolean
+    latitude?: boolean
+    longitude?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }
 
-  export type TourOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "date" | "location" | "image" | "description" | "link" | "prices" | "createdAt" | "updatedAt", ExtArgs["result"]["tour"]>
+  export type TourOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "date" | "location" | "image" | "description" | "link" | "prices" | "district" | "province" | "latitude" | "longitude" | "createdAt" | "updatedAt", ExtArgs["result"]["tour"]>
 
   export type $TourPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Tour"
@@ -3243,6 +3309,10 @@ export namespace Prisma {
       description: string
       link: string | null
       prices: number
+      district: string | null
+      province: string | null
+      latitude: number | null
+      longitude: number | null
       createdAt: Date
       updatedAt: Date
     }, ExtArgs["result"]["tour"]>
@@ -3622,6 +3692,10 @@ export namespace Prisma {
     readonly description: FieldRef<"Tour", 'String'>
     readonly link: FieldRef<"Tour", 'String'>
     readonly prices: FieldRef<"Tour", 'Float'>
+    readonly district: FieldRef<"Tour", 'String'>
+    readonly province: FieldRef<"Tour", 'String'>
+    readonly latitude: FieldRef<"Tour", 'Float'>
+    readonly longitude: FieldRef<"Tour", 'Float'>
     readonly createdAt: FieldRef<"Tour", 'DateTime'>
     readonly updatedAt: FieldRef<"Tour", 'DateTime'>
   }
@@ -3968,6 +4042,8 @@ export namespace Prisma {
     langtitude: 'langtitude',
     longitude: 'longitude',
     description: 'description',
+    district: 'district',
+    province: 'province',
     createdAt: 'createdAt',
     updatedAt: 'updatedAt'
   };
@@ -3999,6 +4075,10 @@ export namespace Prisma {
     description: 'description',
     link: 'link',
     prices: 'prices',
+    district: 'district',
+    province: 'province',
+    latitude: 'latitude',
+    longitude: 'longitude',
     createdAt: 'createdAt',
     updatedAt: 'updatedAt'
   };
@@ -4026,7 +4106,9 @@ export namespace Prisma {
     title: 'title',
     location: 'location',
     image: 'image',
-    description: 'description'
+    description: 'description',
+    district: 'district',
+    province: 'province'
   };
 
   export type CultureOrderByRelevanceFieldEnum = (typeof CultureOrderByRelevanceFieldEnum)[keyof typeof CultureOrderByRelevanceFieldEnum]
@@ -4048,7 +4130,9 @@ export namespace Prisma {
     location: 'location',
     image: 'image',
     description: 'description',
-    link: 'link'
+    link: 'link',
+    district: 'district',
+    province: 'province'
   };
 
   export type TourOrderByRelevanceFieldEnum = (typeof TourOrderByRelevanceFieldEnum)[keyof typeof TourOrderByRelevanceFieldEnum]
@@ -4102,6 +4186,8 @@ export namespace Prisma {
     langtitude?: FloatNullableFilter<"Culture"> | number | null
     longitude?: FloatNullableFilter<"Culture"> | number | null
     description?: StringFilter<"Culture"> | string
+    district?: StringNullableFilter<"Culture"> | string | null
+    province?: StringNullableFilter<"Culture"> | string | null
     createdAt?: DateTimeFilter<"Culture"> | Date | string
     updatedAt?: DateTimeFilter<"Culture"> | Date | string
   }
@@ -4115,6 +4201,8 @@ export namespace Prisma {
     langtitude?: SortOrderInput | SortOrder
     longitude?: SortOrderInput | SortOrder
     description?: SortOrder
+    district?: SortOrderInput | SortOrder
+    province?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     _relevance?: CultureOrderByRelevanceInput
@@ -4132,6 +4220,8 @@ export namespace Prisma {
     langtitude?: FloatNullableFilter<"Culture"> | number | null
     longitude?: FloatNullableFilter<"Culture"> | number | null
     description?: StringFilter<"Culture"> | string
+    district?: StringNullableFilter<"Culture"> | string | null
+    province?: StringNullableFilter<"Culture"> | string | null
     createdAt?: DateTimeFilter<"Culture"> | Date | string
     updatedAt?: DateTimeFilter<"Culture"> | Date | string
   }, "id" | "title">
@@ -4145,6 +4235,8 @@ export namespace Prisma {
     langtitude?: SortOrderInput | SortOrder
     longitude?: SortOrderInput | SortOrder
     description?: SortOrder
+    district?: SortOrderInput | SortOrder
+    province?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     _count?: CultureCountOrderByAggregateInput
@@ -4166,6 +4258,8 @@ export namespace Prisma {
     langtitude?: FloatNullableWithAggregatesFilter<"Culture"> | number | null
     longitude?: FloatNullableWithAggregatesFilter<"Culture"> | number | null
     description?: StringWithAggregatesFilter<"Culture"> | string
+    district?: StringNullableWithAggregatesFilter<"Culture"> | string | null
+    province?: StringNullableWithAggregatesFilter<"Culture"> | string | null
     createdAt?: DateTimeWithAggregatesFilter<"Culture"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"Culture"> | Date | string
   }
@@ -4257,6 +4351,10 @@ export namespace Prisma {
     description?: StringFilter<"Tour"> | string
     link?: StringNullableFilter<"Tour"> | string | null
     prices?: FloatFilter<"Tour"> | number
+    district?: StringNullableFilter<"Tour"> | string | null
+    province?: StringNullableFilter<"Tour"> | string | null
+    latitude?: FloatNullableFilter<"Tour"> | number | null
+    longitude?: FloatNullableFilter<"Tour"> | number | null
     createdAt?: DateTimeFilter<"Tour"> | Date | string
     updatedAt?: DateTimeFilter<"Tour"> | Date | string
   }
@@ -4270,6 +4368,10 @@ export namespace Prisma {
     description?: SortOrder
     link?: SortOrderInput | SortOrder
     prices?: SortOrder
+    district?: SortOrderInput | SortOrder
+    province?: SortOrderInput | SortOrder
+    latitude?: SortOrderInput | SortOrder
+    longitude?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     _relevance?: TourOrderByRelevanceInput
@@ -4287,6 +4389,10 @@ export namespace Prisma {
     description?: StringFilter<"Tour"> | string
     link?: StringNullableFilter<"Tour"> | string | null
     prices?: FloatFilter<"Tour"> | number
+    district?: StringNullableFilter<"Tour"> | string | null
+    province?: StringNullableFilter<"Tour"> | string | null
+    latitude?: FloatNullableFilter<"Tour"> | number | null
+    longitude?: FloatNullableFilter<"Tour"> | number | null
     createdAt?: DateTimeFilter<"Tour"> | Date | string
     updatedAt?: DateTimeFilter<"Tour"> | Date | string
   }, "id">
@@ -4300,6 +4406,10 @@ export namespace Prisma {
     description?: SortOrder
     link?: SortOrderInput | SortOrder
     prices?: SortOrder
+    district?: SortOrderInput | SortOrder
+    province?: SortOrderInput | SortOrder
+    latitude?: SortOrderInput | SortOrder
+    longitude?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     _count?: TourCountOrderByAggregateInput
@@ -4321,6 +4431,10 @@ export namespace Prisma {
     description?: StringWithAggregatesFilter<"Tour"> | string
     link?: StringNullableWithAggregatesFilter<"Tour"> | string | null
     prices?: FloatWithAggregatesFilter<"Tour"> | number
+    district?: StringNullableWithAggregatesFilter<"Tour"> | string | null
+    province?: StringNullableWithAggregatesFilter<"Tour"> | string | null
+    latitude?: FloatNullableWithAggregatesFilter<"Tour"> | number | null
+    longitude?: FloatNullableWithAggregatesFilter<"Tour"> | number | null
     createdAt?: DateTimeWithAggregatesFilter<"Tour"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"Tour"> | Date | string
   }
@@ -4333,6 +4447,8 @@ export namespace Prisma {
     langtitude?: number | null
     longitude?: number | null
     description: string
+    district?: string | null
+    province?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -4346,6 +4462,8 @@ export namespace Prisma {
     langtitude?: number | null
     longitude?: number | null
     description: string
+    district?: string | null
+    province?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -4358,6 +4476,8 @@ export namespace Prisma {
     langtitude?: NullableFloatFieldUpdateOperationsInput | number | null
     longitude?: NullableFloatFieldUpdateOperationsInput | number | null
     description?: StringFieldUpdateOperationsInput | string
+    district?: NullableStringFieldUpdateOperationsInput | string | null
+    province?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -4371,6 +4491,8 @@ export namespace Prisma {
     langtitude?: NullableFloatFieldUpdateOperationsInput | number | null
     longitude?: NullableFloatFieldUpdateOperationsInput | number | null
     description?: StringFieldUpdateOperationsInput | string
+    district?: NullableStringFieldUpdateOperationsInput | string | null
+    province?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -4384,6 +4506,8 @@ export namespace Prisma {
     langtitude?: number | null
     longitude?: number | null
     description: string
+    district?: string | null
+    province?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -4396,6 +4520,8 @@ export namespace Prisma {
     langtitude?: NullableFloatFieldUpdateOperationsInput | number | null
     longitude?: NullableFloatFieldUpdateOperationsInput | number | null
     description?: StringFieldUpdateOperationsInput | string
+    district?: NullableStringFieldUpdateOperationsInput | string | null
+    province?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -4409,6 +4535,8 @@ export namespace Prisma {
     langtitude?: NullableFloatFieldUpdateOperationsInput | number | null
     longitude?: NullableFloatFieldUpdateOperationsInput | number | null
     description?: StringFieldUpdateOperationsInput | string
+    district?: NullableStringFieldUpdateOperationsInput | string | null
+    province?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -4502,6 +4630,10 @@ export namespace Prisma {
     description: string
     link?: string | null
     prices: number
+    district?: string | null
+    province?: string | null
+    latitude?: number | null
+    longitude?: number | null
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -4515,6 +4647,10 @@ export namespace Prisma {
     description: string
     link?: string | null
     prices: number
+    district?: string | null
+    province?: string | null
+    latitude?: number | null
+    longitude?: number | null
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -4527,6 +4663,10 @@ export namespace Prisma {
     description?: StringFieldUpdateOperationsInput | string
     link?: NullableStringFieldUpdateOperationsInput | string | null
     prices?: FloatFieldUpdateOperationsInput | number
+    district?: NullableStringFieldUpdateOperationsInput | string | null
+    province?: NullableStringFieldUpdateOperationsInput | string | null
+    latitude?: NullableFloatFieldUpdateOperationsInput | number | null
+    longitude?: NullableFloatFieldUpdateOperationsInput | number | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -4540,6 +4680,10 @@ export namespace Prisma {
     description?: StringFieldUpdateOperationsInput | string
     link?: NullableStringFieldUpdateOperationsInput | string | null
     prices?: FloatFieldUpdateOperationsInput | number
+    district?: NullableStringFieldUpdateOperationsInput | string | null
+    province?: NullableStringFieldUpdateOperationsInput | string | null
+    latitude?: NullableFloatFieldUpdateOperationsInput | number | null
+    longitude?: NullableFloatFieldUpdateOperationsInput | number | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -4553,6 +4697,10 @@ export namespace Prisma {
     description: string
     link?: string | null
     prices: number
+    district?: string | null
+    province?: string | null
+    latitude?: number | null
+    longitude?: number | null
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -4565,6 +4713,10 @@ export namespace Prisma {
     description?: StringFieldUpdateOperationsInput | string
     link?: NullableStringFieldUpdateOperationsInput | string | null
     prices?: FloatFieldUpdateOperationsInput | number
+    district?: NullableStringFieldUpdateOperationsInput | string | null
+    province?: NullableStringFieldUpdateOperationsInput | string | null
+    latitude?: NullableFloatFieldUpdateOperationsInput | number | null
+    longitude?: NullableFloatFieldUpdateOperationsInput | number | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -4578,6 +4730,10 @@ export namespace Prisma {
     description?: StringFieldUpdateOperationsInput | string
     link?: NullableStringFieldUpdateOperationsInput | string | null
     prices?: FloatFieldUpdateOperationsInput | number
+    district?: NullableStringFieldUpdateOperationsInput | string | null
+    province?: NullableStringFieldUpdateOperationsInput | string | null
+    latitude?: NullableFloatFieldUpdateOperationsInput | number | null
+    longitude?: NullableFloatFieldUpdateOperationsInput | number | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -4665,6 +4821,8 @@ export namespace Prisma {
     langtitude?: SortOrder
     longitude?: SortOrder
     description?: SortOrder
+    district?: SortOrder
+    province?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -4685,6 +4843,8 @@ export namespace Prisma {
     langtitude?: SortOrder
     longitude?: SortOrder
     description?: SortOrder
+    district?: SortOrder
+    province?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -4698,6 +4858,8 @@ export namespace Prisma {
     langtitude?: SortOrder
     longitude?: SortOrder
     description?: SortOrder
+    district?: SortOrder
+    province?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -4867,6 +5029,10 @@ export namespace Prisma {
     description?: SortOrder
     link?: SortOrder
     prices?: SortOrder
+    district?: SortOrder
+    province?: SortOrder
+    latitude?: SortOrder
+    longitude?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -4874,6 +5040,8 @@ export namespace Prisma {
   export type TourAvgOrderByAggregateInput = {
     id?: SortOrder
     prices?: SortOrder
+    latitude?: SortOrder
+    longitude?: SortOrder
   }
 
   export type TourMaxOrderByAggregateInput = {
@@ -4885,6 +5053,10 @@ export namespace Prisma {
     description?: SortOrder
     link?: SortOrder
     prices?: SortOrder
+    district?: SortOrder
+    province?: SortOrder
+    latitude?: SortOrder
+    longitude?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -4898,6 +5070,10 @@ export namespace Prisma {
     description?: SortOrder
     link?: SortOrder
     prices?: SortOrder
+    district?: SortOrder
+    province?: SortOrder
+    latitude?: SortOrder
+    longitude?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -4905,6 +5081,8 @@ export namespace Prisma {
   export type TourSumOrderByAggregateInput = {
     id?: SortOrder
     prices?: SortOrder
+    latitude?: SortOrder
+    longitude?: SortOrder
   }
 
   export type FloatWithAggregatesFilter<$PrismaModel = never> = {
