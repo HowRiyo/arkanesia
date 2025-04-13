@@ -25,15 +25,7 @@ export default async function TourDetailPage({ params, searchParams }) {
           Back
         </Link>
       </div>
-      <h2 className="text-3xl font-bold mb-4">
-        {tour.name} - (
-        {new Date(tour.date).toLocaleDateString("id-ID", {
-          day: "numeric",
-          month: "long",
-          year: "numeric",
-        })}
-        )
-      </h2>
+      <h2 className="text-3xl font-bold mb-4">{tour.name}</h2>
       <img
         src={tour.image}
         alt={tour.title}
@@ -54,6 +46,10 @@ export default async function TourDetailPage({ params, searchParams }) {
         </p>
       </div>
 
+      <div className="md:col-span-3">
+        <Link href={tour.link} className="text-[var(--main-col)]" target="_blank">Lihat Selengkapnya</Link>
+      </div>
+
       <div className="md:col-span-3 mt-20 border-t border-[var(--border-col)] px-8 py-6 shadow-xl">
         <h3 className="text-2xl font-bold mb-10">Informasi Lengkap</h3>
         <div className="mb-6 flex flex-col">
@@ -62,13 +58,35 @@ export default async function TourDetailPage({ params, searchParams }) {
             {tour.prices > 0 ? `Rp ${tour.prices}` : "Free Entry"}
           </p>
         </div>
-        <div className="mb-2 flex flex-col">
+        <div className="mb-6 flex flex-col">
           <h5 className="text-lg font-bold mb-2">Lokasi</h5>
           <p className="text-[var(--dark-col)] leading-relaxed text-justify mb-2">
-            {tour.location} / {tour.district} / {tour.province}
+            {tour.location}
           </p>
         </div>
-        <div className="mb-2 flex flex-col">
+        <div className="mb-6 flex flex-col">
+          <h5 className="text-lg font-bold mb-2">Kabupaten</h5>
+          <p className="text-[var(--dark-col)] leading-relaxed text-justify mb-2">
+            {tour.district}
+          </p>
+        </div>
+        <div className="mb-6 flex flex-col">
+          <h5 className="text-lg font-bold mb-2">Provinsi</h5>
+          <p className="text-[var(--dark-col)] leading-relaxed text-justify mb-2">
+            {tour.province}
+          </p>
+        </div>
+        <div className="mb-6 flex flex-col">
+          <h5 className="text-lg font-bold mb-2">Berdiri sejak</h5>
+          <p className="text-[var(--dark-col)] leading-relaxed text-justify mb-2">
+            {new Date(tour.date).toLocaleDateString("id-ID", {
+              day: "numeric",
+              month: "long",
+              year: "numeric",
+            })}
+          </p>
+        </div>
+        <div className="mb-6 flex flex-col">
           <h5 className="text-lg font-bold mb-2">Map</h5>
           {tour.latitude && tour.longitude ? (
             <iframe
@@ -81,7 +99,9 @@ export default async function TourDetailPage({ params, searchParams }) {
               src={`https://www.google.com/maps?q=${tour.latitude},${tour.longitude}&z=15&output=embed`}
             ></iframe>
           ) : (
-            <p className="text-[var(--dark-col)] italic">Koordinat tidak tersedia.</p>
+            <p className="text-[var(--dark-col)] italic">
+              Koordinat tidak tersedia.
+            </p>
           )}
         </div>
       </div>
