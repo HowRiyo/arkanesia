@@ -31,7 +31,7 @@ export default function EnsiklopediaClient({ cultures }) {
       ref={wrapperRef}
       className="mx-auto max-w-6xl py-20 overflow-hidden"
     >
-      <h2 className="text-4xl font-extrabold text-center text-[var(--main-col)] fade-in">
+      <h2 className="text-4xl font-bold text-center text-[var(--main-col)] fade-in">
         Ensiklopedia
       </h2>
 
