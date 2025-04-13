@@ -7,6 +7,11 @@ import Image from "next/image";
 export default function EnsiklopediaClient({ cultures }) {
   const wrapperRef = useRef(null);
 
+  const truncateText = (text, maxLength) => {
+    if (text.length <= maxLength) return text;
+    return text.substring(0, maxLength) + ".....";
+  };
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.from(".fade-in", {
@@ -22,15 +27,12 @@ export default function EnsiklopediaClient({ cultures }) {
   }, []);
 
   return (
-      <main
-        ref={wrapperRef}
-        className="px-30 py-15 mx-auto"
-      >
-        <h2 className="text-3xl font-extrabold text-center text-[var(--main-col)] fade-in mb-5">
-          Ensiklopedia
-        </h2>
-        <br />
-        <div className="space-y-6">
+    <main ref={wrapperRef} className="px-30 py-15 mx-auto">
+      <h2 className="text-3xl font-extrabold text-center text-[var(--main-col)] fade-in mb-5">
+        Ensiklopedia
+      </h2>
+      <br />
+      <div className="space-y-6">
         {cultures.map((culture, i) => (
           <Link
             href={`/ensiklopedia/${culture.id}`}
@@ -49,12 +51,14 @@ export default function EnsiklopediaClient({ cultures }) {
                 <h3 className="font-bold text-[var(--dark-col)] text-xl">
                   {culture.title} ({culture.year})
                 </h3>
-                <p className="text-[var(--gray-col)] text-sm">{culture.description}</p>
+                <p className="text-[var(--gray-col)] text-sm">
+                  {truncateText(culture.description, 500)}
+                </p>
               </div>
             </div>
           </Link>
         ))}
-        </div>
-      </main>
+      </div>
+    </main>
   );
 }
