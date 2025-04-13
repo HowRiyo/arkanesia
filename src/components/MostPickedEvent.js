@@ -13,7 +13,7 @@ export default function MostPickedSection({ tours }) {
 
   return (
     <section className="my-10">
-      <h2 className="text-2xl font-semibold mb-6">Most Picked</h2>
+      <h2 className="text-3xl font-bold text-[var(--dark-col)] mb-6">Most Picked</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Kartu besar di kiri */}
         <Link href={`/tour/${randomTours[0].id}`} className="md:col-span-1">
@@ -23,12 +23,12 @@ export default function MostPickedSection({ tours }) {
               alt={randomTours[0].name}
               className="w-full h-full object-cover"
             />
-            <div className="absolute top-3 left-3 bg-blue-600 text-white px-3 py-1 rounded text-sm">
+            <div className="absolute top-0 right-0 font-semibold bg-[var(--main-col)] text-[var(--light-col)] px-6 py-2 rounded-bl-2xl text-md">
               {randomTours[0].prices > 0
                 ? `Rp ${randomTours[0].prices}`
                 : "Free Entry"}
             </div>
-            <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent p-3 text-white">
+            <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-[var(--dark-col)] to-transparent p-3 text-[var(--light-col)]">
                 <p className="font-bold">{randomTours[0].name}</p>
                 <p className="text-sm">{randomTours[0].location}</p>
               </div>
@@ -48,10 +48,10 @@ export default function MostPickedSection({ tours }) {
                 alt={tour.name}
                 className="w-full h-40 object-cover"
               />
-              <div className="absolute top-2 left-2 bg-blue-600 text-white px-3 py-1 rounded text-sm">
+              <div className="absolute top-0 right-0 bg-[var(--main-col)] text-[var(--light-col)] px-4 py-1 rounded-bl-xl text-sm">
                 {tour.prices > 0 ? `Rp ${tour.prices}` : "Free Entry"}
               </div>
-              <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent p-3 text-white">
+              <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-[var(--dark-col)] to-transparent p-3 text-[var(--light-col)]">
                 <p className="font-bold">{tour.name}</p>
                 <p className="text-sm">{tour.location}</p>
               </div>

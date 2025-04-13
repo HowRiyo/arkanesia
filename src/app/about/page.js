@@ -2,11 +2,11 @@ import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <main className="px-30 py-15 bg-[var(--background-col)] text-[var(--dark-col)]">
+    <main className="mx-auto max-w-6xl py-20 bg-[var(--background-col)] text-[var(--dark-col)]">
       {/* About Section */}
-      <section className="mx-auto">
+      <section>
         <div className="text-center mb-16">
-          <h1 className="text-3xl font-bold text-[var(--main-col)]">About Arkanesia</h1>
+          <h1 className="text-4xl font-extrabold text-[var(--main-col)]">About Arkanesia</h1>
           <p className="text-[var(--gray-col)] text-lg mt-2">Kenali kisah di balik platform budaya modern ini.</p>
         </div>
 

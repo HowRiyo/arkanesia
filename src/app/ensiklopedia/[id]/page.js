@@ -15,11 +15,11 @@ export default async function CultureDetailPage({ params }) {
   }
 
   return (
-    <main className="max-w-4xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
+    <main className="mx-auto max-w-6xl py-10 px-4 sm:px-6 lg:px-8">
       <div className="flex items-center justify-between mb-4">
         <Link
           href="/ensiklopedia"
-          className="bg-blue-600 text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-700 transition"
+          className="bg-[var(--accent-col)] text-[var(--light-col)] px-6 py-2 rounded-lg shadow-[0_2px_4px_var(--shadow-col)] transition"
         >
           Back
         </Link>
@@ -33,15 +33,15 @@ export default async function CultureDetailPage({ params }) {
         className="w-full h-auto rounded-lg my-6"
       />
       <div className="flex flex-col items-center">
-        <p className="text-gray-700 leading-relaxed text-center">
+        <p className="text-[var(--gray-col)] leading-relaxed text-center">
           Gambar ini menunjukkan ilustrasi terkait ensiklopedia yang sedang
           dibahas. Visualisasi ini membantu memahami konteks lebih dalam dan
           memperkaya informasi yang tersedia.
         </p>
       </div>
 
-      <div className="md:col-span-3 mt-10">
-        <p className="text-gray-700 leading-relaxed text-justify mb-6">
+      <div className="md:col-span-3 mt-15">
+        <p className="text-[var(--dark-col)] leading-relaxed text-justify mb-6 indent-20">
           {culture.description}{" "}
         </p>
       </div>

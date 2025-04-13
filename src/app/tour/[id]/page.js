@@ -40,31 +40,31 @@ export default async function TourDetailPage({ params, searchParams }) {
         className="w-full h-auto rounded-lg my-6"
       />
       <div className="flex flex-col items-center">
-        <p className="text-gray-700 leading-relaxed text-center">
+        <p className="text-[var(--gray-col)] leading-relaxed text-center">
           Gambar ini menunjukkan ilustrasi terkait tempat wisata{" "}
-          <i className="font-bold">{tour.name}</i> yang sedang dibahas.
+          <i className="font-semibold">{tour.name}</i> yang sedang dibahas.
           Visualisasi ini membantu memahami konteks lebih dalam dan memperkaya
           informasi yang tersedia.
         </p>
       </div>
 
-      <div className="md:col-span-3 mt-10">
-        <p className="text-gray-700 leading-relaxed text-justify mb-6">
+      <div className="md:col-span-3 mt-15">
+        <p className="text-[var(--dark-col)] leading-relaxed text-justify mb-6">
           {tour.description}{" "}
         </p>
       </div>
 
-      <div className="md:col-span-3 mt-10 border-t border-gray-200 p-4 rounded-2xl shadow-xl">
-        <h3 className="text-2xl font-bold mb-4">Informasi Lengkap</h3>
+      <div className="md:col-span-3 mt-20 border-t border-[var(--border-col)] px-8 py-6 shadow-xl">
+        <h3 className="text-2xl font-bold mb-10">Informasi Lengkap</h3>
         <div className="mb-6 flex flex-col">
           <h5 className="text-lg font-bold mb-2">Harga Tiket</h5>
-          <p className="text-gray-700 leading-relaxed text-justify mb-2">
+          <p className="text-[var(--dark-col)] leading-relaxed text-justify mb-2">
             {tour.prices > 0 ? `Rp ${tour.prices}` : "Free Entry"}
           </p>
         </div>
         <div className="mb-2 flex flex-col">
           <h5 className="text-lg font-bold mb-2">Lokasi</h5>
-          <p className="text-gray-700 leading-relaxed text-justify mb-2">
+          <p className="text-[var(--dark-col)] leading-relaxed text-justify mb-2">
             {tour.location} / {tour.district} / {tour.province}
           </p>
         </div>
@@ -81,7 +81,7 @@ export default async function TourDetailPage({ params, searchParams }) {
               src={`https://www.google.com/maps?q=${tour.latitude},${tour.longitude}&z=15&output=embed`}
             ></iframe>
           ) : (
-            <p className="text-gray-600 italic">Koordinat tidak tersedia.</p>
+            <p className="text-[var(--dark-col)] italic">Koordinat tidak tersedia.</p>
           )}
         </div>
       </div>

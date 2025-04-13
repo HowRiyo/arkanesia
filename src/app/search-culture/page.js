@@ -28,7 +28,7 @@ export default function SearchPage() {
   };
 
   return (
-    <main className="px-30 text-[var(--dark-col)] font-sans fade-in grid place-items-center h-dvh">
+    <main className="mx-auto max-w-6xl py-20 text-[var(--dark-col)] fade-in grid place-items-center h-dvh">
       <section className="text-center relative">
         <h2 className="text-4xl font-bold text-[var(--main-col)] leading-tight mb-4">
           Mulai Percakapan Budaya dengan AI
