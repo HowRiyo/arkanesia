@@ -35,7 +35,7 @@ export default function EnsiklopediaClient({ cultures }) {
         Ensiklopedia
       </h2>
 
-      <div className="my-15 fade-in">
+      <div className="my-15 fade-in mx-auto w-1/2">
         <input
           type="text"
           placeholder="Cari Budaya di Provinsi..."
