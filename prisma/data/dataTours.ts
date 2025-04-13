@@ -1239,7 +1239,7 @@ const tours: Prisma.TourCreateInput[] = [
   },
   {
     name: "Candi Borobudur",
-    date: "new Date('800-01-01')",
+    date: new Date('800-01-01'),
     location: "Magelang, Jawa Tengah",
     image:
       "https://asset.kompas.com/crops/PDHy7SIS-aHhUFWL0xFBiRleceU=/0x100:1430x1053/1200x800/data/photo/2022/03/07/6225c0669e6d2.jpg",
