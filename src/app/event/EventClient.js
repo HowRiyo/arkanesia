@@ -30,29 +30,29 @@ export default function EventClient({ events, tours }) {
   }, []);
 
   return (
-    <main ref={containerRef} className="bg-white text-gray-800 min-h-screen">
+    <main ref={containerRef} className="text-[var(--dark-col)] min-h-screen">
       <section className="max-w-7xl mx-auto px-6 py-20">
         <div className="text-center mb-14">
-          <h2 className="text-3xl font-bold text-blue-900">Event Budaya</h2>
-          <p className="text-gray-500 mt-2">
+          <h2 className="text-4xl font-bold text-[var(--main-col)]">Event</h2>
+          <p className="text-[var(--gray-col)] mt-2">
             Jelajahi beragam event budaya menarik dari seluruh Indonesia.
           </p>
         </div>
 
-        <h3 className="text-2xl font-bold text-gray-800 mb-6">Event Terbaru</h3>
+        <h3 className="text-3xl font-bold text-[var(--dark-col)] mb-6">Event Terbaru</h3>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-10">
           {events.map((event) => (
             <div
               key={event.id}
-              className="event-card bg-white border rounded-xl overflow-hidden shadow-md"
+              className="event-card border-[var(--border-col)] border rounded-xl overflow-hidden shadow-[0_15px_30px_var(--shadow-col)]"
             >
               <img src={event.image} alt={event.title} />
               <div className="p-5">
-                <h3 className="text-lg font-bold text-blue-800">
+                <h3 className="text-lg font-bold text-[var(--main-col)]">
                   {event.name}
                 </h3>
-                <p className="text-sm text-gray-500 mt-1">
+                <p className="text-sm text-[var(--gray-col)] mt-1">
                   {event.location} -{" "}
                   {new Date(event.date).toLocaleDateString("id-ID", {
                     day: "numeric",
@@ -63,7 +63,7 @@ export default function EventClient({ events, tours }) {
 
                 <Link
                   href={`/event/${event.id}`}
-                  className="inline-block mt-4 bg-blue-600 text-white px-4 py-2 text-sm rounded-lg hover:bg-blue-700 transition"
+                  className="inline-block mt-4 bg-[var(--main-col)] text-[var(--light-col)] px-4 py-2 text-sm rounded-lg hover:bg-[var(--accent-col)] transition"
                 >
                   Lihat Detail
                 </Link>
@@ -72,7 +72,7 @@ export default function EventClient({ events, tours }) {
           ))}
         </div>
 
-        <h3 className="text-2xl font-bold text-gray-800 mb-6">
+        <h3 className="text-3xl font-bold text-[var(--dark-col)] mb-6">
           Rekomendasi Wisata
         </h3>
 
@@ -80,14 +80,14 @@ export default function EventClient({ events, tours }) {
           {tours.map((tour) => (
             <div
               key={tour.id}
-              className="event-card bg-white border rounded-xl overflow-hidden shadow-md"
+              className="event-card border-[var(--border-col)] border rounded-xl overflow-hidden shadow-[0_15px_30px_var(--shadow-col)]"
             >
               <img src={tour.image} alt={tour.title} className="w-full h-56"/>
               <div className="p-5">
-                <h3 className="text-lg font-bold text-blue-800">
+                <h3 className="text-lg font-bold text-[var(--main-col)]">
                   {tour.name}
                 </h3>
-                <p className="text-sm text-gray-500 mt-1">
+                <p className="text-sm text-[var(--gray-col)] mt-1">
                   {tour.location} -{" "}
                   {new Date(tour.date).toLocaleDateString("id-ID", {
                     day: "numeric",
@@ -97,7 +97,7 @@ export default function EventClient({ events, tours }) {
                 </p>
                 <Link
                   href={`/tour/${tour.id}?from=/event`}
-                  className="inline-block mt-4 bg-blue-600 text-white px-4 py-2 text-sm rounded-lg hover:bg-blue-700 transition"
+                  className="inline-block mt-4 bg-[var(--main-col)] text-[var(--light-col)] px-4 py-2 text-sm rounded-lg hover:bg-[var(--accent-col)] transition"
                 >
                   Lihat Detail
                 </Link>
