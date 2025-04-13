@@ -41,9 +41,23 @@ export default async function CultureDetailPage({ params }) {
       </div>
 
       <div className="md:col-span-3 mt-15">
-        <p className="text-[var(--dark-col)] leading-relaxed text-justify mb-6 indent-20">
-          {culture.description}{" "}
-        </p>
+        {(() => {
+          const sentences = culture.description.split(". ");
+          const mid = Math.ceil(sentences.length / 2);
+          const firstParagraph = sentences.slice(0, mid).join(". ") + ".";
+          const secondParagraph = sentences.slice(mid).join(". ");
+
+          return (
+            <>
+              <p className="text-[var(--dark-col)] leading-relaxed text-justify mb-6 indent-20">
+                {firstParagraph}
+              </p>
+              <p className="text-[var(--dark-col)] leading-relaxed text-justify indent-20">
+                {secondParagraph}
+              </p>
+            </>
+          );
+        })()}
       </div>
     </main>
   );
