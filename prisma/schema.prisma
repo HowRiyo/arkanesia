@@ -19,7 +19,7 @@ model Culture {
   title     String  @unique
   year      Int
   location  String
-  image     String?
+  image     String? @db.Text
   langtitude Float?
   longitude Float?
   description String @db.Text
