@@ -27,17 +27,26 @@ export default function EnsiklopediaClient({ cultures }) {
   );
 
   return (
+    <main
+      ref={wrapperRef}
+      className="mx-auto max-w-6xl py-20 overflow-hidden"
+    >
+      <h2 className="text-4xl font-extrabold text-center text-[var(--main-col)] fade-in">
+        Ensiklopedia
+      </h2>
 
-      <main
-        ref={wrapperRef}
-        className="px-30 py-15 mx-auto"
-      >
-        <h2 className="text-3xl font-extrabold text-center text-[var(--main-col)] fade-in mb-5">
-          Ensiklopedia
-        </h2>
-        <br />
-        <div className="space-y-6">
-        {cultures.map((culture, i) => (
+      <div className="my-15 fade-in mx-auto w-1/2">
+        <input
+          type="text"
+          placeholder="Cari Budaya di Provinsi..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          className="w-full border-[var(--border-col)] border rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--accent-col)] transition"
+        />
+      </div>
+
+      <div className="space-y-6 flex flex-col gap-5">
+        {filteredCultures.map((culture, i) => (
           <Link
             href={`/ensiklopedia/${culture.id}`}
             key={i}

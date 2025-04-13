@@ -16,7 +16,7 @@ export default async function EventDetailPage({ params }) {
       <div className="flex items-center justify-between mb-4">
         <Link
           href="/ensiklopedia"
-          className="bg-blue-600 text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-700 transition"
+          className="bg-[var(--accent-col)] text-[var(--light-col)] px-6 py-2 rounded-lg shadow-[0_2px_4px_var(--shadow-col)] transition"
         >
           Back
         </Link>
@@ -30,15 +30,15 @@ export default async function EventDetailPage({ params }) {
         className="w-full h-auto rounded-lg my-6"
       />
       <div className="flex flex-col items-center">
-        <p className="text-gray-700 leading-relaxed text-center">
+        <p className="bg-[var(--dark-col)] p-4 text-[var(--gray-col)] leading-relaxed text-center">
           Gambar ini menunjukkan ilustrasi terkait ensiklopedia yang sedang
           dibahas. Visualisasi ini membantu memahami konteks lebih dalam dan
           memperkaya informasi yang tersedia.
         </p>
       </div>
 
-      <div className="md:col-span-3 mt-10">
-        <p className="text-gray-700 leading-relaxed text-justify mb-6">
+      <div className="md:col-span-3 mt-15">
+        <p className="text-[var(--dark-col)] leading-relaxed text-justify mb-6 indent-20">
           {event.description}{" "}
         </p>
       </div>

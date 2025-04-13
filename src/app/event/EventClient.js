@@ -30,10 +30,10 @@ export default function EventClient({ events, tours }) {
   }, []);
 
   return (
-    <main ref={containerRef} className="text-[var(--dark-col)] min-h-screen">
-      <section className="max-w-7xl mx-auto px-6 py-20">
+    <main ref={containerRef} className="text-[var(--dark-col)] min-h-screen mx-auto max-w-6xl py-20">
+      <section className="mx-auto">
         <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold text-[var(--main-col)]">Event</h2>
+          <h2 className="text-4xl font-extrabold text-[var(--main-col)]">Event</h2>
           <p className="text-[var(--gray-col)] mt-2">
             Jelajahi beragam event budaya menarik dari seluruh Indonesia.
           </p>

@@ -19,8 +19,8 @@ export default function HomeClient({ cultures ,events, tours }) {
   };
 
   return (
-    <main className="py-5 px-30">
-      <section className="flex flex-col md:flex-row items-center justify-between py-16 w-full mx-auto">
+    <main className="mx-auto max-w-6xl py-20">
+      <section className="flex flex-col md:flex-row items-center justify-between w-full mx-auto">
         <div>
           <div className="text-center md:text-left max-w-xl">
             <h2 className="text-4xl font-bold text-[var(--dark-col)] leading-tight">
@@ -32,7 +32,7 @@ export default function HomeClient({ cultures ,events, tours }) {
               tempat bersejarah dalam satu genggaman.
             </p>
             <Link href="/event">
-              <button className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition duration-300 cursor-pointer">
+              <button className="mt-6 px-6 py-3 bg-[var(--main-col)] text-[var(--light-col)] font-semibold rounded-lg shadow-md hover:bg-[var(--accent-col)] transition duration-300 cursor-pointer">
                 Rekomendasi Wisata
               </button>
             </Link>
@@ -167,12 +167,12 @@ export default function HomeClient({ cultures ,events, tours }) {
                     alt="Popular Choice"
                     className="rounded-xl w-full h-32 object-cover shadow-md"
                   />
-                  <span className="absolute top-0 left-0 bg-blue-600 text-white px-4 py-1 rounded-br-lg">
+                  <span className="absolute top-0 left-0 bg-[var(--main-col)] text-[var(--light-col)] px-4 py-1 rounded-br-lg">
                     Popular Choice
                   </span>
                 </div>
                 <p className="mt-2 font-semibold">{tour.name}</p>
-                <p className="text-gray-500">{tour.location}</p>
+                <p className="text-[var(--gray-col)]">{tour.location}</p>
               </div>
             </Link>
           ))}
