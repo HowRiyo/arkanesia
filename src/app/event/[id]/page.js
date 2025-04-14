@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export default async function EventDetailPage({ params }) {
-  const { id } = params;
+  const { id } = await params;
 
   const event = await prisma.event.findUnique({
     where: {
