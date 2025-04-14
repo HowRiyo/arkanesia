@@ -172,7 +172,7 @@ export default function HomeClient({ cultures ,events, tours }) {
                   </span>
                 </div>
                 <p className="mt-2 font-semibold">{tour.name}</p>
-                <p className="text-[var(--gray-col)]">{tour.location}</p>
+                <p className="text-[var(--gray-col)] text-sm">{tour.location}</p>
               </div>
             </Link>
           ))}

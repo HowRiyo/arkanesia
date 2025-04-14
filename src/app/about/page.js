@@ -6,7 +6,7 @@ export default function AboutPage() {
       {/* About Section */}
       <section>
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-extrabold text-[var(--main-col)]">About Arkanesia</h1>
+          <h1 className="text-4xl font-extrabold text-[var(--main-col)]">About</h1>
           <p className="text-[var(--gray-col)] text-lg mt-2">Kenali kisah di balik platform budaya modern ini.</p>
         </div>
 

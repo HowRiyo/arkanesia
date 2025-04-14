@@ -15,7 +15,7 @@ export default function Nav() {
     { name: "About", href: "/about" },
   ];
   const isAnimating = useRef(false);
-const leavePending = useRef(false); // <== NEW
+  const leavePending = useRef(false);
 
 const handleHover = () => {
   if (isAnimating.current) return;
@@ -31,7 +31,6 @@ const handleHover = () => {
     onComplete: () => {
       isAnimating.current = false;
 
-      // Jika mouse sudah keluar saat animasi masih jalan, reset setelah selesai
       if (leavePending.current) {
         gsap.set(navRef.current, {
           "--before-opacity": "0",
@@ -43,11 +42,9 @@ const handleHover = () => {
 };
 
 const handleLeave = () => {
-  // Jika sedang animasi, tandai bahwa mouse sudah keluar
   if (isAnimating.current) {
     leavePending.current = true;
   } else {
-    // Jika tidak sedang animasi, langsung reset
     gsap.set(navRef.current, {
       "--before-opacity": "0",
       "--before-x": "0px",
@@ -67,10 +64,10 @@ const handleLeave = () => {
     >
       <h1 className="text-3xl font-bold tracking-tight">
         <span className="text-[var(--main-col)]">Arka</span>
-        <span className="text-gray-800">nesia.</span>
+        <span className="text-[var(--dark-col)]">Nesia</span>
       </h1>
 
-      <ul className="flex items-center space-x-8 text-gray-600 font-medium">
+      <ul className="flex items-center space-x-8 text-[var(--gray-col)] font-medium">
         {navLinks.map((link) => (
           <li key={link.href}>
             <Link
@@ -118,7 +115,6 @@ const handleLeave = () => {
         z-index: -1;
         pointer-events: none;
       }
-
       `}</style>
     </nav>
   );

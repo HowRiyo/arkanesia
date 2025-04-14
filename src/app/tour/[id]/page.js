@@ -4,14 +4,19 @@ import prisma from "@/lib/prisma";
 import Link from "next/link";
 
 export default async function TourDetailPage({ params, searchParams }) {
-  const { id } = await params;
-
-  const { from } = await searchParams || {}; 
+  const { id } = params;
+  const { from } = searchParams || {};
   const backHref = from || "/";
+
+  // Validate ID
+  const tourId = Number(id);
+  if (isNaN(tourId)) {
+    return <div>ID wisata tidak valid</div>;
+  }
 
   const tour = await prisma.tour.findUnique({
     where: {
-      id: Number(id),
+      id: tourId,
     },
   });
 
@@ -21,15 +26,16 @@ export default async function TourDetailPage({ params, searchParams }) {
 
   return (
     <main className="max-w-4xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
-      <div className="flex items-center justify-between mb-4">
+      <div className="flex items-center justify-between mb-15">
         <Link
           href={backHref}
-          className="bg-blue-600 text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-700 transition"
+          passHref
+          className="bg-[var(--accent-col)] text-[var(--light-col)] px-6 py-2 rounded-lg shadow-[0_2px_4px_var(--shadow-col)] transition"
         >
           Back
         </Link>
       </div>
-      <h2 className="text-3xl font-bold mb-4">{tour.name}</h2>
+      <h2 className="text-3xl text-[var(--dark-col)] font-bold mb-4">{tour.name}</h2>
       <img
         src={tour.image}
         alt={tour.title}
@@ -45,44 +51,48 @@ export default async function TourDetailPage({ params, searchParams }) {
       </div>
 
       <div className="md:col-span-3 mt-15">
-        <p className="text-[var(--dark-col)] leading-relaxed text-justify mb-6">
+        <p className="text-[var(--dark-col)] leading-relaxed text- indent-20 mb-6">
           {tour.description}{" "}
         </p>
       </div>
 
-      <div className="md:col-span-3">
-        <Link href={tour.link} className="text-[var(--main-col)]" target="_blank">Lihat Selengkapnya</Link>
-      </div>
+      {tour.link && (
+        <div className="md:col-span-3">
+          <Link href={tour.link} className="text-[var(--main-col)]" target="_blank">
+            Lihat Selengkapnya
+          </Link>
+        </div>
+      )}
 
-      <div className="md:col-span-3 mt-20 border-t border-[var(--border-col)] px-8 py-6 shadow-xl">
+      <div className="md:col-span-3 mt-20 border-t text-[var(--dark-col)] border-[var(--border-col)] px-8 py-6 shadow-xl">
         <h3 className="text-2xl font-bold mb-10">Informasi Lengkap</h3>
         <div className="mb-6 flex flex-col">
           <h5 className="text-lg font-bold mb-2">Harga Tiket</h5>
-          <p className="text-[var(--dark-col)] leading-relaxed text-justify mb-2">
+          <p className="leading-relaxed text-justify mb-2">
             {tour.prices > 0 ? `Rp ${tour.prices}` : "Free Entry"}
           </p>
         </div>
         <div className="mb-6 flex flex-col">
           <h5 className="text-lg font-bold mb-2">Lokasi</h5>
-          <p className="text-[var(--dark-col)] leading-relaxed text-justify mb-2">
+          <p className="leading-relaxed text-justify mb-2">
             {tour.location}
           </p>
         </div>
         <div className="mb-6 flex flex-col">
           <h5 className="text-lg font-bold mb-2">Kabupaten</h5>
-          <p className="text-[var(--dark-col)] leading-relaxed text-justify mb-2">
+          <p className="leading-relaxed text-justify mb-2">
             {tour.district}
           </p>
         </div>
         <div className="mb-6 flex flex-col">
           <h5 className="text-lg font-bold mb-2">Provinsi</h5>
-          <p className="text-[var(--dark-col)] leading-relaxed text-justify mb-2">
+          <p className="leading-relaxed text-justify mb-2">
             {tour.province}
           </p>
         </div>
         <div className="mb-6 flex flex-col">
           <h5 className="text-lg font-bold mb-2">Berdiri sejak</h5>
-          <p className="text-[var(--dark-col)] leading-relaxed text-justify mb-2">
+          <p className="leading-relaxed text-justify mb-2">
             {new Date(tour.date).toLocaleDateString("id-ID", {
               day: "numeric",
               month: "long",

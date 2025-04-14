@@ -24,7 +24,7 @@ export default async function CultureDetailPage({ params }) {
           Back
         </Link>
       </div>
-      <h2 className="text-3xl font-bold mb-4">
+      <h2 className="text-3xl font-bold text-[var(--dark-col)] mb-4">
         {culture.title} ({culture.year})
       </h2>
       <img

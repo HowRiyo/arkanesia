@@ -39,15 +39,15 @@ export default function EventClient({ events, tours }) {
           </p>
         </div>
 
-        <h3 className="text-3xl font-bold text-[var(--dark-col)] mb-6">Event Terbaru</h3>
+        <h3 className="text-3xl font-bold text-[var(--dark-col)] mb-8 mt-10">Event Terbaru</h3>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-10">
           {events.map((event) => (
             <div
               key={event.id}
-              className="event-card border-[var(--border-col)] border rounded-xl overflow-hidden shadow-[0_15px_30px_var(--shadow-col)]"
+              className="event-card rounded-xl overflow-hidden shadow-[0_15px_30px_var(--shadow-col)]"
             >
-              <img src={event.image} alt={event.title} />
+              <img src={event.image} alt={event.title} className="w-full h-60" />
               <div className="p-5">
                 <h3 className="text-lg font-bold text-[var(--main-col)]">
                   {event.name}
@@ -72,7 +72,7 @@ export default function EventClient({ events, tours }) {
           ))}
         </div>
 
-        <h3 className="text-3xl font-bold text-[var(--dark-col)] mb-6">
+        <h3 className="text-3xl font-bold text-[var(--dark-col)] mb-8 mt-20">
           Rekomendasi Wisata
         </h3>
 
@@ -80,9 +80,9 @@ export default function EventClient({ events, tours }) {
           {tours.map((tour) => (
             <div
               key={tour.id}
-              className="event-card border-[var(--border-col)] border rounded-xl overflow-hidden shadow-[0_15px_30px_var(--shadow-col)]"
+              className="event-card rounded-xl overflow-hidden shadow-[0_15px_30px_var(--shadow-col)]"
             >
-              <img src={tour.image} alt={tour.title} className="w-full h-56"/>
+              <img src={tour.image} alt={tour.title} className="w-full h-60" />
               <div className="p-5">
                 <h3 className="text-lg font-bold text-[var(--main-col)]">
                   {tour.name}
