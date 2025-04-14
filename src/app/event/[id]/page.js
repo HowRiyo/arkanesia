@@ -1,8 +1,5 @@
-import Link from "next/link";
-
-
 export default async function EventDetailPage({ params }) {
-  const { id } = params;
+  const { id } = await params;
 
   const event = await prisma.event.findUnique({
     where: {
@@ -15,7 +12,7 @@ export default async function EventDetailPage({ params }) {
   }
 
   return (
-    <main className="px-30 py-10">
+    <main>
       <div className="flex items-center justify-between mb-4">
         <Link
           href="/event"
@@ -24,8 +21,8 @@ export default async function EventDetailPage({ params }) {
           Back
         </Link>
       </div>
-      <h2 className="text-3xl font-bold text-[var(--dark-col)] mb-4">
-        {event.title}
+      <h2 className="text-3xl font-bold mb-4">
+        {event.title} ({event.year})
       </h2>
       <img
         src={event.image}
