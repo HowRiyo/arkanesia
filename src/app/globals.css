@@ -21,7 +21,3 @@ body {
 .text-xl, .text-2xl, .text-3xl, .text-4xl {
   font-family: var(--font-raleway);
 }
-
-* {
-  /* outline: 1px solid red; */
-}
