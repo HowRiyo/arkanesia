@@ -29,8 +29,8 @@ export default function MostPickedSection({ tours }) {
                 : "Free Entry"}
             </div>
             <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-[var(--dark-col)] to-transparent p-3 text-[var(--light-col)]">
-                <p className="font-bold">{randomTours[0].name}</p>
-                <p className="text-sm">{randomTours[0].location}</p>
+                <p className="font-bold text-xl">{randomTours[0].name}</p>
+                <p className="text-md">{randomTours[0].location}</p>
               </div>
           </div>
         </Link>

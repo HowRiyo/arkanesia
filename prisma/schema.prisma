@@ -15,44 +15,44 @@ datasource db {
 }
 
 model Culture {
-  id        Int     @id @default(autoincrement())
-  title     String  @unique
+  id        Int      @id @default(autoincrement())
+  title     String   @unique
   year      Int
   location  String
-  image     String?
+  image     String?  @db.Text
   langtitude Float?
   longitude Float?
   description String @db.Text
-  district  String?
-  province  String?
+  district  String?  @db.VarChar(100)
+  province  String?  @db.VarChar(50)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
 
 model Event {
-  id        Int     @id @default(autoincrement())
+  id        Int      @id @default(autoincrement())
   name      String  
   date      DateTime
-  location  String
-  image     String?
-  description String
-  link      String?
+  location  String   @db.VarChar(100)
+  image     String?  @db.Text
+  description String @db.Text
+  link      String?  @db.Text
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
 
 
 model Tour {
-  id        Int     @id @default(autoincrement())
+  id        Int      @id @default(autoincrement())
   name      String  
   date      DateTime
   location  String
-  image     String? @db.Text
+  image     String?  @db.Text
   description String @db.Text
-  link      String? @db.Text
+  link      String?  @db.Text
   prices    Float
-  district  String?
-  province  String?
+  district  String?  @db.VarChar(100)
+  province  String?  @db.VarChar(50)
   latitude  Float?
   longitude Float?
   createdAt DateTime @default(now())
