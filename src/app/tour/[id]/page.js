@@ -4,8 +4,8 @@ import prisma from "@/lib/prisma";
 import Link from "next/link";
 
 export default async function TourDetailPage({ params, searchParams }) {
-  const { id } = params;
-  const { from } = searchParams || {};
+  const { id } = await params;
+  const { from } = await searchParams || {};
   const backHref = from || "/";
 
   // Validate ID
