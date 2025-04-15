@@ -6,7 +6,7 @@ import tours from "./data/dataTours";
 
 const prisma = new PrismaClient();
 
-const API_URL = "https://your-ml-api.com/blablabla";
+const API_URL = "http://localhost:5001";
 
 
 
