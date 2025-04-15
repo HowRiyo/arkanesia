@@ -27,15 +27,15 @@ export default function EnsiklopediaClient({ cultures }) {
   );
 
   return (
-    <main
+    <section
       ref={wrapperRef}
-      className="mx-auto max-w-6xl py-20 overflow-hidden"
+      className="overflow-hidden"
     >
       <h2 className="text-4xl font-extrabold text-center text-[var(--main-col)] fade-in">
         Ensiklopedia
       </h2>
 
-      <div className="my-15 fade-in mx-auto w-1/2">
+      <div className="my-15 fade-in mx-auto w-full  md:w-1/2">
         <input
           type="text"
           placeholder="Cari Budaya di Provinsi..."
@@ -54,7 +54,7 @@ export default function EnsiklopediaClient({ cultures }) {
           >
             <div className="p-4 shadow-md rounded-lg flex flex-col sm:flex-row items-start gap-4">
               <div
-                className="w-52 h-32 min-w-[64px] bg-[var(--light-col)] rounded-md bg-cover bg-center"
+                className="md:h-32 h-42 w-full md:w-50 bg-[var(--light-col)] rounded-md bg-cover bg-center"
                 style={{ backgroundImage: `url(${culture.image})` }}
               ></div>
               <div className="flex-1">
@@ -75,6 +75,6 @@ export default function EnsiklopediaClient({ cultures }) {
           </p>
         )}
       </div>
-    </main>
+    </section>
   );
 }

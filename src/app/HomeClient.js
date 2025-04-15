@@ -4,22 +4,76 @@ import Link from "next/link";
 import MostPickedSection from "@/components/MostPickedEvent";
 import { useEffect, useState } from "react";
 
-export default function HomeClient({ cultures ,events, tours }) {
+export default function HomeClient({ cultures, events, tours }) {
   const [shuffledTours, setShuffledTours] = useState([]);
+  const [recommended, setRecommended] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [loadingText, setLoadingText] = useState(
+    "Sedang mencari wisata di dekatmu..."
+  );
 
   useEffect(() => {
     const shuffled = [...tours].sort(() => 0.5 - Math.random()).slice(0, 10);
     setShuffledTours(shuffled);
   }, [tours]);
-  const handleMove = (e) => {
-    const btn = e.currentTarget;
-    const rect = btn.getBoundingClientRect();
-    btn.style.setProperty("--x", `${e.clientX - rect.left}px`);
-    btn.style.setProperty("--y", `${e.clientY - rect.top}px`);
+
+  useEffect(() => {
+    const texts = [
+      "Sedang mencari wisata di dekatmu...",
+      "Mencari tempat wisata terbaik...",
+      "Menemukan tempat wisata populer...",
+      "Mencari tempat wisata terdekat...",
+      "Rekomendasi wisata sedang diproses...",
+    ];
+
+    let index = 0;
+    const interval = setInterval(() => {
+      setLoadingText(texts[index]);
+      index = (index + 1) % texts.length;
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const savedRecommendations = sessionStorage.getItem("recommended");
+    if (savedRecommendations) {
+      setRecommended(JSON.parse(savedRecommendations));
+    }
+  }, []);
+
+  const handleRecommendation = async () => {
+    setLoading(true);
+    try {
+      const pos = await new Promise((resolve, reject) => {
+        navigator.geolocation.getCurrentPosition(resolve, reject);
+      });
+
+      const { latitude, longitude } = pos.coords;
+      console.log(latitude, longitude);
+
+      setTimeout(async () => {
+        const res = await fetch("http://localhost:5001/recommendation", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ latitude, longitude }),
+        });
+
+        const data = await res.json();
+        setRecommended(data);
+        sessionStorage.setItem("recommended", JSON.stringify(data));
+        setLoading(false);
+      }, 5000);
+    } catch (err) {
+      console.error("Gagal dapat lokasi atau fetch data:", err);
+      setLoading(false);
+    }
   };
 
   return (
-    <main className="mx-auto max-w-6xl py-20">
+    <>
       <section className="flex flex-col md:flex-row items-center justify-between w-full mx-auto">
         <div>
           <div className="text-center md:text-left max-w-xl">
@@ -31,14 +85,15 @@ export default function HomeClient({ cultures ,events, tours }) {
               dengan cara yang seru dan personal. Temukan cerita, sejarah, dan
               tempat bersejarah dalam satu genggaman.
             </p>
-            <Link href="/event">
-              <button className="mt-6 px-6 py-3 bg-[var(--main-col)] text-[var(--light-col)] font-semibold rounded-lg shadow-md hover:bg-[var(--accent-col)] transition duration-300 cursor-pointer">
-                Rekomendasi Wisata
-              </button>
-            </Link>
+            <button
+              onClick={handleRecommendation}
+              className="mt-6 px-6 py-3 bg-[var(--main-col)] text-[var(--light-col)] font-semibold rounded-lg shadow-md hover:bg-[var(--accent-col)] transition duration-300 cursor-pointer"
+            >
+              Rekomendasi Wisata
+            </button>
           </div>
 
-          <div className="mt-6 flex space-x-10 text-[var(--gray-col)]">
+          <div className="mt-6 flex flex-wrap justify-center gap-y-5 gap-x-10 text-[var(--gray-col)]">
             {/* Budaya */}
             <div className="flex items-center space-x-3">
               <svg
@@ -104,7 +159,7 @@ export default function HomeClient({ cultures ,events, tours }) {
           </div>
         </div>
 
-        <div className="relative w-[40%] h-80">
+        <div className="relative md:w-[40%] w-full h-80 md:mt-0 mt-10">
           <Image
             src="/assets/images/bg.jpg"
             alt="Hero Image"
@@ -114,31 +169,42 @@ export default function HomeClient({ cultures ,events, tours }) {
         </div>
       </section>
 
-      {/* BUTTON HOVER SECTION */}
+      {/* TOUR RECOMMENDATION */}
       <section className="flex justify-around mt-10">
-        <div className="w-full bg-[var(--light-col)] rounded-3xl py-6">
+        <div className="w-full bg-[var(--light-col)] rounded-3xl p-6">
           <div className="flex justify-around space-x-12">
-            <button
-              className="px-6 py-3 bg-[var(--background-col)] font-semibold border-[var(--border-col)] text-[var(--dark-col)] border rounded-lg shadow-[0_4px_2px_var(--shadow-col)] text-base hover-glow"
-              style={{ "--glow-color": "rgba(59,130,246,0.35)" }}
-              onMouseMove={handleMove}
-            >
-              Select Location
-            </button>
-            <button
-              className="px-6 py-3 bg-[var(--background-col)] font-semibold border-[var(--border-col)] text-[var(--dark-col)] border rounded-lg shadow-[0_4px_2px_var(--shadow-col)] text-base hover-glow"
-              style={{ "--glow-color": "rgba(59,130,246,0.35)" }}
-              onMouseMove={handleMove}
-            >
-              Check Available
-            </button>
-            <button
-              className="px-6 py-3 bg-[var(--main-col)] font-sans text-[var(--background-col)] rounded-lg shadow-[0_5px_15px_5px_var(--shadow-col)] ext-base hover-glow"
-              style={{ "--glow-color": "rgba(255,255,255,0.4)" }}
-              onMouseMove={handleMove}
-            >
-              Search
-            </button>
+            {loading ? (
+              <p className="text-center text-[var(--gray-col)]">
+                {loadingText}
+              </p>
+            ) : recommended.length > 0 ? (
+              <div className="grid grid-cols-3 w-full gap-y-12 gap-x-6">
+                {recommended.map((tour, i) => (
+                  <Link
+                    href={`/tour/${tour.id}`}
+                    key={i}
+                    className="relative transition duration-300 cursor-pointer transform hover:scale-105"
+                  >
+                    <img
+                      src={tour.image || "/assets/images/default.jpg"}
+                      alt={tour.name}
+                      className="rounded-xl w-full h-52 object-cover shadow-md"
+                    />
+                    <p className="absolute top-0 left-0 bg-[var(--main-col)] text-[var(--light-col)] px-4 py-1 rounded-br-lg">
+                      {tour.prices > 0 ? `Rp ${tour.prices}` : "Free Entry"}
+                    </p>
+                    <p className="mt-2 font-semibold">{tour.name}</p>
+                    <p className="text-[var(--gray-col)] text-sm">
+                      {tour.location}
+                    </p>
+                  </Link>
+                ))}
+              </div>
+            ) : (
+              <p className="text-center font-semibold text-[var(--gray-col)]">
+                Cari wisata terdekat dengan satu klik
+              </p>
+            )}
           </div>
         </div>
       </section>
@@ -154,9 +220,9 @@ export default function HomeClient({ cultures ,events, tours }) {
           Popular Choice
         </h3>
 
-        <div className="grid grid-cols-4 gap-y-12 gap-x-6 mt-4">
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 grid-cols-1 gap-y-10 gap-x-8 mt-4">
           {shuffledTours.map((tour, i) => (
-            <Link key={i} href={`/tour/${tour.id}`}>
+            <Link key={i} href={`/tour/${tour.id}`} className="md:h-50 h-70">
               <div className="relative">
                 <div className="hover-popular">
                   <img
@@ -165,14 +231,16 @@ export default function HomeClient({ cultures ,events, tours }) {
                     width={200}
                     height={100}
                     alt="Popular Choice"
-                    className="rounded-xl w-full h-32 object-cover shadow-md"
+                    className="rounded-xl w-full h-60 md:h-35 object-cover shadow-md"
                   />
-                  <span className="absolute top-0 left-0 bg-[var(--main-col)] text-[var(--light-col)] px-4 py-1 rounded-br-lg">
+                  <span className="absolute top-0 left-0 font-semibold bg-[var(--main-col)] text-[var(--light-col)] px-4 py-1 rounded-br-lg">
                     Popular Choice
                   </span>
                 </div>
-                <p className="mt-2 font-semibold">{tour.name}</p>
-                <p className="text-[var(--gray-col)] text-sm">{tour.location}</p>
+                <p className="mt-2 text-[var(--dark-col)] font-semibold">{tour.name}</p>
+                <p className="text-[var(--gray-col)] text-sm">
+                  {tour.location}
+                </p>
               </div>
             </Link>
           ))}
@@ -231,6 +299,6 @@ export default function HomeClient({ cultures ,events, tours }) {
           box-shadow: inset 0 -25px 30px 5px var(--dark-col);
         }
       `}</style>
-    </main>
+    </>
   );
 }

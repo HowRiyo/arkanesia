@@ -40,15 +40,15 @@ export default function MostPickedSection({ tours }) {
           {randomTours.slice(1).map((tour) => (
             <Link
               key={tour.id}
-              className="relative rounded-xl overflow-hidden shadow-md"
+              className="relative rounded-xl overflow-hidden shadow-md h-70 md:h-full"
               href={`/tour/${tour.id}`}
             >
               <img
                 src={tour.image}
                 alt={tour.name}
-                className="w-full h-40 object-cover"
+                className="w-full h-full object-cover"
               />
-              <div className="absolute top-0 right-0 bg-[var(--main-col)] text-[var(--light-col)] px-4 py-1 rounded-bl-xl text-sm">
+              <div className="absolute font-semibold top-0 right-0 bg-[var(--main-col)] text-[var(--light-col)] px-4 py-1 rounded-bl-xl text-sm">
                 {tour.prices > 0 ? `Rp ${tour.prices}` : "Free Entry"}
               </div>
               <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-[var(--dark-col)] to-transparent p-3 text-[var(--light-col)]">
