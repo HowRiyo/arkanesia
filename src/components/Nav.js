@@ -101,7 +101,7 @@ export default function Nav() {
             >
               {link.name}
               <span
-                className={`absolute left-0 bottom-1 h-0.5 bg-[var(--main-col)] transition-all ${
+                className={`absolute left-0 bottom-[-2px] h-0.5 bg-[var(--main-col)] transition-all ${
                   pathname === link.href ? "w-full" : "w-0 group-hover:w-full"
                 }`}
               ></span>
