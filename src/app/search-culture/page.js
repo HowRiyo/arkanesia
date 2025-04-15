@@ -7,7 +7,6 @@ export default function SearchPage() {
   const inputRef = useRef(null);
   const [messages, setMessages] = useState([]);
 
-  // Menyimpan pesan ke localStorage
   useEffect(() => {
     const savedMessages = localStorage.getItem("messages");
     if (savedMessages) {
@@ -15,20 +14,13 @@ export default function SearchPage() {
     }
   }, []);
 
-  const scrollToBottom = () => {
-    const chatBox = chatBoxRef.current;
-    if (chatBox) {
-      chatBox.scrollTop = chatBox.scrollHeight;
-    }
-  };
-
   const handleKeyDown = async (e) => {
     const input = e.target;
     if (e.key === "Enter" && input.value.trim()) {
       const userMessage = input.value.trim();
       setMessages((prev) => {
-        const newMessages = [{ type: "user", text: userMessage }, ...prev]; // Menyisipkan pesan baru di depan
-        localStorage.setItem("messages", JSON.stringify(newMessages)); // Menyimpan ke localStorage
+        const newMessages = [{ type: "user", text: userMessage }, ...prev];
+        localStorage.setItem("messages", JSON.stringify(newMessages)); 
         return newMessages;
       });
       input.value = "";
@@ -46,14 +38,12 @@ export default function SearchPage() {
           throw new Error("Invalid response");
         }
 
-        // Tambahkan jawaban utama dari chatbot
         setMessages((prev) => {
-          const newMessages = [{ type: "ai", text: data.answer }, ...prev]; // Pesan AI di depan
-          localStorage.setItem("messages", JSON.stringify(newMessages)); // Menyimpan ke localStorage
+          const newMessages = [{ type: "ai", text: data.answer }, ...prev]; 
+          localStorage.setItem("messages", JSON.stringify(newMessages)); 
           return newMessages;
         });
 
-        // Tambahkan semua hasil wisata jika ada
         if (data.result && Array.isArray(data.result)) {
           const newMessages = data.result.map((item) => ({
             type: "ai",
@@ -68,15 +58,15 @@ export default function SearchPage() {
             }`,
           }));
           setMessages((prev) => {
-            const updatedMessages = [...newMessages, ...prev]; // Pesan wisata di depan
-            localStorage.setItem("messages", JSON.stringify(updatedMessages)); // Menyimpan ke localStorage
+            const updatedMessages = [...newMessages, ...prev];
+            localStorage.setItem("messages", JSON.stringify(updatedMessages)); 
             return updatedMessages;
           });
         }
       } catch (err) {
         setMessages((prev) => [
           { type: "ai", text: "Maaf, terjadi kesalahan saat mengambil data." },
-          ...prev, // Pesan error di depan
+          ...prev,
         ]);
       }
     }
@@ -84,7 +74,7 @@ export default function SearchPage() {
 
   const handleClearChat = () => {
     setMessages([]);
-    localStorage.removeItem("messages"); // Menghapus pesan dari localStorage
+    localStorage.removeItem("messages"); 
   };
 
   return (
