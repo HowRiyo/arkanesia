@@ -1,30 +1,90 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function SearchPage() {
   const chatBoxRef = useRef(null);
   const inputRef = useRef(null);
+  const [messages, setMessages] = useState([]);
 
-  const handleKeyDown = (e) => {
-    const input = e.target;
-    const chatBox = chatBoxRef.current;
-    if (e.key === "Enter" && input.value.trim()) {
-      const userMsg = document.createElement("div");
-      userMsg.className = "message-bubble from-user self-end";
-      userMsg.textContent = input.value;
-      chatBox.appendChild(userMsg);
-
-      setTimeout(() => {
-        const aiMsg = document.createElement("div");
-        aiMsg.className = "message-bubble from-ai";
-        aiMsg.textContent = `Sedang mencari jawaban untuk "${input.value}"...`;
-        chatBox.appendChild(aiMsg);
-        chatBox.scrollTop = chatBox.scrollHeight;
-      }, 800);
-
-      input.value = "";
+  // Menyimpan pesan ke localStorage
+  useEffect(() => {
+    const savedMessages = localStorage.getItem("messages");
+    if (savedMessages) {
+      setMessages(JSON.parse(savedMessages));
     }
+  }, []);
+
+  const scrollToBottom = () => {
+    const chatBox = chatBoxRef.current;
+    if (chatBox) {
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+  };
+
+  const handleKeyDown = async (e) => {
+    const input = e.target;
+    if (e.key === "Enter" && input.value.trim()) {
+      const userMessage = input.value.trim();
+      setMessages((prev) => {
+        const newMessages = [{ type: "user", text: userMessage }, ...prev]; // Menyisipkan pesan baru di depan
+        localStorage.setItem("messages", JSON.stringify(newMessages)); // Menyimpan ke localStorage
+        return newMessages;
+      });
+      input.value = "";
+
+      try {
+        const res = await fetch("http://localhost:5001/chatbot", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ question: userMessage }),
+        });
+
+        const data = await res.json();
+
+        if (!res.ok || !data.answer) {
+          throw new Error("Invalid response");
+        }
+
+        // Tambahkan jawaban utama dari chatbot
+        setMessages((prev) => {
+          const newMessages = [{ type: "ai", text: data.answer }, ...prev]; // Pesan AI di depan
+          localStorage.setItem("messages", JSON.stringify(newMessages)); // Menyimpan ke localStorage
+          return newMessages;
+        });
+
+        // Tambahkan semua hasil wisata jika ada
+        if (data.result && Array.isArray(data.result)) {
+          const newMessages = data.result.map((item) => ({
+            type: "ai",
+            id: item.id,
+            text: `${
+              item.name.charAt(0).toUpperCase() + item.name.slice(1)
+            } - (${
+              item.province.charAt(0).toUpperCase() + item.province.slice(1)
+            })\n${
+              item.description.charAt(0).toUpperCase() +
+              item.description.slice(1)
+            }`,
+          }));
+          setMessages((prev) => {
+            const updatedMessages = [...newMessages, ...prev]; // Pesan wisata di depan
+            localStorage.setItem("messages", JSON.stringify(updatedMessages)); // Menyimpan ke localStorage
+            return updatedMessages;
+          });
+        }
+      } catch (err) {
+        setMessages((prev) => [
+          { type: "ai", text: "Maaf, terjadi kesalahan saat mengambil data." },
+          ...prev, // Pesan error di depan
+        ]);
+      }
+    }
+  };
+
+  const handleClearChat = () => {
+    setMessages([]);
+    localStorage.removeItem("messages"); // Menghapus pesan dari localStorage
   };
 
   return (
@@ -47,14 +107,46 @@ export default function SearchPage() {
             onKeyDown={handleKeyDown}
           />
         </div>
+
+        {messages.length > 0 && (
+          <button
+            className="mt-4 px-4 py-2 bg-red-500 text-white rounded-full hover:bg-red-600 transition"
+            onClick={handleClearChat}
+          >
+            Hapus Semua Chat
+          </button>
+        )}
       </section>
 
       <section>
         <div
           id="chatBox"
           ref={chatBoxRef}
-          className="flex flex-col space-y-2 mt-10"
-        ></div>
+          className="flex flex-col space-y-2 mt-10 px-4 w-full"
+        >
+          {messages.map((msg, index) => (
+            <div
+              key={index}
+              className={`message-bubble ${
+                msg.type === "user"
+                  ? "from-user self-end"
+                  : "from-ai self-start"
+              }`}
+            >
+              {msg.text.charAt(0).toUpperCase() + msg.text.slice(1)}
+
+              {msg.id && (
+                <div className="mt-2">
+                  <Link href={`/tour/${msg.id}?from=/search-culture`}>
+                    <button className="text-blue-500 hover:underline">
+                      Lihat Selengkapnya
+                    </button>
+                  </Link>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
       </section>
 
       <style jsx>{`
@@ -73,21 +165,12 @@ export default function SearchPage() {
           }
         }
 
-        body {
-          background: radial-gradient(circle at top, #e0f2ff, #ffffff);
-          overflow-x: hidden;
-        }
-
-        .glow-input:focus {
-          box-shadow: 0 0 12px rgba(59, 130, 246, 0.8);
-        }
-
         .message-bubble {
-          max-width: 70%;
           padding: 10px 16px;
           border-radius: 16px;
           margin: 8px 0;
           word-wrap: break-word;
+          white-space: pre-line;
         }
 
         .from-user {
