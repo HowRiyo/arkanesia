@@ -15,7 +15,7 @@ const manrope = Manrope({
 
 export const metadata = {
   title: "ArkaNesia",
-  description: "Lorem ipsum dolor sit amet..",
+  description: "ArkaNesia bawa kamu menyelami warisan budaya dan tradisi yang penuh arti.", 
 };
 
 export default function RootLayout({ children }) {
