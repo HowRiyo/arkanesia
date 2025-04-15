@@ -1,11 +1,11 @@
 export default function Footer() {
     return (
-        <footer className="mt-20">
-            <div className="flex-grow px-30 pb-16">
+        <footer>
+            <div className="flex-grow px-0 mx-10 md:mx-auto max-w-6xl pb-16">
                 <h1 className="text-3xl font-bold">
                     <span className="text-[var(--main-col)]">Arka</span>Nesia.
                 </h1>
-                <p className="text-[var(--gray-col)] mt-2 max-w-md">
+                <p className="text-[var(--gray-col)] mt-2">
                     Bukan cuma destinasi, ArkaNesia bawa kamu menyelami warisan budaya dan tradisi yang penuh arti.
                 </p>
             </div>

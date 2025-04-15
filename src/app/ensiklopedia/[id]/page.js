@@ -15,7 +15,7 @@ export default async function CultureDetailPage({ params }) {
   }
 
   return (
-    <main className="mx-auto max-w-6xl py-10 px-4 sm:px-6 lg:px-8">
+    <section className="mx-auto max-w-4xl">
       <div className="flex items-center justify-between mb-4">
         <Link
           href="/ensiklopedia"
@@ -30,9 +30,9 @@ export default async function CultureDetailPage({ params }) {
       <img
         src={culture.image}
         alt={culture.title}
-        className="w-full h-auto rounded-lg my-6"
+        className="w-full rounded-lg my-6 mx-auto"
       />
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center mx-auto">
         <p className="text-[var(--gray-col)] leading-relaxed text-center">
           Gambar ini menunjukkan ilustrasi terkait ensiklopedia yang sedang
           dibahas. Visualisasi ini membantu memahami konteks lebih dalam dan
@@ -40,7 +40,7 @@ export default async function CultureDetailPage({ params }) {
         </p>
       </div>
 
-      <div className="md:col-span-3 mt-15">
+      <div className="md:col-span-3 mt-15 indent-10 md:indent-20">
         {(() => {
           const sentences = culture.description.split(". ");
           const mid = Math.ceil(sentences.length / 2);
@@ -59,6 +59,6 @@ export default async function CultureDetailPage({ params }) {
           );
         })()}
       </div>
-    </main>
+    </section>
   );
 }

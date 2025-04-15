@@ -175,7 +175,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1700,
     location: "Ende",
     image:
-      "https://asset.kompas.com/crops/IoAfRCpswSh8Rr9_E0ATw6PX_Hs=/0x0:780x520/750x500/data/photo/2020/09/04/5f51f3d2e7e6e.jpg",
+      "https://awsimages.detik.net.id/content/2014/08/22/1519/ikat1.jpg",
     description:
       "Tenun Ikat Flores adalah salah satu warisan budaya tekstil Indonesia yang berasal dari Pulau Flores, Nusa Tenggara Timur, dan telah menjadi simbol identitas serta kebanggaan masyarakat setempat. Kain tenun ini dibuat dengan teknik yang rumit dan membutuhkan ketelitian tinggi, di mana benang diikat dan dicelup sesuai pola sebelum ditenun, menghasilkan motif-motif geometris yang khas seperti manusia, hewan, tumbuhan, atau simbol-simbol spiritual suku-suku Flores seperti Ngada, Manggarai, dan Ende. Setiap daerah di Flores memiliki corak dan warna dominannya sendiri, seperti biru indigo dari Sikka, merah dari Ende, atau cokelat dari Manggarai, yang tidak hanya indah secara visual tetapi juga sarat makna filosofis, seperti perlambangan hubungan manusia dengan alam, leluhur, dan Sang Pencipta. Proses pembuatannya yang masih tradisional, mulai dari pemintalan benang kapas atau kepompong ulat sutera, pewarnaan alami menggunakan akar, daun, atau kulit kayu, hingga penenunan manual dengan alat tenun bukan mesin (ATBM), bisa memakan waktu berminggu-minggu hingga berbulan-bulan untuk satu helai kain. Tenun Ikat Flores tidak hanya berfungsi sebagai pakaian adat dalam upacara perkawinan, kematian, atau penyambutan tamu, tetapi juga menjadi komoditas ekonomi kreatif yang mendukung kesejahteraan perempuan penenun di pedesaan. Saat ini, kain ini semakin populer di dunia fashion modern karena keunikan dan nilai seninya, sekaligus menjadi media pelestarian budaya yang diwariskan turun-temurun. UNESCO telah mengakui teknik tenun ikat Indonesia sebagai warisan budaya dunia, menjadikan Tenun Ikat Flores sebagai salah satu kekayaan budaya yang patut dilindungi dan dikembangkan.",
     district: "Ende",
@@ -186,7 +186,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1800,
     location: "Manggarai",
     image:
-      "https://indonesiakaya.com/wp-content/uploads/2020/10/tari_caci_1.jpg",
+      "https://static.cdntap.com/tap-assets-prod/wp-content/uploads/sites/24/2022/02/Tari-Caci_-Sejarah-Makna-Tarian-dan-Gerakan.jpg",
     description:
       "Tari Caci adalah tarian perang tradisional khas masyarakat Manggarai di Flores, Nusa Tenggara Timur, yang menggabungkan unsur seni, olahraga, dan ritual dalam satu pertunjukan spektakuler. Tarian ini biasanya dilakukan oleh dua pria bersenjatakan cambuk (larik) dan perisai (gendang) yang saling beradu keterampilan dengan gerakan dinamis sambil diiringi musik gong dan gendang. Kostum penari Caci sangat khas, dengan hiasan kepala dari bulu kambing (songke) dan pakaian tradisional berwarna cerah yang melambangkan keberanian. Meskipun terlihat seperti pertarungan, Tari Caci sebenarnya mengandung nilai-nilai luhur seperti kejujuran, sportivitas, dan penghormatan terhadap lawan, di mana setiap peserta dilarang menunjukkan emosi negatif meski terkena cambukan. Tarian ini sering dipentaskan dalam berbagai acara adat seperti pernikahan, syukuran panen (hang woja), atau upacara tahun baru (penti), sekaligus berfungsi sebagai ritual tolak bala dan uji ketangkasan pemuda Manggarai. Dalam filosofi masyarakat setempat, luka akibat cambukan dianggap sebagai simbol pengorbanan dan ketahanan fisik, sementara darah yang keluar dipercaya membawa kesuburan bagi tanah. Seiring waktu, Tari Caci tidak hanya menjadi identitas budaya Manggarai tetapi juga berkembang sebagai atraksi wisata yang memukau, menarik minat wisatawan domestik maupun mancanegara untuk menyaksikan langsung kekayaan tradisi Flores yang unik ini.",
     district: "Manggarai",
@@ -196,8 +196,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     title: "Upacara Reba",
     year: 1900,
     location: "Ngada",
-    image:
-      "https://cdn.idntimes.com/content-images/community/2021/01/upacara-reba-ngada-ntt-07e8b2d6cce63aef710ff2c624ba9c34.jpg",
+    image: "https://koranntt.com/wp-content/uploads/2021/12/images.jpeg-56.jpg",
     description:
       'Upacara Reba adalah perayaan tahunan suku Ngada di Flores, Nusa Tenggara Timur, sebagai bentuk syukur atas hasil panen dan penghormatan kepada leluhur. Ritual ini berpusat pada penyembahan "Mori Kraeng" (Tuhan Yang Maha Esa) dan roh nenek moyang, dengan simbol utama berupa "Watu Lewa" (batu persembahan) dan "Uwi Reba" (umbi-umbian yang dianggap suci). Prosesinya dimulai dengan "Tutu Reba" (pemotongan ubi pertama) oleh ketua adat, diikuti tarian "Tari Reba" yang dinamis dengan iringan gong dan gendang, sementara peserta mengenakan "Baju Adat Reba" dari kain tenun khas Ngada. Upacara ini juga menjadi momentum rekonsiliasi warga, ditandai dengan pembagian "Moke" (minuman tradisional) dan daging hewan kurban sebagai lambang persaudaraan. Dalam perkembangannya, Reba tidak hanya menjadi ritual sakral tetapi juga atraksi wisata budaya yang memukau, menggambarkan kearifan lokal masyarakat Flores dalam menjaga harmoni antara manusia, alam, dan leluhur. UNESCO telah mencatat Reba sebagai warisan budaya takbenda, memperkuat upaya pelestariannya di tengah modernisasi.',
     district: "Ngada",
@@ -207,7 +206,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     title: "Rumah Adat Mbaru Niang",
     year: 1600,
     location: "Wae Rebo",
-    image: "https://www.nativeindonesia.com/foto/2020/06/mbaru-niang.jpg",
+    image: "https://cdn.wisata.app/diary/5915f1b7-bd02-4364-9f3d-646321893f8e_sm.jpg",
     description:
       "Mbaru Niang adalah rumah adat tradisional masyarakat Manggarai di Flores, Nusa Tenggara Timur, yang memiliki bentuk unik seperti kerucut dengan atap menjulang tinggi terbuat dari ijuk atau alang-alang. Rumah ini dibangun dengan struktur bertingkat lima, di mana setiap tingkat memiliki fungsi simbolis berbeda sesuai filosofi hidup masyarakat Manggarai: lutur (lantai dasar) untuk tempat tinggal dan berkumpul keluarga, lobo (tingkat dua) untuk menyimpan bahan makanan dan hasil panen, lentur (tingkat tiga) untuk benih tanaman, lempo rae (tingkat empat) untuk cadangan pangan, dan hekang kode (tingkat paling atas) sebagai tempat sesajian untuk leluhur. Pembangunan Mbaru Niang melibatkan seluruh warga desa dalam semangat gotong royong, dengan teknik konstruksi tanpa paku menggunakan tali dari serat alam dan kayu pilihan. Selain sebagai hunian, rumah ini juga menjadi pusat aktivitas adat seperti musyawarah, ritual penti (syukuran panen), dan penerusan nilai-nilai budaya kepada generasi muda. Keunikan arsitekturnya yang tahan gempa dan ramah lingkungan menjadikan Mbaru Niang sebagai simbol kearifan lokal yang diakui dunia, termasuk salah satu contohnya di Desa Wae Rebo yang ditetapkan sebagai Warisan Budaya UNESCO. Saat ini, Mbaru Niang tidak hanya dilestarikan sebagai warisan budaya tetapi juga menjadi daya tarik wisata yang memukau bagi pengunjung yang ingin mempelajari kehidupan tradisional masyarakat Flores.",
     district: "Manggarai Barat",
@@ -218,7 +217,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1800,
     location: "Ende",
     image:
-      "https://asset.kompas.com/crops/IjndWBPUUoP3VV5Sfzvcc2TcvPo=/0x0:0x0/750x500/data/photo/2020/03/12/5e6a75e66a301.jpg",
+      "https://assets.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/2023/03/06/331952831_960057045362315_254517274886962232_n1-904229740.jpg",
     description:
       "Tari Gawi adalah tarian tradisional khas masyarakat Flores, Nusa Tenggara Timur, yang melambangkan kebersamaan, kegembiraan, dan syukur atas berkat yang diterima. Tarian ini biasanya dilakukan secara masal oleh puluhan bahkan ratusan penari yang membentuk lingkaran sambil berpegangan tangan, melambangkan persatuan dan kekompakan masyarakat. Gerakan tari yang sederhana namun penuh makna ini diiringi oleh alunan musik gong waning (gong kecil) dan gendang, menciptakan irama yang menghentak dan semangat. Tari Gawi kerap dipentaskan dalam berbagai acara adat penting seperti panen raya, upacara syukuran, penyambutan tamu kehormatan, atau perayaan hari besar agama. Kostum penari biasanya didominasi oleh kain tenun khas Flores yang berwarna-warni, dengan hiasan kepala dan aksesoris tradisional yang menambah keindahan gerakan tari. Nilai filosofis yang terkandung dalam Tari Gawi sangat dalam, yakni mengajarkan tentang pentingnya gotong royong, rasa syukur, dan harmonisasi antara manusia dengan Sang Pencipta serta alam sekitarnya. Dalam perkembangannya, tarian ini tidak hanya menjadi bagian dari ritual adat tetapi juga telah menjadi ikon budaya Flores yang sering ditampilkan dalam festival-festival budaya nasional maupun internasional, sekaligus menjadi media pelestarian warisan leluhur bagi generasi muda. Tari Gawi merupakan perwujudan nyata dari semangat kebersamaan masyarakat Flores yang tetap lestari di tengah arus modernisasi.",
     district: "Ende",
@@ -231,7 +230,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1800,
     location: "Lombok Tengah",
     image:
-      "https://indonesiakaya.com/wp-content/uploads/2020/10/tenun_songket_lombok_1.jpg",
+      "https://img.okezone.com/content/2018/04/06/194/1883220/mengintip-pembuatan-warna-warni-tenun-songket-subahnale-khas-lombok-JUzALU6Pq4.jpg",
     description:
       'Tenun Songket Sasak merupakan salah satu warisan budaya takbenda suku Sasak di Lombok, Nusa Tenggara Barat, yang telah diakui oleh UNESCO sebagai bagian dari kekayaan tekstil tradisional Indonesia. Kain songket ini ditenun secara manual menggunakan benang emas atau perak dengan teknik "pick-up" yang rumit, menghasilkan motif-motif geometris dan floral yang sarat makna filosofis, seperti motif "keker" (kepala burung) yang melambangkan kebijaksanaan, atau "subahnale" (lautan api) yang dipercaya sebagai penolak bala. Proses pembuatannya memakan waktu berminggu-minggu hingga berbulan-bulan, tergantung kerumitan motif, dan biasanya dikerjakan oleh perempuan Sasak di rumah-rumah tradisional menggunakan alat tenun bukan mesin ("gedogan" atau "cagcag"). Warna dominan songket Sasak adalah merah, hitam, kuning, dan hijau yang berasal dari pewarna alami seperti akar mengkudu, daun tarum, atau kunyit. Kain ini tidak hanya berfungsi sebagai pakaian adat dalam upacara pernikahan atau ritual "nyongkolan", tetapi juga menjadi simbol status sosial—semakin banyak benang emas dan rumit motifnya, semakin tinggi nilai ekonomi dan prestise pemakainya. Dalam perkembangannya, tenun songket Sasak telah menjadi komoditas ekonomi kreatif yang mendukung pariwisata Lombok, dengan sentra produksi utama di Desa Sukarara dan Sade. Pelestariannya dilakukan melalui pembelajaran turun-temurun serta inovasi desain yang mengadaptasi tren modern tanpa menghilangkan identitas budaya. Keunikan songket Sasak terletak pada kombinasi ketelitian tangan, nilai spiritual, dan ketahanannya sebagai produk budaya yang terus hidup di tengah arus globalisasi.',
     district: "Lombok Tengah",
@@ -242,7 +241,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1500,
     location: "Pantai Seger, Lombok",
     image:
-      "https://www.goodnewsfromindonesia.id/uploads/post/large-bau-nyale-5c6cbf179b1a9e3b3d4be73a.jpg",
+      "https://kolomdesa.com/wp-content/uploads/2023/06/Twitter-hzqmack.jpg",
     description:
       "Bau Nyale adalah tradisi unik masyarakat Sasak di Lombok yang digelar setiap tahun pada bulan Februari atau Maret, bertepatan dengan musim munculnya cacing laut (nyale) di pantai selatan Lombok seperti Pantai Seger, Kuta, dan Tanjung Aan. Ritual ini bermula dari legenda Putri Mandalika yang mengorbankan diri dengan menceburkan ke laut untuk menghindari perang saudara akibat diperebutkan banyak pangeran, lalu berubah menjadi nyale sebagai simbol cinta abadi. Prosesi dimulai dengan pembacaan doa oleh pemangku adat, diikuti pencarian nyale di malam hari saat air laut surut, dimana masyarakat berbondong-bondong ke pantai dengan obor dan jaring tradisional. Nyale yang tertangkap dipercaya membawa berkah kesuburan bagi pertanian dan keberuntungan dalam percintaan, sehingga banyak muda-mudi yang mengikuti ritual ini dengan harapan menemukan jodoh. Selain sebagai ritual budaya, Bau Nyale telah berkembang menjadi festival besar yang menyajikan berbagai pertunjukan seni seperti tari Gandrung, musik tradisional, hingga lomba menangkap nyale, menarik ribuan wisatawan domestik maupun mancanegara. Tradisi ini tidak hanya memperkaya khazanah budaya Nusa Tenggara Barat tetapi juga menjadi bukti kearifan lokal masyarakat Sasak dalam menjaga harmoni antara manusia, alam, dan kepercayaan leluhur yang tetap lestari di tengah modernisasi.",
     district: "Lombok Tengah",
@@ -253,7 +252,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1700,
     location: "Lombok",
     image:
-      "https://www.kebudayaan.kemdikbud.go.id/bpnbsumsel/wp-content/uploads/sites/36/2020/07/Gendang-Beleq.jpg",
+      "https://asset.kompas.com/crops/cYWRqrM2b7zshFZb8Big1Krlgek=/0x0:1000x667/750x500/data/photo/2020/02/18/5e4bbd62bf219.jpg",
     description:
       'Tarian Gendang Beleq adalah kesenian tradisional khas suku Sasak di Lombok, Nusa Tenggara Barat, yang memadukan unsur musik perkusi dan gerakan dinamis dalam sebuah pertunjukan spektakuler. Tarian ini dinamakan dari instrumen utamanya, yaitu "gendang beleq" (gendang besar) yang dimainkan secara berkelompok dengan iringan gong, terumpang, dan suling, menciptakan irama menghentak penuh semangat. Secara tradisional, tarian ini merupakan bagian dari upacara adat, penyambutan tamu agung, atau pemberangkatan prajurit ke medan perang pada masa Kerajaan Lombok, mencerminkan jiwa heroik dan kebersamaan masyarakat Sasak. Para penari menggunakan kostum warna-warni dengan dominasi merah, hitam, dan kuning, lengkap dengan ikat kepala khas Sasak, sambil memainkan gendang dengan gerakan lincah seperti melompat, berputar, dan berbaris dinamis yang melambangkan semangat perjuangan. Tarian ini biasanya dibawakan oleh 10-20 orang dengan formasi yang teratur, di mana dua orang memainkan gendang besar sebagai pemimpin irama sementara lainnya memainkan instrumen pendukung, menciptakan harmoni musik yang menggetarkan. Dalam perkembangannya, Gendang Beleq tidak hanya menjadi sarana pelestarian budaya tetapi juga tontonan menarik dalam berbagai festival budaya dan even pariwisata di Lombok, bahkan sering menjadi pembuka acara-acara penting di tingkat nasional. Keunikan tarian ini terletak pada kombinasi antara kekuatan musik perkusi yang membangkitkan adrenalin dengan gerakan penuh energi yang memvisualisasikan karakter masyarakat Sasak yang pemberani dan bersemangat, menjadikannya salah satu warisan budaya paling ikonik dari Pulau Lombok yang terus dijaga kelestariannya oleh generasi muda.',
     district: "Lombok Barat",
@@ -264,7 +263,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1500,
     location: "Desa Sade",
     image:
-      "https://asset.kompas.com/crops/QaylmPa7kVccNmoH37yJtD1rcLg=/0x0:1000x667/750x500/data/photo/2022/08/04/62ebf18c05902.jpg",
+      "https://asset.kompas.com/crops/PshPbi8wKvNG2T41qwvSolmi5yI=/0x0:780x520/780x390/data/photo/2021/06/09/60c044ff1a211.png",
     description:
       "Rumah Adat Sasak merupakan salah satu kekayaan arsitektur tradisional Indonesia yang berasal dari suku Sasak di Lombok, Nusa Tenggara Barat. Rumah ini dibangun dengan material alami seperti kayu, bambu, dan ijuk, serta memiliki struktur unik berupa dinding anyaman bambu (bedek) dan atap jerami yang melengkung ke bawah, dirancang untuk menahan angin kencang dan gempa. Ciri khas lainnya adalah lantai yang terbuat dari campuran tanah liat, kotoran kerbau, dan abu jerami, menghasilkan permukaan keras dan berkilau setelah diinjak-injak selama bertahun-tahun. Rumah adat ini terbagi dalam beberapa bagian fungsional, seperti bale tani (ruang tamu), bale dalam (kamar tidur), dan sekepat (dapur), dengan berugak (gazebo) di halaman depan sebagai tempat bersantai dan menerima tamu. Nilai budaya yang kuat terlihat dari pembangunannya yang melibatkan gotong royong warga dan ritual adat, seperti nyelamet metuaq (upacara syukuran) sebelum menempati rumah baru. Keunikan lain adalah adanya lumbung padi (berugak) yang berdiri terpisah dengan atap menjulang, melambangkan kemakmuran. Saat ini, perkampungan adat seperti Desa Sade dan Ende menjadi tempat terbaik untuk melihat keaslian rumah Sasak sekaligus mempelajari filosofi hidup masyarakat Lombok yang harmonis dengan alam. Meskipun modernisasi mulai memengaruhi bentuknya, upaya pelestarian melalui wisata budaya dan workshop terus dilakukan agar arsitektur tradisional ini tidak punah tertinggal zaman.",
     district: "Lombok Tengah",
@@ -275,7 +274,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1600,
     location: "Lombok Tengah",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Peresean_01.jpg/800px-Peresean_01.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/b/b1/Peresean_ritual_of_Sasak_people_of_Lombok.jpg",
     description:
       "Peresean adalah salah satu tradisi unik dari suku Sasak di Lombok, Nusa Tenggara Barat, yang menggabungkan unsur seni bela diri, ritual, dan hiburan dalam satu pertunjukan spektakuler. Dua pesilat (pepadu) bertarung menggunakan tongkat rotan (penjalin) dan perisai (ende) yang terbuat dari kulit sapi, dengan tujuan menunjukkan keberanian dan ketangkasan sekaligus mempertahankan tradisi leluhur. Awalnya, Peresean merupakan ritual untuk memohon hujan atau menguji ketahanan fisik pemuda Sasak sebelum perang, namun kini berkembang menjadi atraksi budaya yang kerap ditampilkan dalam acara-acara penting seperti upacara adat, festival, atau penyambutan tamu. Meski terlihat keras karena para pepadu boleh memukul hingga menyebabkan luka, pertarungan ini dilandasi oleh nilai-nilai sportivitas dan persaudaraan, di mana setelah pertandingan usai, mereka akan berpelukan sebagai tanda tidak ada dendam. Musik tradisional seperti gendang beleq dan gong menjadi pengiring yang memacu semangat para pepadu serta penonton, menciptakan atmosfer heroik dan penuh adrenalin. Kostum khas berwarna hitam dengan ikat kepala (sapuk) menambah kesan gagah, sementara wasit (pekembar) bertugas memastikan pertarungan berjalan adil dan sesuai aturan. Peresean tidak hanya sekadar pertunjukan fisik, tetapi juga sarana pelestarian budaya, pendidikan karakter tentang keberanian, dan simbol persatuan masyarakat Sasak. Saat ini, tradisi ini semakin populer sebagai daya tarik wisata budaya, bahkan diangkat dalam berbagai event nasional untuk memperkenalkan kekayaan budaya Indonesia. Meski modernisasi mulai masuk, esensi Peresean sebagai warisan leluhur tetap dijaga, termasuk keyakinan bahwa darah yang keluar selama pertarungan merupakan persembahan simbolis kepada alam untuk menjaga keseimbangan kehidupan.",
     district: "Lombok Tengah",
@@ -288,7 +287,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1800,
     location: "Kutai Barat",
     image:
-      "https://kebudayaan.kemdikbud.go.id/bpnkaltim/wp-content/uploads/sites/29/2017/04/gantar.jpg",
+      "https://www.nesiatimes.com/wp-content/uploads/2019/09/tari-gantar-2.png",
     description:
       'Tari Gantar adalah tarian tradisional khas suku Dayak Benuaq di Kutai Barat, Kalimantan Timur, yang melambangkan kegembiraan, semangat gotong royong, dan syukur atas hasil panen. Tarian ini dinamakan "Gantar" karena menggunakan tongkat panjang (kayu gantar) dan bambu berisi biji-bijian sebagai properti utama, yang ketika digerakkan menghasilkan irama khas. Gerakan tari yang energik dan dinamis menggambarkan proses menumbuk padi, menanam benih, hingga merayakan hasil panen bersama komunitas. Kostum penari didominasi warna merah, hitam, dan kuning dengan aksesoris manik-manik dan bulu burung enggang yang melambangkan keagungan dalam budaya Dayak. Dahulu, Tari Gantar hanya dipentaskan dalam upacara adat Gawai Belian (ritual penyembuhan) dan Gawai Tahun (syukuran panen), namun kini telah berkembang menjadi tarian penyambutan tamu dan pertunjukan budaya. Nilai kebersamaan sangat kental dalam tarian ini, terlihat dari formasi penari yang bergerak melingkar simbolis sebagai representasi persatuan masyarakat Dayak. Melalui pelestarian di sanggar-sanggar budaya dan festival seperti Erau Tenggarong, Tari Gantar tidak hanya menjadi identitas Kutai Barat tetapi juga warisan budaya Indonesia yang diakui secara nasional, sekaligus media edukasi bagi generasi muda tentang kearifan lokal agraris suku Dayak.',
     district: "Kutai Barat",
@@ -299,7 +298,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1300,
     location: "Kutai Kartanegara",
     image:
-      "https://cdn.idntimes.com/content-images/community/2019/06/erau5-6e3c7a47779e6a4d89d91ef6e122e5cd_600x400.jpg",
+      "https://kukarpaper.com/wp-content/uploads/2022/09/Ngulur-Naga-2.jpg",
     description:
       'Upacara Erau di Kutai Kartanegara merupakan salah satu tradisi tertua dan paling megah di Kalimantan Timur, yang berakar dari ritual kerajaan Hindu Kutai sejak abad ke-13. Sebagai warisan budaya Kesultanan Kutai Kartanegara Ing Martadipura, upacara ini awalnya digelar untuk penobatan raja atau pembersihan kerajaan dari malapetaka, namun kini telah berkembang menjadi festival budaya tahunan yang menarik ribuan pengunjung. Inti dari Erau (berasal dari kata "eroh" yang berarti ramai) terletak pada serangkaian ritual sakral seperti Beluluh (mandi raja), Tijak Tanah (menginjak bumi), dan Menyanggar Tunjung (pembersihan sungai Mahakam dengan sesaji), yang melambangkan hubungan harmonis antara manusia, alam, dan leluhur. Kemegahan Erau juga terlihat dari berbagai pertunjukan seni seperti Tari Gantar, Tari Kanjar, serta adu ketangkasan seperti Bepanah (berjalan di atas bambu) dan Main Terbang (permainan gasing raksasa). Salah satu momen paling dinanti adalah Pesta Rakyat di Stadion Aji Imbut, di mana masyarakat dari berbagai suku Dayak berkumpul dalam pesta makan besar dengan hidangan khas seperti nasi bekepor dan ikan patin. Sejak 2013, Erau telah ditetapkan sebagai Warisan Budaya Takbenda Indonesia, sekaligus menjadi simbol persatuan multietnis di Kutai Kartanegara yang tetap mempertahankan nilai-nilai luhur di tengah modernisasi. Festival ini biasanya digelar selama dua minggu di bulan Juli-Agustus, dengan puncak acara berupa Kirab Budaya yang menampilkan 7.000 penari tradisional mengelilingi kota Tenggarong.',
     district: "Kutai Kartanegara",
@@ -310,7 +309,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1700,
     location: "Kutai Barat",
     image:
-      "https://www.indonesiakaya.com/wp-content/uploads/2020/10/tenun_doyo_1.jpg",
+      "https://indonesiakaya.com/wp-content/uploads/2020/10/9__IMG_2404_Hingga_kini_teknik_pembuatan_tenun_ulap_doyo_sulit_dikuasai_oleh_wanita_diluar_Suku_Dayak_Benuaq.jpg",
     description:
       "Tenun Doyo merupakan salah satu warisan budaya suku Dayak Benuaq di Kutai Barat, Kalimantan Timur, yang dibuat dari serat daun doyo (Curculigo latifolia), sejenis tumbuhan liar yang tumbuh subur di pedalaman Kalimantan. Proses pembuatannya sangat unik dan memerlukan keterampilan tinggi, dimulai dari pengambilan serat daun doyo yang kemudian dipintal menjadi benang, diwarnai menggunakan pewarna alami seperti akar mengkudu atau kayu ulet, lalu ditenun secara manual dengan alat tradisional bernama gedokan. Motif-motif pada Tenun Doyo tidak hanya sekadar hiasan, melainkan mengandung makna filosofis mendalam, seperti motif tumpuk patah yang melambangkan persatuan, atau motif naga yang diyakini sebagai simbol kekuatan dan perlindungan. Kain ini umumnya digunakan dalam upacara adat seperti pernikahan, penyambutan tamu penting, atau ritual keagamaan, sekaligus menjadi penanda status sosial dalam masyarakat Dayak. Warna dominan pada Tenun Doyo adalah merah, hitam, dan kuning, yang masing-masing melambangkan keberanian, kesedian, dan kemuliaan. Saat ini, Tenun Doyo tidak hanya menjadi kebanggaan masyarakat Dayak tetapi juga telah dikenal luas sebagai produk tekstil khas Indonesia yang bernilai seni tinggi, bahkan dipamerkan dalam berbagai event budaya nasional dan internasional. Upaya pelestariannya terus dilakukan melalui pelatihan tenun bagi generasi muda dan pengembangan desain kontemporer agar tetap relevan di era modern tanpa menghilangkan nilai tradisionalnya. Dengan keunikan bahan, proses pembuatan, dan makna budaya yang terkandung di dalamnya, Tenun Doyo bukan sekadar kain, melainkan sebuah mahakarya yang merepresentasikan kearifan lokal suku Dayak Benuaq.",
     district: "Kutai Barat",
@@ -320,7 +319,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     title: "Lamin Adat Dayak",
     year: 1600,
     location: "Berau",
-    image: "https://www.nativeindonesia.com/foto/2020/12/rumah-lamin-dayak.jpg",
+    image: "https://www.ruparupa.com/blog/wp-content/uploads/2022/02/4581184674_8891e5d114.jpg",
     description:
       "Lamin Adat Dayak merupakan rumah panjang tradisional khas suku Dayak di Kalimantan Timur, khususnya di wilayah Berau dan Kutai Barat. Bangunan megah ini bukan sekadar tempat tinggal, melainkan pusat kehidupan sosial, budaya, dan spiritual masyarakat Dayak. Dengan panjang mencapai 100-300 meter, Lamin dibangun dari kayu ulin berkualitas tinggi yang tahan puluhan tahun, ditopang oleh tiang-tiang setinggi 3-5 meter sebagai perlindungan dari banjir dan binatang buas. Secara filosofis, Lamin melambangkan persatuan karena dihuni oleh 10-30 keluarga secara gotong royong. Setiap bagian rumah memiliki fungsi khusus: ruang depan untuk menerima tamu, bagian tengah sebagai area keluarga, dan ujung rumah yang sakral untuk menyimpan benda pusaka seperti mandau dan gong. Ornamen ukiran khas Dayak seperti motif burung enggang (simbol keagungan) dan tanaman menjalar (lambang kesuburan) menghiasi dinding dan tiang Lamin, menceritakan kisah leluhur melalui visual. Lamin juga berperan sebagai balai adat tempat penyelesaian sengketa, upacara perkawinan, hingga ritual Gawai seperti panen atau kematian. Arsitekturnya yang adaptif terhadap iklim tropis, dengan atap melengkung tinggi untuk sirkulasi udara dan lantai panggung dari belahan bambu, menunjukkan kearifan lokal suku Dayak. Saat ini, Lamin tidak hanya menjadi simbol identitas budaya tetapi juga objek wisata edukatif, seperti Lamin Eheng di Kutai Barat yang telah ditetapkan sebagai cagar budaya. Keberadaan Lamin Adat Dayak terus dilestarikan sebagai warisan nenek moyang, meski tantangan modernisasi mengubah pola permukiman masyarakat Dayak. Melalui festival budaya dan program revitalisasi, generasi muda diajak untuk memahami nilai-nilai kebersamaan dan kelestarian alam yang terkandung dalam setiap papan rumah Lamin.",
     district: "Berau",
@@ -331,7 +330,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1800,
     location: "Mahakam Ulu",
     image:
-      "https://asset.kompas.com/crops/_UThcmoNG0zAH_kxH4EU1OT_ZDo=/0x0:640x426/750x500/data/photo/2020/10/22/5f91872d3dc15.jpg",
+      "https://www.wwf.id/sites/default/files/blog/_c__wwfid_sugeng_hendratno%20%281%29.jpg",
     description:
       "Tari Hudoq merupakan salah satu tarian sakral suku Dayak Bahau dan Modang di Kalimantan Timur yang kaya akan nilai spiritual dan budaya. Tarian ini biasanya dipentaskan dalam rangkaian upacara adat menyambut masa tanam atau sebagai ritual tolak bala untuk melindungi desa dari malapetaka. Keunikan Tari Hudoq terletak pada kostum penarinya yang menggunakan topeng kayu berwarna-warni dengan wajah seram, menyerupai roh leluhur atau makhluk gaia, serta busana dari daun pisang atau kulit kayu yang menutupi seluruh tubuh. Topeng-topeng ini bukan sekadar properti tari, melainkan simbol penghormatan kepada dewa-dewa pertanian dan alam. Prosesi Tari Hudoq diawali dengan ritual pemanggilan roh oleh seorang dukun (belian) sebelum para penari muncul dengan gerakan khas yang dinamis dan penuh energi. Gerakan tari ini menggambarkan semangat bercocok tanam, hubungan harmonis antara manusia dan alam, serta harapan akan hasil panen yang melimpah. Iringan musik tradisional seperti gendang, gong, dan alat musik bambu menambah nuansa magis dalam setiap pertunjukannya. Selain sebagai ritual pertanian, Tari Hudoq juga memiliki fungsi sosial sebagai media penyampaian pesan moral dan pelestarian tradisi lisan suku Dayak. Setiap gerakan dan motif topeng mengandung cerita mitologis tentang asal-usul leluhur dan kearifan lokal dalam menjaga keseimbangan alam. Pada perkembangannya, tarian ini tidak hanya dipentaskan dalam konteks adat tetapi juga menjadi daya tarik wisata budaya, seperti dalam Festival Erau di Tenggarong. Masyarakat Dayak percaya bahwa Tari Hudoq harus dilakukan dengan tulus dan khidmat agar berkat dari leluhur dapat turun. Jika ritual ini diabaikan, mereka meyakini akan terjadi bencana seperti gagal panen atau wabah penyakit. Saat ini, Tari Hudoq telah diakui sebagai Warisan Budaya Takbenda Indonesia oleh Kementerian Pendidikan dan Kebudayaan, sekaligus menjadi simbol kekayaan budaya Kalimantan Timur yang terus dilestarikan oleh generasi muda.",
     district: "Mahakam Ulu",
@@ -344,7 +343,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1800,
     location: "Kapuas Hulu",
     image:
-      "https://cdn.idntimes.com/content-images/post/20230424/tari-monong-16ae4f9a42cb7414e969cfc66398e8d4.jpg",
+      "https://backpackerjakarta.com/wp-content/uploads/2017/04/tari-monong-kalimantan-barat-1.jpg",
     description:
       "Tari Monong merupakan tarian tradisional suku Dayak Benuaq di Kalimantan Timur yang berfungsi sebagai ritual penyembuhan dan penolak bala. Tarian ini dipimpin oleh seorang dukun (belian) yang bertindak sebagai mediator antara dunia manusia dan roh leluhur, dengan gerakan-gerakan khusus yang diyakini memiliki kekuatan magis untuk mengusir penyakit atau roh jahat. Para penari menggunakan kostum tradisional dari bahan alam seperti daun rumbia dan kulit kayu, dilengkapi dengan aksesori seperti kalung manik-manik dan ikat kepala khas Dayak, sambil membawa alat musik sederhana seperti gendang dan gong kecil sebagai pengiring. Prosesi tari dimulai dengan pembacaan mantra oleh dukun, diikuti gerakan berputar-putar dan menghentak-hentakkan kaki yang simbolis, mencerminkan usaha mengusir energi negatif dari tubuh si sakit atau dari lingkungan masyarakat. Dalam perkembangannya, Tari Monong tidak hanya menjadi bagian dari upacara adat tetapi juga ditampilkan dalam berbagai festival budaya sebagai wujud pelestarian tradisi leluhur. Tarian ini mengandung nilai-nilai spiritual yang dalam tentang kepercayaan suku Dayak terhadap dunia gaia dan keseimbangan alam, sekaligus menunjukkan kekayaan warisan budaya Kalimantan Timur yang terus dijaga eksistensinya oleh generasi muda melalui pembelajaran langsung dari tetua adat. Keunikan Tari Monong terletak pada perpaduan antara unsur ritual magis dengan seni pertunjukan yang memukau, membuatnya menjadi salah satu kekayaan budaya Indonesia yang patut dilestarikan.",
     district: "Kapuas Hulu",
@@ -355,7 +354,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1900,
     location: "Landak",
     image:
-      "https://www.goodnewsfromindonesia.id/uploads/post/large-upacara-naik-dango-kalimantan-barat-768x432-9f8b7e59b1f164b8a2794d0f0a1d2ac6.jpg",
+      "https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1556426548/mxhea6brqj4sfyivyugd.jpg",
     description:
       "Upacara Naik Dango adalah ritual adat suku Dayak Kanayatn di Kalimantan Barat sebagai bentuk syukur atas hasil panen padi yang melimpah, sekaligus permohonan agar musim tanam berikutnya diberkati. Upacara ini biasanya digelar setahun sekali di rumah betang (rumah panjang adat) dengan prosesi sakral yang dipimpin oleh tetua adat atau pemangku ritual. Inti dari upacara ini adalah menaikkan padi ke dalam dango (lumbung padi) sebagai simbol penyimpanan hasil bumi sekaligus penghormatan kepada Jubata (Tuhan) dan Nek Padi (roh padi) yang dipercaya telah memberikan kemakmuran. Selama ritual, masyarakat mengenakan pakaian adat Dayak lengkap dengan aksesoris manik-manik dan bulu burung enggang, sambil menampilkan tarian tradisional seperti Tari Monong atau Tari Kinyah sebagai bentuk kegembiraan. Prosesi dilengkapi dengan sesajen berupa tuak, beras ketan, dan hewan ternak yang dipersembahkan sebagai tanda terima kasih kepada alam semesta. Upacara ini tidak hanya menjadi ajang pelestarian budaya, tetapi juga memperkuat solidaritas komunitas karena melibatkan seluruh warga desa dalam persiapan dan pelaksanaannya. Dalam perkembangannya, Naik Dango kini juga diadakan sebagai festival budaya yang menarik minat wisatawan, seperti Festival Gawai Dayak di Pontianak, yang memadukan tradisi dengan pertunjukan seni modern. Melalui upacara ini, nilai-nilai kearifan lokal tentang rasa syukur, penghormatan kepada alam, dan kebersamaan tetap hidup di tengah arus modernisasi.",
     district: "Landak",
@@ -366,7 +365,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1800,
     location: "Pontianak",
     image:
-      "https://pontianak.tribunnews.com/thumban/960x640/2020/11/09/1622745136.jpg",
+      "https://i.ytimg.com/vi/m7gwk4o_808/maxresdefault.jpg",
     description:
       "Tari Jonggan adalah tarian tradisional khas masyarakat Dayak Kanayatn di Kalimantan Barat yang menggambarkan kegembiraan dan rasa syukur atas berkah kehidupan. Tarian ini biasanya dibawakan oleh penari pria dan wanita dengan gerakan dinamis dan lincah, diiringi oleh musik tradisional seperti gendang, gong, dan alat musik bambu. Kostum penari sangat berwarna-warni, dengan hiasan kepala dari bulu burung enggang dan manik-manik tradisional yang melambangkan keanggunan dan kekayaan budaya Dayak. Tari Jonggan sering dipentaskan dalam berbagai acara adat seperti pernikahan, penyambutan tamu penting, atau perayaan panen, sebagai bentuk ungkapan kebahagiaan dan persatuan masyarakat. Gerakan dalam tarian ini mencerminkan keharmonisan antara manusia dengan alam serta nilai-nilai kebersamaan yang dijunjung tinggi oleh suku Dayak. Tari Jonggan tidak hanya menjadi hiburan, tetapi juga sarana pelestarian budaya dan pendidikan moral bagi generasi muda. Saat ini, tarian ini semakin dikenal luas dan sering ditampilkan dalam festival budaya nasional maupun internasional, memperkenalkan kekayaan seni Kalimantan Barat kepada dunia. Melalui Tari Jonggan, masyarakat Dayak Kanayatn terus menjaga warisan leluhur sekaligus menunjukkan identitas budaya mereka yang unik dan penuh makna.",
     district: "Pontianak",
@@ -377,7 +376,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1600,
     location: "Sintang",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/8/88/Rumah_Betang_Pontianak.jpg",
+      "https://pariwisata.kalteng.go.id/images/wisata/32betang%20house.jpg",
     description:
       'Rumah Panjang Dayak (Lamin Adat) adalah rumah tradisional khas suku Dayak di Kalimantan Timur yang menjadi simbol kebersamaan dan kearifan lokal masyarakat adat. Berbentuk memanjang dengan struktur panggung dari kayu ulin yang kokoh, rumah ini bisa mencapai panjang 100-300 meter dan dihuni oleh puluhan keluarga sekaligus dalam satu komunitas. Arsitekturnya yang unik menampilkan ornamen ukiran khas Dayak dengan motif enggang (burung suci) dan naga yang melambangkan hubungan harmonis antara manusia, alam, dan leluhur. Atapnya yang menjulang tinggi terbuat dari sirap kayu atau daun rumbia, dirancang untuk melindungi penghuni dari cuaca tropis sekaligus menjadi identitas status sosial pemiliknya. Fungsi Lamin Adat tidak hanya sebagai tempat tinggal, tetapi juga pusat aktivitas adat seperti musyawarah, penyelesaian konflik, upacara ritual (seperti Tiwah), hingga penyimpanan benda pusaka. Ruang dalamnya terbagi secara hierarkis - bagian depan untuk menerima tamu dan upacara, tengah untuk ruang keluarga, serta belakang yang bersifat privat. Nilai gotong royong sangat terlihat dalam pembangunannya yang melibatkan seluruh warga, mencerminkan filosofi "Huma Betang" tentang persatuan dan kesetaraan. Saat ini, selain tetap dipertahankan oleh komunitas adat di pedalaman, Lamin Adat juga menjadi objek wisata budaya seperti di Desa Pampang Samarinda, sekaligus dilindungi sebagai cagar budaya nasional untuk memastikan kelestarian warisan arsitektur Borneo yang megah ini.',
     district: "Sintang",
@@ -388,7 +387,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1700,
     location: "Pontianak",
     image:
-      "https://cdn.antaranews.com/cache/1200x800/2022/06/02/IMG_20220602_104527.jpg",
+      "https://cdngnfi2.sgp1.cdn.digitaloceanspaces.com/gnfi/uploads/images/2022/06/1616182022-shutterstock_201334f3520.jpg",
     description:
       "Tepung Tawar Melayu adalah salah satu ritual adat yang mendalam dalam budaya Melayu, biasanya dilaksanakan dalam berbagai momen penting seperti pernikahan, kelahiran bayi, pembangunan rumah, atau penyambutan tamu agung. Prosesi ini melambangkan pengharapan akan keselamatan, keberkahan, dan perlindungan dari mara bahaya, dengan menggunakan bahan-bahan simbolis seperti beras kunyit, bunga rampai, air mawar, dan daun-daunan tertentu yang diyakini memiliki kekuatan spiritual. Dalam pelaksanaannya, seorang tetua adat atau pemuka agama akan memimpin ritual sambil membacakan doa-doa khusus, kemudian menaburkan atau mengoleskan campuran tepung tawar ke dahi, tangan, atau bagian tubuh penerima sebagai bentuk penyucian dan permohonan restu dari Yang Maha Kuasa. Makna filosofis di balik Tepung Tawar tidak hanya terletak pada aspek religiusnya, tetapi juga sebagai perekat sosial yang menguatkan tali silaturahmi antarindividu dalam komunitas Melayu. Setiap unsur yang digunakan dalam ritual ini memiliki arti tersendiri; misalnya, beras melambangkan kemakmuran, bunga menggambarkan keharuman hidup, dan air menjadi simbol kesucian. Di era modern, tradisi ini tetap lestari dan sering dipadukan dengan acara-acara resmi sebagai bentuk pelestarian identitas budaya Melayu yang kaya akan nilai spiritual dan kearifan lokal. Keberadaan Tepung Tawar juga mencerminkan akulturasi harmonis antara kepercayaan animisme masa lalu dengan ajaran Islam yang kini dianut oleh sebagian besar masyarakat Melayu, menjadikannya warisan budaya yang terus relevan dari generasi ke generasi.",
     district: "Pontianak",
@@ -401,7 +400,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1600,
     location: "Tana Toraja",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/4/4c/Tongkonan_-_Traditional_Toraja_House.jpg",
+      "https://img.era.id/XrzXTS338KaQv57L6PS6wglGEwunmYdXn7immFGooq0/rs:fill:1280:720/g:sm/bG9jYWw6Ly8vcHVibGlzaGVycy8xMDM4NTUvMjAyMjA5MTUxMjIxLW1haW4uanBn.jpg",
     description:
       'Rumah Adat Tongkonan adalah rumah tradisional suku Toraja yang menjadi simbol status sosial, kekayaan budaya, dan spiritualitas masyarakat setempat. Dibangun dengan arsitektur khas berbentuk seperti perahu dengan atap melengkung yang menjulang (disebut "tongkonan"), rumah ini terbuat dari kayu berkualitas tinggi dan dihiasi ukiran rumit berwarna merah, hitam, kuning, dan putih yang masing-masing memiliki makna filosofis—seperti keberanian, kesucian, dan kesuburan. Tongkonan bukan sekadar tempat tinggal, melainkan pusat kehidupan sosial, adat, dan ritual suku Toraja, khususnya dalam upacara kematian (Rambu Solo’) yang melambangkan penghormatan kepada leluhur. Strukturnya yang menghadap utara-selatan mencerminkan kepercayaan akan asal-usul nenek moyang dari utara dan perjalanan arwah menuju alam akhirat di selatan. Setiap bagian rumah memiliki fungsi khusus, seperti "alang" (loteng) untuk menyimpan pusaka keluarga, sementara tiang-tiang penyangganya melambangkan hubungan harmonis antaranggota keluarga. Keunikan Tongkonan juga terlihat dari susunan tanduk kerbau yang dipasang di depan rumah sebagai simbol status pemiliknya—semakin banyak tanduk, semakin tinggi strata sosialnya. Saat ini, Tongkonan tidak hanya menjadi warisan budaya yang dilindungi UNESCO tetapi juga daya tarik wisata utama di Tana Toraja, menarik minat antropolog dan pelancong untuk mempelajari nilai-nilai kebersamaan, tradisi megalitik, dan kearifan lokal suku Toraja yang tetap lestari di tengah modernisasi.',
     district: "Tana Toraja",
@@ -412,18 +411,18 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1800,
     location: "Tana Toraja",
     image:
-      "https://cdn.idntimes.com/content-images/community/2020/10/toraja-2-29519eabf56a417aaafed5ed719930aa.jpg",
+      "https://statik.tempo.co/data/2023/09/02/id_1233585/1233585_720.jpg",
     description:
       "Upacara Rambu Solo adalah ritual pemakaman adat suku Toraja yang megah dan sarat makna, merupakan salah satu tradisi paling terkenal di Indonesia karena keunikan prosesi dan filosofinya. Upacara ini bertujuan untuk mengantarkan arwah menuju alam roh (Puya) dengan penuh kemuliaan, sekaligus menunjukkan status sosial keluarga melalui berbagai simbol seperti kerbau yang disembelih, jumlah tamu undangan, dan ukuran tongkonan (rumah adat) yang didirikan. Prosesinya bisa berlangsung selama berhari-hari hingga berminggu-minggu, melibatkan seluruh warga desa dalam berbagai ritual seperti Ma’tinggoro Tedong (pemotongan kerbau), Ma’badong (tarian berkabung), serta Ma’palao (arak-arakan jenazah ke tempat peristirahatan terakhir di tebing batu Londa atau Lemo). Setiap tahapan memiliki makna mendalam, seperti pengorbanan kerbau sebagai bekal arwah atau tarian Ma’badong yang menceritakan perjalanan hidup almarhum. Keunikan lain terlihat pada tau-tau (patung kayu) yang dibuat sebagai representasi almarhum dan diletakkan di tebing kuburan. Meskipun biayanya sangat besar (bisa mencapai miliaran rupiah), masyarakat Toraja tetap mempertahankan tradisi ini sebagai bentuk penghormatan tertinggi kepada leluhur dan identitas budaya. Kini, Rambu Solo tidak hanya menjadi warisan turun-temurun tetapi juga daya tarik wisata budaya yang menarik minat antropolog dan traveler dari seluruh dunia.",
     district: "Tana Toraja",
     province: "Sulawesi Selatan",
   },
   {
-    title: "Tari Pakarena",
+    title: "Tari Kipas Pakarena",
     year: 1700,
     location: "Gowa",
     image:
-      "https://budaya-indonesia.org/wp-content/uploads/2019/01/Tari-Pakarena.jpg",
+      "https://asset-2.tstatic.net/pontianak/foto/bank/images/tari-kipas-dari-gowa-sulawesi-selatan-lambang-kelembutan.jpg",
     description:
       "Tari Pakarena adalah tarian tradisional yang berasal dari suku Makassar di Sulawesi Selatan, dikenal sebagai simbol keanggunan dan kesopanan perempuan Bugis-Makassar. Tarian ini dibawakan oleh penari wanita dengan gerakan gemulai yang mengalir, mencerminkan karakter perempuan Sulawesi yang lembut namun penuh keteguhan. Gerakan tangan yang berputar perlahan, lengkungan tubuh yang harmonis, serta tatapan mata yang teduh menjadi ciri khas tarian ini, diiringi oleh alunan musik tradisional seperti gandrang (gendang) dan puik-puik (serunai). Konon, Tari Pakarena terinspirasi dari kisah perpisahan penghuni khayangan (Botting Langi) dengan penghuni bumi (Lino) sebelum mereka berpisah, di mana gerakan tarian ini diyakini sebagai simbol pesan dan petunjuk hidup yang ditinggalkan Botting Langi untuk manusia di bumi. Tarian ini biasanya dipentaskan dalam berbagai acara adat seperti pernikahan, penyambutan tamu penting, atau festival budaya, dengan penari menggunakan busana adat berupa baju bodo (kemeja longgar khas Bugis) dan kain sarung sutra yang mewah. Keunikan Tari Pakarena terletak pada filosofinya yang dalam; meskipun gerakannya terlihat sederhana dan tenang, tarian ini membutuhkan konsentrasi tinggi, stamina yang baik, serta penguasaan emosi karena harus dibawakan secara kontinu tanpa jeda selama kurang lebih 120 menit. Sebagai warisan budaya yang telah diakui secara nasional, Tari Pakarena tidak hanya menjadi identitas budaya Sulawesi Selatan tetapi juga terus dipelajari dan dikembangkan oleh sanggar-sanggar tari untuk memastikan kelestariannya bagi generasi mendatang.",
     district: "Gowa",
@@ -434,20 +433,20 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1600,
     location: "Makassar",
     image:
-      "https://asset.kompas.com/crops/6T93PX9HLE7pPpb3sKiA8uUqR70=/102x0:1198x728/750x500/data/photo/2022/07/07/62c67bb68a2e5.jpg",
+      "https://weddingmarket.com/storage/images/artikelidea/cabcaebd6f1d6b3a99806fd93cdfbd27102f7924.webp",
     description:
       "Pakaian Adat Bodo merupakan busana tradisional khas masyarakat Sulawesi Selatan, khususnya suku Bugis-Makassar, yang dikenal sebagai salah satu pakaian adat tertua di Indonesia dengan sejarah yang diperkirakan telah ada sejak abad ke-9. Pakaian ini terbuat dari kain muslin atau kain katun tipis yang transparan, dengan warna-warna cerah seperti merah, kuning, hijau, atau ungu, dan biasanya dipadukan dengan sarung sutra bermotif kotak-kotak (sarung pattu’du’) sebagai bawahan. Ciri khas Pakaian Adat Bodo terletak pada bentuknya yang sederhana namun mencolok, berupa blus longgar berlengan pendek dan lebar, dipakai tanpa kancing, serta kerah berbentuk segitiga yang memberikan kesan anggun dan feminin. Pada zaman dahulu, warna pakaian ini juga menandakan status sosial pemakainya, misalnya warna jingga untuk anak-anak, merah muda untuk remaja, dan merah tua untuk wanita dewasa, sementara warna hijau digunakan oleh bangsawan dan warna ungu oleh para dukun atau tetua adat. Pakaian ini sering dipakai dalam berbagai upacara adat seperti pernikahan, penyambutan tamu penting, atau festival budaya, dan biasanya dilengkapi dengan perhiasan emas seperti kalung, gelang, dan anting-anting yang menambah kemewahan penampilan. Seiring perkembangan zaman, Pakaian Adat Bodo telah mengalami berbagai modifikasi, seperti penambahan payet atau bordir, namun tetap mempertahankan bentuk aslinya sebagai wujud pelestarian budaya. Keunikan dan keindahan Pakaian Adat Bodo tidak hanya menjadi kebanggaan masyarakat Sulawesi Selatan, tetapi juga telah diakui secara nasional sebagai warisan budaya Indonesia yang mencerminkan kearifan lokal dan identitas kesukuan yang khas.",
     district: "Makassar",
     province: "Sulawesi Selatan",
   },
   {
-    title: "Bahasa Bugis",
+    title: "Aksara Lontara",
     year: 1400,
     location: "Bone",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/4/42/Bugis_Lontara_script.png",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/La_galigo.jpg/357px-La_galigo.jpg",
     description:
-      'Bahasa Bugis adalah salah satu bahasa daerah terpenting di Indonesia yang dituturkan oleh suku Bugis di Sulawesi Selatan, dengan penutur tersebar hingga Kalimantan, Sumatra, dan Malaysia. Bahasa ini termasuk dalam rumpun Austronesia dan memiliki sistem penulisan tradisional menggunakan aksara Lontara, yang berasal dari abad ke-14 dan masih dipelajari hingga kini. Bahasa Bugis kaya akan kosakata yang berkaitan dengan budaya maritim, pertanian, dan kearifan lokal, seperti istilah "passompe" (pelayaran) atau "pangngadereng" (adat istiadat). Dalam struktur sosial Bugis, bahasa juga mencerminkan strata masyarakat melalui tingkatan bahasa halus (bahasa "to makaka") dan bahasa sehari-hari. Meskipun pengaruh bahasa Indonesia semakin kuat, upaya pelestarian terus dilakukan melalui pendidikan muatan lokal, sastra lisan seperti "elong" (puisi tradisional), dan musik tradisional. Bahasa Bugis juga menjadi identitas budaya yang dibawa perantau Bugis ke berbagai wilayah, menunjukkan ketahanannya sebagai simbol persatuan dan warisan leluhur. UNESCO mencatat aksara Lontara sebagai bagian dari memori dunia, memperkuat posisinya sebagai bahasa yang patut dilindungi. Dengan sekitar 4 juta penutur, Bahasa Bugis tetap hidup dalam percakapan sehari-hari, upacara adat, dan karya sastra modern.',
+      'Aksara Lontara adalah salah satu bahasa daerah terpenting di Indonesia yang dituturkan oleh suku Bugis di Sulawesi Selatan, dengan penutur tersebar hingga Kalimantan, Sumatra, dan Malaysia. Bahasa ini termasuk dalam rumpun Austronesia dan memiliki sistem penulisan tradisional menggunakan aksara Lontara, yang berasal dari abad ke-14 dan masih dipelajari hingga kini. Bahasa Bugis kaya akan kosakata yang berkaitan dengan budaya maritim, pertanian, dan kearifan lokal, seperti istilah "passompe" (pelayaran) atau "pangngadereng" (adat istiadat). Dalam struktur sosial Bugis, bahasa juga mencerminkan strata masyarakat melalui tingkatan bahasa halus (bahasa "to makaka") dan bahasa sehari-hari. Meskipun pengaruh bahasa Indonesia semakin kuat, upaya pelestarian terus dilakukan melalui pendidikan muatan lokal, sastra lisan seperti "elong" (puisi tradisional), dan musik tradisional. Bahasa Bugis juga menjadi identitas budaya yang dibawa perantau Bugis ke berbagai wilayah, menunjukkan ketahanannya sebagai simbol persatuan dan warisan leluhur. UNESCO mencatat aksara Lontara sebagai bagian dari memori dunia, memperkuat posisinya sebagai bahasa yang patut dilindungi. Dengan sekitar 4 juta penutur, Bahasa Bugis tetap hidup dalam percakapan sehari-hari, upacara adat, dan karya sastra modern.',
     district: "Bone",
     province: "Sulawesi Selatan",
   },
@@ -458,7 +457,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1700,
     location: "Minahasa",
     image:
-      "https://indonesiakaya.com/wp-content/uploads/2020/10/tari_kabasaran_1.jpg",
+      "https://sultantv.co/wp-content/uploads/2022/09/tr.jpg",
     description:
       "Tari Kabasaran adalah tarian perang tradisional dari Minahasa, Sulawesi Utara, yang menggambarkan keberanian dan jiwa kepahlawanan masyarakat Minahasa di medan perang. Tarian ini dibawakan oleh para penari pria yang mengenakan kostum merah menyala dengan hiasan kepala berbulu burung tingang (enggang), membawa senjata tradisional seperti pedang (santi) dan perisai (balang), serta diiringi oleh musik tambur dan gong yang dinamis. Gerakan tari Kabasaran sangat enerjik, dengan langkah tegas, loncatan, dan teriakan khas yang menggambarkan semangat juang dan kegagahan. Dahulu, tarian ini merupakan ritual penyemangat prajurit sebelum berperang, sekaligus bentuk penghormatan kepada roh leluhur. Dalam perkembangannya, Tari Kabasaran kini menjadi bagian penting dalam upacara adat, penyambutan tamu kehormatan, dan festival budaya, serta diakui sebagai Warisan Budaya Takbenda Indonesia. Nilai-nilai yang terkandung dalam tarian ini, seperti keberanian, persatuan, dan kecintaan pada tanah air, terus dipelihara oleh generasi muda Minahasa sebagai identitas budaya yang membanggakan.",
     district: "Minahasa",
@@ -469,7 +468,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1800,
     location: "Kepulauan Sangihe",
     image:
-      "https://www.indonesiakaya.com/wp-content/uploads/2020/10/tulude_1.jpg",
+      "https://sangihekab.go.id/wp-content/uploads/2020/06/IMG-20200201-WA0007.jpg",
     description:
       'Upacara Tulude adalah ritual tahunan masyarakat Sangihe di Sulawesi Utara yang digelar setiap 31 Januari sebagai bentuk syukur atas berkat alam dan permohonan perlindungan untuk tahun baru. Tradisi ini berakar dari kepercayaan lokal yang memadukan unsur budaya Kristen dengan adat leluhur, ditandai dengan penyembelihan ayam putih sebagai persembahan simbolis, pembacaan doa, serta penyajian hidangan khas seperti "babi putar" dan "nasi jaha". Inti upacara terletak pada prosesi "Tulude" (memotong tiang bambu berhias) yang melambangkan pemutusan kesialan tahun lalu dan penyambutan tahun baru penuh harapan. Masyarakat berkumpul dengan mengenakan pakaian adat "laku tepu", menari "tari gunde", dan menyanyikan lagu-lagu tradisional seperti "Kabasaran" dengan iringan musik "salude" (gong kecil). Upacara ini tidak hanya menjadi sarana pelestarian budaya tetapi juga memperkuat solidaritas komunitas, bahkan menarik wisatawan yang ingin menyaksikan kekayaan budaya Sangihe. Sejak 2013, Tulude telah ditetapkan sebagai Warisan Budaya Takbenda Indonesia, menegaskan perannya sebagai identitas budaya yang terus hidup di tengah modernisasi.',
     district: "Kepulauan Sangihe",
@@ -479,18 +478,18 @@ const cultures: Prisma.CultureCreateInput[] = [
     title: "Tari Maengket",
     year: 1600,
     location: "Minahasa",
-    image: "https://www.kamerabudaya.com/uploads/2016/09/tari-maengket.jpg",
+    image: "https://museumnusantara.com/wp-content/uploads/2021/11/Sejarah-dan-Asal-Usul-Tari-Gong.jpg.webp",
     description:
       'Tari Maengket adalah tarian tradisional yang berasal dari Sulawesi Utara, khususnya masyarakat Minahasa, yang menggabungkan unsur gerakan dinamis, syair lagu, dan makna budaya mendalam dalam satu pertunjukan yang harmonis. Tarian ini awalnya merupakan bagian dari ritual syukur setelah panen padi (mapalus), namun kini berkembang menjadi tarian penyambutan tamu dan perayaan adat dengan tiga jenis gerakan utama: "Maowey Kamberu" (menggambarkan proses pengumpulan padi), "Marambak" (simbol kebersamaan dan gotong royong), dan "Lalayaan" (gerakan ceria sebagai ungkapan sukacita). Para penari, baik laki-laki maupun perempuan, menari dengan iringan musik tradisional seperti kolintang, gong, dan tambur, sambil mengenakan busana khas Minahasa berupa "laku tepu" (kain tenun) untuk perempuan dan "baju banang" untuk laki-laki, dengan aksesori tambahan seperti "sigi" (hiasan kepala) yang memperkuat identitas budaya. Keunikan Tari Maengket terletak pada pola lantai yang dinamis dan interaksi antara penari yang mencerminkan nilai-nilai kebersamaan, kerja keras, serta penghormatan terhadap alam, di mana setiap gerakan tangan yang meliuk dan langkah kaki yang tegas memiliki makna filosofis terkait siklus hidup manusia dan alam. Dalam perkembangannya, tarian ini tidak hanya menjadi sarana pelestarian budaya tetapi juga media edukasi bagi generasi muda untuk memahami kearifan lokal Minahasa, serta sering ditampilkan dalam festival budaya seperti Festival Bolaang Mongondow dan event pariwisata nasional sebagai ikon kebanggaan Sulawesi Utara yang memukau penonton dengan energinya yang contagius dan pesan persatuan yang universal.',
     district: "Minahasa",
     province: "Sulawesi Utara",
   },
   {
-    title: "Masamper",
+    title: "Kesenian Masamper",
     year: 1800,
     location: "Bitung",
     image:
-      "https://cdn.idntimes.com/content-images/community/2022/07/masamper-bitung-90f725c7c76cb60314297fa1fc91fa55_600x400.jpg",
+      "https://mmc.tirto.id/image/2016/10/08/antarafoto-rekorkesenianmasamper-081016-adw_ratio-16x9.JPG",
     description:
       "Masamper adalah tradisi musik vokal khas masyarakat Maluku Tengah yang biasanya dibawakan secara berkelompok dengan pola nyanyian berbalas-balasan (kanon) dalam harmoni yang khas, menciptakan alunan melodi yang syahdu dan penuh makna. Budaya seni suara ini umumnya ditampilkan dalam berbagai acara adat seperti pernikahan, penyambutan tamu penting, atau upacara adat sebagai bentuk penghormatan dan persatuan masyarakat. Lagu-lagu Masamper biasanya berisi petuah kehidupan, kisah perjuangan leluhur, atau ungkapan syukur atas hasil bumi, yang dilantunkan dalam bahasa tanah setempat dengan teknik vokal khas yang diturunkan secara turun-temurun. Keunikan Masamper terletak pada struktur nyanyiannya yang terdiri dari empat kelompok suara (sopran, alto, tenor, dan bass) yang saling mengisi dan menciptakan harmoni polifonis yang kaya, tanpa diiringi alat musik apapun sehingga kemurnian suara manusia menjadi elemen utama pertunjukan. Tradisi ini tidak hanya menjadi sarana hiburan, tetapi juga media pendidikan moral dan pelestarian bahasa daerah, di mana para tetua adat biasanya akan menyisipkan nilai-nilai kebijaksanaan lokal dalam lirik lagunya. Dalam perkembangannya, Masamper telah diakui sebagai Warisan Budaya Takbenda Indonesia dan sering ditampilkan dalam festival budaya nasional maupun internasional sebagai representasi kekayaan seni budaya Maluku. Masyarakat Maluku sangat menjaga kelestarian Masamper dengan mengajarkannya kepada generasi muda melalui sanggar-sanggar budaya dan kegiatan ekstrakurikuler di sekolah, sehingga tradisi ini tetap hidup dan menjadi identitas budaya yang membanggakan.",
     district: "Bitung",
@@ -501,7 +500,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1500,
     location: "Minahasa",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/8/8a/Wale_Wangko_-_Traditional_house_of_Minahasa.jpg",
+      "https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1594127745/s9ty52yupkn0r78xdtbx.jpg",
     description:
       "Walewangko adalah rumah adat khas suku Minahasa, berbentuk rumah panggung dengan atap segitiga dan ornamen khas Minahasa.",
     district: "Minahasa",
@@ -514,7 +513,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1800,
     location: "Wamena",
     image:
-      "https://indonesiakaya.com/wp-content/uploads/2020/10/tari_perang_papua.jpg",
+      "https://radarmukomuko.bacakoran.co/upload/9f943683fe7fbf8423742b91ac860c7c.jpg",
     description:
       "Rumah Adat Walewangko adalah salah satu rumah tradisional khas suku Minahasa di Sulawesi Utara yang memiliki arsitektur unik berbentuk panggung dengan atap melengkung tinggi menyerupai tanduk kerbau, simbol kebanggaan dan status sosial pemiliknya. Dibangun dari material alam seperti kayu besi (linggua), bambu, dan daun rumbia, rumah ini dirancang tahan gempa dengan struktur tiang penyangga tanpa paku, hanya menggunakan sistem pasak dan ikatan tali dari serat alam. Bagian depan rumah (depan) selalu menghadap utara atau selatan sesuai kepercayaan leluhur Minahasa bahwa arah tersebut membawa keberkahan, sementara kolong rumah dimanfaatkan untuk menyimpan hasil panen atau kandang hewan. Interior rumah terbagi menjadi tiga bagian utama: lesar (ruang tamu), salei (ruang keluarga), dan porong (kamar tidur), dengan dapur terpisah di belakang rumah. Ornamen ukiran kayu bermotif geometris dan patung kayu (wale) di setiap sudut menambah nilai estetika sekaligus melambangkan perlindungan dari roh jahat. Rumah Walewangko bukan hanya tempat tinggal, tetapi juga pusat aktivitas adat seperti musyawarah, upacara perkawinan, atau ritual Mapalus (gotong royong). Saat ini, keberadaan rumah adat ini semakin langka, namun beberapa masih dapat ditemui di daerah seperti Tondano, Tomohon, dan Minahasa Tenggara sebagai bukti warisan budaya Minahasa yang terus dilestarikan melalui festival dan edukasi generasi muda.",
     district: "Jayawijaya",
@@ -525,7 +524,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1700,
     location: "Pegunungan Tengah Papua",
     image:
-      "https://asset.kompas.com/crops/LnvHwTjHDcd5Vp_3thqB6vZCDrA=/0x0:1000x667/750x500/data/photo/2021/10/24/617527e4a3544.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/8/89/Bakar_Batu.jpg",
     description:
       "Bakar Batu adalah tradisi kuliner sekaligus ritual persembahan yang unik dari masyarakat Papua, khususnya suku Dani, Lani, dan Yali di Pegunungan Tengah. Disebut juga dengan nama Barapen, ritual ini melambangkan rasa syukur, perdamaian, atau penyambutan tamu penting dengan cara memasak berbagai bahan makanan (seperti ubi, daging babi, dan sayuran) di atas batu panas yang dibakar hingga membara. Prosesnya dimulai dengan menyusun kayu bakar dan batu vulkanik khusus di dalam lubang tanah, kemudian api dinyalakan hingga batu memanas selama beberapa jam. Setelah batu mencapai suhu optimal, lapisan daun pisang atau daun lainnya disusun di atasnya, lalu bahan makanan diletakkan dan ditutup kembali dengan daun serta karung goni untuk mempertahankan panas selama proses pemasakan yang bisa berlangsung 1-2 jam. Selain sebagai metode memasak, Bakar Batu memiliki nilai sosial yang dalam karena melibatkan seluruh komunitas—mulai dari persiapan, prosesi adat, hingga pembagian makanan secara merata sebagai simbol persatuan. Tradisi ini juga kerap menjadi bagian dari upacara besar seperti pernikahan, penyelesaian konflik (Pesta Damai), atau festival budaya seperti Lembah Baliem. Keunikan Bakar Batu tidak hanya terletak pada cita rasa makanan yang khas akibat proses pemanasan alami, tetapi juga pada filosofinya yang menekankan kebersamaan, kesederhanaan, dan penghormatan terhadap alam. Saat ini, ritual ini tetap dilestarikan dan bahkan menjadi daya tarik wisata budaya yang memperkenalkan kearifan lokal Papua kepada dunia.",
     district: "Jayawijaya",
@@ -535,7 +534,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     title: "Koteka",
     year: 1600,
     location: "Lembah Baliem",
-    image: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Koteka.jpg",
+    image: "https://i0.wp.com/portalsains.org/wp-content/uploads/2019/06/koteka.jpg?fit=800%2C600&ssl=1",
     description:
       "Koteka adalah pakaian tradisional khas masyarakat Papua yang digunakan oleh pria sebagai penutup kemaluan, terbuat dari labu air yang dikeringkan dan diolah sedemikian rupa hingga membentuk selongsong memanjang. Budaya penggunaan koteka telah ada sejak ratusan tahun dan menjadi identitas kuat suku-suku pegunungan Papua seperti Dani, Lani, dan Yali, mencerminkan nilai-nilai kesederhanaan, kedewasaan, serta kedekatan dengan alam. Dalam masyarakat tradisional Papua, koteka bukan sekadar penutup tubuh melainkan juga simbol status sosial, di mana ukuran, bentuk, dan hiasannya dapat menunjukkan kedudukan pemakainya dalam komunitas – semakin panjang dan dihiasi bulu atau ornamen tertentu, semakin tinggi status sosialnya. Penggunaan koteka umumnya dibarengi dengan perlengkapan tradisional lain seperti tusuk hidung dari tulang, hiasan kepala dari bulu burung cendrawasih, serta kalung dari gigi hewan, yang bersama-sama membentuk identitas budaya yang khas. Meskipun di era modern banyak masyarakat Papua telah beralih ke pakaian Barat, koteka tetap dipakai dalam upacara adat, festival budaya, atau sebagai bentuk pelestarian tradisi, sekaligus menjadi ikon budaya Papua yang dikenal secara internasional. UNESCO telah mengakui koteka sebagai bagian dari warisan budaya tak benda, yang mencerminkan kearifan lokal dalam menciptakan pakaian fungsional dari bahan alam sekaligus menunjukkan ketahanan budaya masyarakat Papua di tengah perubahan zaman. Saat ini, koteka juga menjadi objek wisata budaya yang menarik minat para antropolog dan traveler untuk mempelajari lebih dalam tentang kehidupan suku-suku pedalaman Papua.",
     district: "Jayawijaya",
@@ -545,18 +544,18 @@ const cultures: Prisma.CultureCreateInput[] = [
     title: "Ukiran Asmat",
     year: 1500,
     location: "Asmat",
-    image: "https://upload.wikimedia.org/wikipedia/commons/4/4f/Asmat_art.jpg",
+    image: "https://emmanus.com/wp-content/uploads/2024/10/Suku-asmat.jpg",
     description:
       "Ukiran Asmat adalah salah satu warisan seni tradisional paling terkenal dari Papua yang dibuat oleh suku Asmat, dikenal dengan detail rumit dan makna spiritual yang mendalam. Karya seni ini biasanya terbuat dari kayu besi (ironwood) atau kayu bakau yang diukir dengan motif inspirasi alam, leluhur, dan kehidupan spiritual suku Asmat. Setiap ukiran bukan sekadar hiasan, melainkan memiliki nilai sakral sebagai penghubung antara dunia manusia dengan roh nenek moyang (ow-ow) dan digunakan dalam berbagai ritual adat seperti upacara kematian, penyembahan, atau inisiasi. Motif yang sering muncul meliputi figur manusia, hewan seperti buaya dan burung, serta simbol perahu lesung yang merepresentasikan perjalanan arwah ke alam baka. Proses pembuatannya pun penuh dengan ritual, dimulai dari pencarian kayu yang dianggap keramat hingga pemberian nama pada ukiran yang selesai. Keterampilan mengukir diwariskan turun-temurun, dengan teknik pahat tradisional menggunakan tulang, batu, atau gigi hewan sebelum beralih ke alat modern. Keunikan Ukiran Asmat terletak pada gaya khasnya yang terbagi dalam beberapa aliran seperti Asmat Pantai Kasuari dengan bentuk lebih abstrak dan Asmat Pedalaman yang cenderung realistis. Saat ini, ukiran ini tidak hanya menjadi simbol identitas budaya suku Asmat tetapi juga komoditas seni bernilai tinggi yang dipamerkan di museum internasional dan menjadi daya tarik wisata budaya di Papua. UNESCO telah mengakui Ukiran Asmat sebagai salah satu kekayaan budaya dunia yang perlu dilestarikan, meskipun tantangan modernisasi dan perubahan gaya hidup mulai memengaruhi kelestarian tradisi ini.",
     district: "Asmat",
     province: "Papua Selatan",
   },
   {
-    title: "Tifa Papua",
+    title: "Alat Musik Tifa",
     year: 1700,
     location: "Serui",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/2/28/Tifa_Music_Instrument_from_Papua.jpg",
+      "",
     description:
       "Tifa Papua adalah alat musik tradisional khas masyarakat Papua dan Papua Barat yang berbentuk seperti gendang panjang, terbuat dari kayu utuh yang dilubangi bagian tengahnya dan dilapisi kulit binatang (biawak, soa-soa, atau rusa) sebagai membran penghasil suara. Alat musik ini memiliki peran penting dalam berbagai aspek kehidupan masyarakat Papua, mulai dari upacara adat, ritual keagamaan, penyambutan tamu, hingga pengiring tarian perang seperti Tari Perang atau Tari Yospan. Tifa biasanya diukir dengan motif khas suku-suku Papua, seperti Asmat, Dani, atau Sentani, yang tidak hanya memperindah alat musik tetapi juga menceritakan kisah leluhur dan nilai-nilai budaya. Dalam masyarakat Papua, pembuatan Tifa bukan sekadar proses fisik tetapi juga melibatkan ritual adat, seperti pemilihan kayu yang harus dilakukan dengan izin roh leluhur dan pemberian sesaji. Bunyi yang dihasilkan Tifa bervariasi tergantung ukuran dan jenis kulit yang digunakan, mulai dari suara rendah dan berat (Tifa Jekir) hingga suara tinggi dan nyaring (Tifa Bas). Selain sebagai alat musik, Tifa juga berfungsi sebagai alat komunikasi antarkampung, terutama di pedalaman, dengan pola pukulan tertentu yang bisa menandakan bahaya, pesta adat, atau panggilan berkumpul. Saat ini, Tifa tidak hanya menjadi simbol kebanggaan masyarakat Papua tetapi juga sering digunakan dalam pertunjukan budaya nasional dan internasional, memperkenalkan kekayaan seni Nusantara kepada dunia. Upaya pelestarian Tifa terus dilakukan melalui pendidikan budaya di sekolah-sekolah dan festival-festival lokal, memastikan alat musik legendaris ini tetap hidup dari generasi ke generasi.",
     district: "Yapen",
@@ -569,7 +568,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1800,
     location: "Ambon",
     image:
-      "https://indonesiakaya.com/wp-content/uploads/2020/10/tari_lenso_1.jpg",
+      "https://asset-2.tstatic.net/tribunnewswiki/foto/bank/images/Tari-Lenso.jpg",
     description:
       'Tari Lenso adalah tarian tradisional yang berasal dari Maluku dan Minahasa (Sulawesi Utara), biasanya dibawakan oleh penari wanita dengan gerakan gemulai sambil memegang lenso (saputangan) sebagai properti utama. Tarian ini sering dipentaskan dalam acara adat, pernikahan, atau penyambutan tamu sebagai simbol sukacita dan keramahan. Gerakannya yang lentur dan dinamis, dipadukan dengan iringan musik tradisional seperti tifa, suling, atau kolintang, menciptakan suasana ceria dan penuh kehangatan. Dalam budaya Maluku, Tari Lenso juga kerap menjadi bagian dari acara "Lenso Dance" atau "Pesta Lenso", di mana para tamu diajak menari bersama sambil menggerakkan saputangan sebagai bentuk ikatan sosial. Sementara di Minahasa, tarian ini memiliki variasi gerak lebih energik dengan kostum berwarna cerah, mencerminkan semangat kebersamaan masyarakat setempat. Nilai filosofis Tari Lenso terletak pada makna saputangan itu sendiri yang melambangkan kesucian, persahabatan, dan keterbukaan dalam membangun hubungan. Seiring waktu, tarian ini tidak hanya menjadi warisan budaya tetapi juga sering ditampilkan dalam festival nasional sebagai representasi kekayaan seni Nusantara. Pelestarian Tari Lenso terus didorong melalui sanggar tari dan pengenalan sejak dini di sekolah-sekolah, menjadikannya salah satu ikon budaya yang tetap hidup di tengah modernisasi.',
     district: "Kota Ambon",
@@ -580,7 +579,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1700,
     location: "Maluku Tengah",
     image:
-      "https://www.indonesiakaya.com/wp-content/uploads/2020/10/bambu_gila_1.jpg",
+      "https://asset-2.tstatic.net/wartakota/foto/bank/images/20150703-atraksi-bambu-gila-di-maluku_20150703_185148.jpg",
     description:
       'Bambu Gila adalah permainan tradisional khas Maluku yang sarat dengan unsur magis dan kekuatan spiritual, biasanya dipentaskan sebagai bagian dari upacara adat atau hiburan rakyat. Dalam pertunjukannya, sebatang bambu sepanjang 2-3 meter yang awalnya diam tiba-tiba bergerak liar dan seolah memiliki kehidupan sendiri setelah diberi mantra oleh seorang pawang. Para pemain (biasanya 4-6 orang) berusaha menahan bambu tersebut dengan tangan kosong, namun kekuatan bambu seringkali membuat mereka terhuyung-huyung bahkan terjatuh, seolah bambu tersebut benar-benar "gila" dan sulit dikendalikan. Ritual ini diawali dengan pembacaan doa dan penyalaan kemenyan untuk memanggil roh leluhur atau kekuatan gaib masuk ke dalam bambu, dimana pawang akan mengucapkan mantra khusus sambil mengelilingi bambu yang ditidurkan di tanah. Uniknya, bambu yang digunakan harus dipilih secara khusus dan melalui proses ritual tertentu sebelum pertunjukan. Meskipun terlihat seperti permainan, Bambu Gila memiliki makna filosofis yang dalam sebagai simbol kekuatan alam yang tidak bisa diprediksi dan harus dihadapi dengan keberanian serta kerja sama. Kini, atraksi ini tidak hanya menjadi daya tarik wisata budaya di Maluku, tetapi juga sering ditampilkan dalam festival-festival nasional sebagai warisan budaya takbenda yang terus dilestarikan, menggabungkan unsur mistis dengan nilai-nilai kebersamaan dan penghormatan terhadap alam.',
     district: "Maluku Tengah",
@@ -591,7 +590,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1600,
     location: "Seram",
     image:
-      "https://cdn.idntimes.com/content-images/community/2022/11/20221101-073531-0000-3e02d94629a21f4cbf9b158e2c82bb2a.jpg",
+      "https://indonesiakaya.com/wp-content/uploads/2020/10/Kelompok_Musik_Tifa_Totobuang.jpg",
     description:
       "Totobuan adalah salah satu upacara adat penting dalam budaya masyarakat Dayak Tunjung di Kalimantan Timur, khususnya di Kabupaten Kutai Barat. Ritual ini merupakan bentuk syukuran atas hasil panen yang melimpah sekaligus permohonan perlindungan kepada leluhur dan roh alam. Prosesi Totobuan biasanya dipimpin oleh seorang pemangku adat atau tetua kampung, dengan rangkaian kegiatan yang melibatkan seluruh warga desa. Inti dari upacara ini adalah penyembelihan hewan kurban seperti babi atau kerbau, yang dagingnya kemudian dibagikan secara merata kepada semua peserta sebagai simbol kebersamaan dan gotong royong. Ciri khas Totobuan terletak pada tarian tradisional yang mengiringi prosesi, di mana para penari mengenakan pakaian adat Dayak lengkap dengan aksesoris seperti mandau, perisai kayu, dan hiasan kepala dari bulu burung enggang. Musik pengiringnya berasal dari alat musik tradisional seperti sampe (kecapi khas Dayak), gendang, dan gong yang menciptakan irama magis. Upacara ini juga menjadi momentum penting untuk mempererat tali persaudaraan antarwarga, menyelesaikan konflik adat, serta meneruskan nilai-nilai luhur budaya kepada generasi muda. Dalam perkembangannya, Totobuan tidak hanya menjadi ritual sakral tetapi juga telah menjadi daya tarik wisata budaya yang memperkaya khazanah tradisi Kalimantan Timur. Pelestarian Totobuan terus dilakukan melalui berbagai festival budaya dan dokumentasi oleh pemerintah daerah, menjadikannya sebagai salah satu warisan budaya takbenda yang patut dijaga kelestariannya. Upacara ini mencerminkan kearifan lokal masyarakat Dayak dalam menjaga harmoni antara manusia, alam, dan leluhur, sekaligus menunjukkan kekayaan budaya Nusantara yang masih hidup dan berkembang di era modern.",
     district: "Seram Bagian Barat",
@@ -602,9 +601,9 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1500,
     location: "Maluku Tengah",
     image:
-      "https://phinemo.com/wp-content/uploads/2019/06/upacara-pela-gandong.jpg",
+      "https://kebudayaan.kemdikbud.go.id/bpnbmaluku/wp-content/uploads/sites/13/2020/03/wa-1024x768.jpeg",
     description:
-      "Tradisi adat yang mengikat persaudaraan antar negeri di Maluku, dilandasi oleh filosofi hidup bersama dalam damai dan saling tolong-menolong.",
+      "Tradisi pela gandong adalah perjanjian adat yang mengikat masyarakat Maluku dalam ikatan persaudaraan, tolong-menolong, dan kerukunan. Tradisi ini dilandaskan pada nilai-nilai luhur, seperti persatuan, kebersamaan, dan kekeluargaan. Tradisi adat ini mengikat persaudaraan antar negeri di Maluku, dilandasi oleh filosofi hidup bersama dalam damai dan saling tolong-menolong. Pela gandong merupakan warisan adat dan sejarah yang hidup dalam kehidupan masyarakat Maluku, terutama di Ambon. Tradisi ini juga berlaku bagi masyarakat yang beragama Islam maupun non-muslim. Pela gandong merupakan kearifan lokal Maluku yang menjadi perekat hubungan sosial. Tradisi ini juga menjadi ikon perdamaian Maluku. Pela gandong diwujudkan dalam sumpah yang tidak boleh dilanggar. Pelanggaran sumpah konon akan mendapat hukuman dari nenek moyang.",
     district: "Maluku Tengah",
     province: "Maluku",
   },
@@ -613,7 +612,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1800,
     location: "Ternate dan Maluku Utara",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Cakalele_dance%2C_Ternate%2C_North_Maluku.jpg/1200px-Cakalele_dance%2C_Ternate%2C_North_Maluku.jpg",
+      "https://hartabanda.com/wp-content/uploads/2021/10/Gerakan-Tarian-Cakalele.jpg",
     description:
       'Upacara Pela Gandong adalah tradisi sakral masyarakat Maluku yang melambangkan persaudaraan abadi antar desa, mengikat hubungan kekeluargaan yang tidak terputuskan oleh perbedaan agama, suku, atau geografis. Ritual ini bermula dari legenda rakyat tentang dua desa yang saling membantu dalam masa perang atau bencana alam, kemudian bersumpah untuk saling melindungi seperti saudara kandung melalui sumpah adat yang diucapkan di depan para tetua dan pemimpin agama. Prosesi upacaranya melibatkan pertukaran sirih pinang sebagai simbol ikatan, penyembelihan hewan kurban, serta pembacaan doa bersama dengan bahasa adat setempat, diikuti dengan pesta rakyat dan tarian tradisional seperti Tari Cakalele. Nilai utama Pela Gandong terletak pada prinsip "hidup sepenanggungan", di mana desa bersaudara wajib saling membantu dalam membangun infrastruktur, menyelesaikan konflik, bahkan mengumpulkan dana untuk keperluan pendidikan atau kesehatan. Tradisi yang telah berusia ratusan tahun ini menjadi contoh nyata toleransi di Indonesia, khususnya di Maluku yang pernah dilanda konflik horizontal, karena mampu mempersatukan desa Kristen dan Muslim dalam satu ikatan kekal. Saat ini, Upacara Pela Gandong tidak hanya dilestarikan sebagai warisan budaya, tetapi juga ditetapkan sebagai salah satu objek pemajuan kebudayaan nasional oleh Kementerian Pendidikan dan Kebudayaan RI, sekaligus menjadi daya tarik wisata budaya yang memperkaya khazanah multikultural Indonesia.',
     district: "Maluku Utara (asal), tapi dikenal di Maluku juga",
@@ -626,7 +625,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1600,
     location: "Serang",
     image:
-      "https://asset.kompas.com/crops/roAOrH-G4ZwnT40TPeRZnzyYGeM=/0x0:780x520/750x500/data/photo/2022/02/02/61fa52d08f493.jpg",
+      "https://assets.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/depoktoday/2021/08/large-shutterstock-1163635177-64623f76c1a7cfa8ebf9d46417f70b1a-1.jpg",
     description:
       "Debus adalah seni bela diri tradisional khas Banten yang memadukan unsur kekebalan tubuh, gerakan silat, dan ritual spiritual Islam, sering dipertunjukkan sebagai bentuk kesenian sekaligus atraksi ekstrem. Asal-usulnya terkait dengan penyebaran Islam di Banten pada abad ke-16 oleh Sunan Gunung Jati, di mana Debus awalnya digunakan sebagai media dakwah dan pembentukan mental para pejuang melawan penjajah. Atraksi utamanya melibatkan berbagai aksi berbahaya seperti menusuk tubuh dengan senjata tajam, memukul diri dengan martil, menginjak pecahan kaca, hingga memakan api, yang dilakukan dalam keadaan trance dengan pembacaan mantra dan zikir tertentu. Kostum yang digunakan biasanya berupa pakaian muslim berwarna putih dengan ikat kepala khas Banten, sementara iringan musik meliputi terbang (rebana besar), kendang, dan pembacaan shalawat yang menciptakan atmosfer magis. Dalam filosofinya, Debus bukan sekadar pertunjukan kekebalan fisik, melainkan juga simbol keteguhan iman, di mana para pemainnya harus melalui puasa dan latihan spiritual intensif sebelum pentas. Kesenian ini kini telah berkembang menjadi ikon budaya Banten yang sering ditampilkan dalam acara resmi maupun festival, meski tetap mempertahankan unsur sakralnya. Sebagai warisan budaya takbenda Indonesia, Debus tidak hanya menarik minat wisatawan tetapi juga menjadi subjek penelitian tentang kearifan lokal yang memadukan seni, spiritualitas, dan ketahanan fisik secara unik.",
     district: "Serang",
@@ -637,7 +636,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1500,
     location: "Pandeglang",
     image:
-      "https://radarbanten.co.id/wp-content/uploads/2020/12/pencak-silat1.jpg",
+      "https://cdn0-production-images-kly.akamaized.net/GZYjPNnzjkYkPke-PY1RFdpFmq0=/1200x675/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/1073964/original/053577400_1449079808-silat.jpg",
     description:
       "Pencak Silat Banten adalah seni bela diri tradisional khas masyarakat Banten yang memadukan unsur gerakan fisik, seni, dan nilai-nilai spiritual Islam. Dikenal dengan gaya bertarung yang cepat, lincah, dan penuh strategi, Pencak Silat Banten tidak hanya berfungsi sebagai sistem pertahanan diri tetapi juga sebagai sarana pengembangan karakter dan pelestarian budaya. Salah satu aliran yang terkenal adalah Silat Cimande dan Silat Bandrong, yang menekankan pada kelenturan tubuh, teknik kuncian, serta penggunaan senjata tradisional seperti golok dan toya (tongkat). Ciri khasnya terlihat dari gerakan yang dinamis, sering kali diiringi oleh musik tradisional seperti kendang penca, menciptakan ritme yang memengaruhi tempo pertarungan. Selain aspek fisik, Pencak Silat Banten juga mengandung nilai-nilai sufistik, di mana latihan pernapasan (tenaga dalam) dan zikir menjadi bagian integral dari proses pendalaman ilmu. Dalam konteks budaya, seni bela diri ini sering ditampilkan dalam acara-acara adat, pernikahan, atau festival seperti Pesta Seni Banten, menjadi simbol keberanian dan identitas masyarakat setempat. Saat ini, Pencak Silat Banten tidak hanya dipelajari oleh generasi muda Banten tetapi juga menarik minat pecinta bela diri dari berbagai daerah, berkat keunikan tekniknya dan upaya pelestarian melalui sanggar-sanggar serta sekolah silat yang tersebar di seluruh provinsi. Sebagai warisan budaya takbenda Indonesia, Pencak Silat Banten terus berkembang tanpa kehilangan esensi tradisinya, menjadi salah satu ikon kebanggaan Banten yang mendunia.",
     district: "Pandeglang",
@@ -648,7 +647,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1800,
     location: "Cilegon",
     image:
-      "https://warisanbudaya.kemdikbud.go.id/simdig/assets/images/budaya/1817528919_1_topeng%20cirebon.jpg",
+      "https://museumnusantara.com/wp-content/uploads/2020/12/indonesiagoid-1.jpg",
     description:
       "Tari Topeng Cirebon-Banten adalah salah satu kesenian tradisional yang kaya akan nilai filosofis dan estetika, berkembang di wilayah pesisir utara Jawa Barat dan Banten. Tarian ini menggunakan topeng kayu sebagai properti utama, dengan setiap karakter topeng seperti Panji, Samba, Rumyang, Tumenggung, dan Kelana mewakili tahapan kehidupan manusia serta sifat-sifat universal seperti kebaikan, kebijaksanaan, dan amarah. Gerakan tari yang halus namun penuh makna, dipadukan dengan iringan gamelan khas Cirebon (gong, kendang, dan rebab), menciptakan pertunjukan yang memukau sekaligus sarat pesan moral. Tari Topeng Cirebon-Banten tidak hanya berfungsi sebagai hiburan, tetapi juga sebagai media dakwah Islam sejak zaman Sunan Gunung Jati, di mana kisah-kisah yang dibawakan seringkali mengandung ajaran sufisme dan akulturasi budaya Hindu-Islam. Dalam perkembangannya, tarian ini terbagi menjadi beberapa gaya seperti Topeng Losari (Cirebon) dan Topeng Cisungsang (Banten), masing-masing memiliki kekhasan gerak dan cerita. Saat ini, Tari Topeng Cirebon-Banten terus dilestarikan melalui sanggar-sanggar tradisi dan festival budaya, sekaligus menjadi simbol identitas masyarakat pesisir Jawa-Banten yang religius namun tetap mempertahankan keluhuran seni leluhur. UNESCO telah mengakui Tari Topeng Cirebon sebagai Warisan Budaya Takbenda pada 2021, memperkuat posisinya sebagai salah satu mahakarya seni pertunjukan Nusantara.",
     district: "Cilegon",
@@ -659,7 +658,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1800,
     location: "Lebak",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Seba_Baduy_2023_-_Serang%2C_Banten.jpg/800px-Seba_Baduy_2023_-_Serang%2C_Banten.jpg",
+      "https://eventdaerah.kemenparekraf.go.id/storage/app/uploads/public/664/caa/272/664caa27260b2688275306.png",
     description:
       "Upacara Seba Baduy adalah ritual adat tahunan masyarakat Suku Baduy di Banten yang melambangkan kesetiaan dan penghormatan kepada pemerintah serta ungkapan syukur atas hasil bumi. Dilaksanakan setiap tahun setelah panen, upacara ini diawali dengan perjalanan panjang warga Baduy Dalam dan Baduy Luar dari Desa Kanekes ke Pendopo Kabupaten Lebak, bahkan hingga ke Gedung Sate di Bandung atau Istana Negara di Jakarta untuk bertemu pejabat pemerintah. Prosesi ini mencerminkan filosofi hidup masyarakat Baduy tentang keseimbangan antara manusia, alam, dan penguasa. Dalam upacara tersebut, mereka membawa berbagai hasil bumi seperti padi, pisang, dan gula aren sebagai simbol persembahan sekaligus bentuk kepedulian terhadap ketahanan pangan. Pakaian khas Baduy yang serba putih (Baduy Dalam) dan hitam (Baduy Luar) dengan ikat kepala khas menjadi ciri visual yang mencolok selama prosesi. Upacara Seba Baduy tidak hanya menjadi sarana silaturahmi antara masyarakat adat dengan pemerintah, tetapi juga memperkuat identitas budaya Baduy di tengah modernisasi. Ritual ini telah ditetapkan sebagai Warisan Budaya Takbenda Indonesia dan menjadi daya tarik wisata budaya yang unik, meskipun pelaksanaannya tetap mempertahankan kesakralan sesuai aturan adat yang ketat. Melalui Seba Baduy, masyarakat Baduy menunjukkan komitmen mereka untuk melestarikan tradisi leluhur sekaligus beradaptasi dengan dunia luar secara bijak.",
     district: "Lebak",
@@ -669,7 +668,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     title: "Kendang Pencak",
     year: 1700,
     location: "Tangerang",
-    image: "https://sinarpaginews.com/media/uploads/IMG-20201007-WA0022.jpg",
+    image: "https://www.giripurwaseni.com/wp-content/uploads/2017/01/Kendang-Ukir-e1642601627379.jpeg",
     description:
       'Kendang Pencak adalah alat musik tradisional khas Jawa Barat yang menjadi unsur penting dalam seni bela diri Pencak Silat, sekaligus pengiring berbagai pertunjukan budaya Sunda. Terbuat dari kayu nangka atau mahoni dengan membran kulit kambing atau sapi, kendang ini menghasilkan suara dinamis yang mengatur tempo gerakan silat, mulai dari ritme lambat (indung) hingga cepat (kembang), mencerminkan filosofi keselarasan antara kekuatan dan keindahan. Dalam konteks Pencak Silat, tabuhan kendang tidak hanya berfungsi sebagai pengiring, tetapi juga sebagai kode komunikasi antar pesilat untuk mengubah strategi gerakan, sementara dalam kesenian seperti Jaipongan atau Degung, kendang pencak menjadi instrumen utama yang memberi warna ritmis khas Sunda. Bentuknya yang ramping dengan ujung lancip memungkinkan pemain (pengendang) memainkannya dengan teknik kompleks seperti tepak, gedig, dan pareukan, sering dipadukan dengan vocal "pencak" yang energik. Keunikan kendang pencak terletak pada kemampuannya menyatukan unsur seni, bela diri, dan spiritual, di mana setiap pukulan melambangkan keteguhan hati, ketangkasan fisik, dan penghormatan pada tradisi. Saat ini, kendang pencak tidak hanya dilestarikan di padepokan silat dan sanggar seni, tetapi juga dimodifikasi untuk pertunjukan kontemporer, menjadi simbol identitas budaya Jawa Barat yang dinamis dan tangguh.',
     district: "Tangerang",
@@ -682,7 +681,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1960,
     location: "Bandar Lampung",
     image:
-      "https://indonesiakaya.com/wp-content/uploads/2020/10/tari_sigeh_penguten_1.jpg",
+      "https://indonesiakaya.com/wp-content/uploads/2020/10/Tari_ini_menyerap_gestur_tarian_Pepadun_dan_Saibatin_menjadi_kesatuan_harmonis_yang_dapat_diterima_masyarakat.jpg",
     description:
       "Tari Sigeh Panguten adalah tarian tradisional khas Lampung yang biasanya dipentaskan dalam upacara penyambutan tamu agung atau acara adat penting, menggambarkan keanggunan dan keramahan masyarakat Lampung. Tarian ini dibawakan oleh penari wanita dengan gerakan gemulai dan kostum tradisional Lampung yang megah, berupa kain tapis bersulam emas, siger (mahkota), serta aksesori perhiasan yang melambangkan status sosial. Setiap gerakan dalam Tari Sigeh Panguten memiliki makna filosofis mendalam, seperti gerakan sembah yang menunjukkan penghormatan, atau gerakan memutar yang melambangkan kesatuan dan kebersamaan. Musik pengiringnya biasanya terdiri dari gambus, gendang, dan gong yang menciptakan irama khidmat namun penuh semangat. Tarian ini tidak hanya sekadar pertunjukan estetis, tetapi juga sarat dengan nilai-nilai adat seperti kesopanan, kehalusan budi, dan penghargaan terhadap tamu. Dalam perkembangannya, Tari Sigeh Panguten telah menjadi ikon budaya Lampung yang sering ditampilkan dalam berbagai festival budaya nasional maupun internasional, sekaligus menjadi media pelestarian warisan leluhur di tengah modernisasi. Para penari biasanya dilatih sejak dini untuk menjaga kemurnian gerakan dan makna tarian ini, yang dianggap sebagai salah satu identitas terkuat masyarakat Lampung. Melalui tarian ini, tersirat pesan tentang pentingnya menjaga tradisi sekaligus menyambut tamu dengan hati terbuka, sesuai dengan prinsip hidup masyarakat Lampung yang menjunjung tinggi nilai-nilai kekeluargaan dan keramahtamahan.",
     district: "Bandar Lampung",
@@ -693,7 +692,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1700,
     location: "Lampung Tengah",
     image:
-      "https://asset.kompas.com/crops/2xjBvBD9mIXmtnbscsw7gSh38pM=/0x0:1000x667/750x500/data/photo/2021/03/19/605447b6b409f.jpg",
+      "https://lampuung.com/wp-content/uploads/2021/05/DSC8242-scaled.jpg",
     description:
       "Tari Tampis Lampung merupakan salah satu tarian tradisional khas Provinsi Lampung yang menggambarkan keanggunan, keluhuran, dan nilai-nilai kehidupan masyarakat Lampung, khususnya dari etnis Pepadun. Tarian ini biasanya dibawakan oleh penari perempuan dengan gerakan gemulai dan penuh makna, menggunakan properti seperti kipas dan selendang sebagai simbol kesopanan dan kehalusan budi. Kostum penari Tampis sangat megah, didominasi warna merah dan emas dengan hiasan tapis (kain tenun khas Lampung) serta perhiasan seperti siger (mahkota pengantin) dan gelang ruwi yang menambah kesan aristokratis. Gerakan tari ini menekankan pada kelenturan tubuh, terutama pada bagian tangan dan kaki, dengan pola lantai yang dinamis namun tetap teratur, mencerminkan tata krama dan kedisiplinan masyarakat Lampung. Tari Tampis sering dipentaskan dalam acara adat seperti pernikahan, penyambutan tamu penting, atau festival budaya, berfungsi sebagai media penyampaian pesan moral tentang kesantunan, kesetiaan, dan penghormatan kepada leluhur. Musik pengiringnya menggunakan alat tradisional seperti gambus lunik, gendang, dan gong yang menciptakan irama khidmat namun dinamis. Dalam perkembangannya, Tari Tampis tidak hanya menjadi simbol identitas budaya Lampung tetapi juga mengalami berbagai inovasi koreografi tanpa menghilangkan esensi tradisinya, bahkan kerap ditampilkan dalam event nasional dan internasional sebagai representasi kekayaan seni Sumatera. Pelestarian tarian ini dilakukan melalui sanggar-sanggar tari dan dimasukkan dalam kurikulum sekolah di Lampung, menjadikannya warisan budaya yang terus hidup di tengah modernisasi.",
     district: "Lampung Tengah",
@@ -704,7 +703,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1800,
     location: "Lampung Selatan",
     image:
-      "https://beritagar.id/media/2a/d4/6e/2ad46e263f4081d1c6d9e38aa74a5bd0.jpg",
+      "https://i0.wp.com/archipelagoid.com/wp-content/uploads/2024/07/Nilai-Nilai-Budaya-Dari-Tradisi-Ngebabali.webp?resize=700%2C350&ssl=1",
     description:
       "Upacara Ngebabali merupakan tradisi sakral suku Dayak Benuaq di Kutai Barat, Kalimantan Timur, yang dilaksanakan sebagai bentuk syukur atas hasil panen dan permohonan perlindungan kepada leluhur. Ritual ini berpusat pada penyembelihan babi sebagai persembahan, di mana dagingnya kemudian dibagikan kepada seluruh warga desa sebagai simbol kebersamaan dan gotong royong. Prosesi diawali dengan tarian adat dan doa-doa yang dipimpin oleh pemangku adat, menggunakan bahasa kuno yang hanya dimengerti oleh para tetua. Upacara ini tidak hanya sekadar perayaan panen, tetapi juga mengandung nilai spiritual yang mendalam, yakni sebagai media komunikasi antara manusia dengan roh leluhur dan penguasa alam. Seluruh rangkaian acara dilakukan di rumah panjang (lamin adat) yang menjadi pusat kehidupan komunitas Dayak Benuaq, dengan peserta yang mengenakan pakaian tradisional lengkap dengan aksesoris dari manik-manik dan bulu burung. Dalam perkembangannya, Ngebabali tidak hanya bertahan sebagai ritual adat tetapi juga menjadi atraksi budaya yang menarik minat wisatawan, meskipun esensi sakralnya tetap dijaga ketat oleh masyarakat setempat. Melalui upacara ini, terlihat jelas bagaimana suku Dayak Benuaq mempertahankan kearifan lokal mereka dalam menjaga harmoni antara manusia, alam, dan dunia spiritual.",
     district: "Lampung Selatan",
@@ -715,7 +714,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1800,
     location: "Lampung Timur",
     image:
-      "https://www.goodnewsfromindonesia.id/uploads/post/large-tari-melinting-c3ba1fcfef6e73ac0a218598dbd6e473.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/9/97/Tari_Melinting_5.jpg",
     description:
       "Tari Melinting adalah tarian tradisional khas Lampung yang berasal dari Suku Melinting di Kabupaten Lampung Timur, memiliki sejarah panjang sejak abad ke-16 dan awalnya hanya dibawakan di lingkungan keraton Melinting sebagai tarian penyambutan tamu agung. Tarian ini dibawakan secara berpasangan oleh penari pria dan wanita dengan gerakan dinamis yang mencerminkan kelincahan dan keanggunan, diiringi oleh musik tradisional seperti gamolan pekhing (alat musik bambu khas Lampung) dan gendang. Kostum penari sangat megah, dimana penari wanita mengenakan siger (mahkota emas khas Lampung) dan tapis (kain tenun bersulam emas), sementara penari pria menggunakan pakaian adat Lampung dengan warna dominan putih dan hiasan kepala, mencerminkan kemewahan budaya Lampung di masa lalu. Gerakan tari Melinting memiliki makna filosofis mendalam, seperti gerakan sembah yang menunjukkan penghormatan, gerakan memutar yang melambangkan kesatuan alam semesta, serta langkah gesit yang mencerminkan semangat masyarakat Lampung. Saat ini, Tari Melinting tidak hanya menjadi warisan budaya tetapi juga sering ditampilkan dalam berbagai acara penting seperti penyambutan tamu negara, festival budaya, dan pernikahan adat Lampung, menunjukkan adaptasi nilai tradisional dalam kehidupan modern sekaligus upaya pelestarian oleh generasi muda Lampung.",
     district: "Lampung Timur",
@@ -726,7 +725,7 @@ const cultures: Prisma.CultureCreateInput[] = [
     year: 1600,
     location: "Lampung Utara",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/e/e2/Nuwo_Sesat_Rumah_Adat_Lampung.jpg",
+      "https://cdn2.gnfi.net/gnfi/uploads/articles/rumah-adat-lampung-fc93035b0e77bbf93669eb48042339de.jpg",
     description:
       "Rumah Adat Nuwo Sesat merupakan rumah tradisional khas Lampung yang berfungsi sebagai balai pertemuan adat sekaligus simbol kebanggaan masyarakat Lampung. Bangunan ini memiliki arsitektur unik berbentuk panggung dengan atap berbentuk limas bersusun (sessat) yang melambangkan status sosial pemiliknya, semakin banyak susunan atap semakin tinggi derajat keluarganya. Material utama pembuatan Nuwo Sesat berasal dari kayu-kayu pilihan seperti merbau atau damar dengan struktur tanpa paku, hanya menggunakan pasak dan ikatan tali dari rotan yang menunjukkan kearifan lokal. Bagian dalam rumah terdiri dari ruang serba guna seperti Ijan Geladak (ruang tamu), Lepau (ruang musyawarah), dan Tengah (ruang utama untuk acara adat), dihiasi ukiran motif Siger (mahkota pengantin Lampung) dan Pucuk Rebung yang melambangkan persatuan. Nuwo Sesat tidak hanya berfungsi sebagai tempat penyelesaian sengketa adat atau pernikahan, tetapi juga menjadi pusat pelestarian budaya seperti upacara Cakak Pepadun atau pentas tari tradisional. Keberadaannya kini banyak ditemui di kampung-kampung adat seperti Sukau dan Way Kanom, serta menjadi ikon wisata budaya Lampung yang menggambarkan filosofi hidup masyarakat setempat yang menjunjung tinggi nilai kebersamaan dan kelestarian alam.",
     district: "Lampung Utara",

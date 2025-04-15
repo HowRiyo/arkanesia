@@ -25,7 +25,9 @@ export default function RootLayout({ children }) {
         className={`${raleway.variable} ${manrope.variable} antialiased`}
       >
         <Nav/>
-        {children}
+        <main className="mx-auto min-h-screen max-w-6xl py-20 px-10 sm:px-6 lg:px-8">
+          {children}
+        </main>
         <Footer/>
       </body>
     </html>

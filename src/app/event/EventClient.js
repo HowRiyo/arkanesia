@@ -30,7 +30,7 @@ export default function EventClient({ events, tours }) {
   }, []);
 
   return (
-    <main ref={containerRef} className="text-[var(--dark-col)] min-h-screen mx-auto max-w-6xl py-20">
+    <section ref={containerRef} className="text-[var(--dark-col)]">
       <section className="mx-auto">
         <div className="text-center mb-14">
           <h2 className="text-4xl font-extrabold text-[var(--main-col)]">Event</h2>
@@ -47,7 +47,7 @@ export default function EventClient({ events, tours }) {
               key={event.id}
               className="event-card rounded-xl overflow-hidden shadow-[0_15px_30px_var(--shadow-col)]"
             >
-              <img src={event.image} alt={event.title} className="w-full h-60" />
+              <img src={event.image} alt={event.title} className="w-full h-60 object-cover" />
               <div className="p-5">
                 <h3 className="text-lg font-bold text-[var(--main-col)]">
                   {event.name}
@@ -106,6 +106,6 @@ export default function EventClient({ events, tours }) {
           ))}
         </div>
       </section>
-    </main>
+    </section>
   );
 }

@@ -28,7 +28,7 @@ export default function SearchPage() {
   };
 
   return (
-    <main className="mx-auto max-w-6xl py-20 text-[var(--dark-col)] fade-in grid place-items-center h-dvh">
+    <section className="text-[var(--dark-col)] fade-in grid place-items-center">
       <section className="text-center relative">
         <h2 className="text-4xl font-bold text-[var(--main-col)] leading-tight mb-4">
           Mulai Percakapan Budaya dengan AI
@@ -55,16 +55,6 @@ export default function SearchPage() {
           ref={chatBoxRef}
           className="flex flex-col space-y-2 mt-10"
         ></div>
-      </section>
-
-      <section>
-        <div className="font-extrabold text-2xl text-[var(--main-col)] text-center">Telusuri Kategori Melalui</div>
-        <div className="flex gap-10 mt-5">
-          <Link className="bg-[var(--shadow-col)] px-8 py-2 rounded-4xl text-[var(--light-col)] font-semibold" href="#">Kategori 1</Link>
-          <Link className="bg-[var(--shadow-col)] px-8 py-2 rounded-4xl text-[var(--light-col)] font-semibold" href="#">Kategori 2</Link>
-          <Link className="bg-[var(--shadow-col)] px-8 py-2 rounded-4xl text-[var(--light-col)] font-semibold" href="#">Kategori 3</Link>
-          <Link className="bg-[var(--shadow-col)] px-8 py-2 rounded-4xl text-[var(--light-col)] font-semibold" href="#">Kategori 4</Link>
-        </div>
       </section>
 
       <style jsx>{`
@@ -110,6 +100,6 @@ export default function SearchPage() {
           align-self: flex-start;
         }
       `}</style>
-    </main>
+    </section>
   );
 }

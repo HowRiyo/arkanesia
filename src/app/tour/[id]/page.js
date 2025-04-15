@@ -25,7 +25,7 @@ export default async function TourDetailPage({ params, searchParams }) {
   }
 
   return (
-    <main className="max-w-4xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
+    <section className="mx-auto max-w-4xl">
       <div className="flex items-center justify-between mb-15">
         <Link
           href={backHref}
@@ -39,7 +39,7 @@ export default async function TourDetailPage({ params, searchParams }) {
       <img
         src={tour.image}
         alt={tour.title}
-        className="w-full h-auto rounded-lg my-6"
+        className="w-full rounded-lg my-6 mx-auto"
       />
       <div className="flex flex-col items-center">
         <p className="text-[var(--gray-col)] leading-relaxed text-center">
@@ -51,7 +51,7 @@ export default async function TourDetailPage({ params, searchParams }) {
       </div>
 
       <div className="md:col-span-3 mt-15">
-        <p className="text-[var(--dark-col)] leading-relaxed text- indent-20 mb-6">
+        <p className="text-[var(--dark-col)] leading-relaxed indent-10 md:indent-20 mb-6">
           {tour.description}{" "}
         </p>
       </div>
@@ -119,6 +119,6 @@ export default async function TourDetailPage({ params, searchParams }) {
           )}
         </div>
       </div>
-    </main>
+    </section>
   );
 }

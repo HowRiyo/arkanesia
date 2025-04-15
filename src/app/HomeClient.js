@@ -73,7 +73,7 @@ export default function HomeClient({ cultures, events, tours }) {
   };
 
   return (
-    <main className="mx-auto max-w-6xl py-20">
+    <>
       <section className="flex flex-col md:flex-row items-center justify-between w-full mx-auto">
         <div>
           <div className="text-center md:text-left max-w-xl">
@@ -93,7 +93,7 @@ export default function HomeClient({ cultures, events, tours }) {
             </button>
           </div>
 
-          <div className="mt-6 flex space-x-10 text-[var(--gray-col)]">
+          <div className="mt-6 flex flex-wrap justify-center gap-y-5 gap-x-10 text-[var(--gray-col)]">
             {/* Budaya */}
             <div className="flex items-center space-x-3">
               <svg
@@ -159,7 +159,7 @@ export default function HomeClient({ cultures, events, tours }) {
           </div>
         </div>
 
-        <div className="relative w-[40%] h-80">
+        <div className="relative md:w-[40%] w-full h-80 md:mt-0 mt-10">
           <Image
             src="/assets/images/bg.jpg"
             alt="Hero Image"
@@ -201,7 +201,7 @@ export default function HomeClient({ cultures, events, tours }) {
                 ))}
               </div>
             ) : (
-              <p className="text-center text-[var(--gray-col)]">
+              <p className="text-center font-semibold text-[var(--gray-col)]">
                 Cari wisata terdekat dengan satu klik
               </p>
             )}
@@ -220,9 +220,9 @@ export default function HomeClient({ cultures, events, tours }) {
           Popular Choice
         </h3>
 
-        <div className="grid grid-cols-4 gap-y-12 gap-x-6 mt-4">
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 grid-cols-1 gap-y-10 gap-x-8 mt-4">
           {shuffledTours.map((tour, i) => (
-            <Link key={i} href={`/tour/${tour.id}`}>
+            <Link key={i} href={`/tour/${tour.id}`} className="md:h-50 h-70">
               <div className="relative">
                 <div className="hover-popular">
                   <img
@@ -231,13 +231,13 @@ export default function HomeClient({ cultures, events, tours }) {
                     width={200}
                     height={100}
                     alt="Popular Choice"
-                    className="rounded-xl w-full h-32 object-cover shadow-md"
+                    className="rounded-xl w-full h-60 md:h-35 object-cover shadow-md"
                   />
-                  <span className="absolute top-0 left-0 bg-[var(--main-col)] text-[var(--light-col)] px-4 py-1 rounded-br-lg">
+                  <span className="absolute top-0 left-0 font-semibold bg-[var(--main-col)] text-[var(--light-col)] px-4 py-1 rounded-br-lg">
                     Popular Choice
                   </span>
                 </div>
-                <p className="mt-2 font-semibold">{tour.name}</p>
+                <p className="mt-2 text-[var(--dark-col)] font-semibold">{tour.name}</p>
                 <p className="text-[var(--gray-col)] text-sm">
                   {tour.location}
                 </p>
@@ -299,6 +299,6 @@ export default function HomeClient({ cultures, events, tours }) {
           box-shadow: inset 0 -25px 30px 5px var(--dark-col);
         }
       `}</style>
-    </main>
+    </>
   );
 }
