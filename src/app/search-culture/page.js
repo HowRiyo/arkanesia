@@ -26,7 +26,7 @@ export default function SearchPage() {
       input.value = "";
 
       try {
-        const res = await fetch("https://arkanesia.vercel.app/chatbot", {
+        const res = await fetch("http://localhost:5001/chatbot", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ question: userMessage }),
