@@ -53,7 +53,7 @@ export default function HomeClient({ cultures, events, tours }) {
       console.log(latitude, longitude);
 
       setTimeout(async () => {
-        const res = await fetch("http://localhost:5001/recommendation", {
+        const res = await fetch("https://arkanesia.onrender.com/recommendation", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
